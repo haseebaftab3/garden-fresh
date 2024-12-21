@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
-use App\Models\{Product, CartItem, User, Order, OrderItem, Address, Payment};
+use App\Models\{Product, CartItem, User, Order, OrderItem, Address, Payment, OrderTimeline};
 use Exception;
 
 class CheckoutController extends Controller
@@ -208,6 +208,17 @@ class CheckoutController extends Controller
                     'variants' => json_encode($cartItem['variants']->toArray()),
                 ]);
             }
+
+
+
+            OrderTimeline::create([
+                'order_id' => $orderId,
+                'status' => 'Order Placed',
+                'icon' => 'ri-shopping-bag-line',
+                'description' => 'Your order has been successfully placed.',
+                'event_date' => now()->toDateString(),
+                'event_time' => now()->toTimeString(),
+            ]);
         } catch (Exception $e) {
             // Log::error('Saving Order Items Failed: ' . $e->getMessage());
             throw $e;

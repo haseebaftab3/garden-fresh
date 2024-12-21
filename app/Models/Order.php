@@ -55,6 +55,14 @@ class Order extends Model
      */
     public function shippingAddress()
     {
-        return $this->hasOne(Address::class, 'order_id', 'id')->where('type', 'shipping');
+        return $this->hasOne(Address::class, 'order_id', 'id');
+    }
+    public function timelines()
+    {
+        return $this->hasMany(OrderTimeline::class);
+    }
+    public function logistic()
+    {
+        return $this->hasOne(Logistic::class);
     }
 }

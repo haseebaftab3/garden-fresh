@@ -51,6 +51,7 @@ Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.s
 Route::get('/order/success/{orderId}', [CheckoutController::class, 'orderSuccess'])->name('order.success');
 
 
+
 // Main Website
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/shop', [ShopController::class, 'index'])->name('shop');
@@ -96,8 +97,16 @@ Route::middleware(['auth:admin'])->group(function () {
     // Orders
     Route::prefix('admin/orders')->group(function () {
         Route::get('/', [OrderController::class, 'index'])->name('admin.orders.index');
-        Route::get('/{order}', [OrderController::class, 'show'])->name('admin.orders.show');
+        Route::get('/orders/{order}', [OrderController::class, 'show'])->name('admin.orders.show');
+        Route::get('/pending', [OrderController::class, 'pending'])->name('admin.orders.pending');
+        Route::get('/approved', [OrderController::class, 'approved'])->name('admin.orders.approved');
+        Route::get('/rejected', [OrderController::class, 'rejected'])->name('admin.orders.rejected');
+        Route::get('orders/{order}/edit', [OrderController::class, 'edit'])->name('admin.orders.edit');
+        Route::post('/change-address/{order}', [OrderController::class, 'changeAddress'])->name('change.address');
+        Route::put('/change-status/{order}', [OrderController::class, 'changeStatus'])->name('change.status');
+        Route::get('/orders/{order}/invoice', [OrderController::class, 'showInvoice'])->name('orders.invoice');
     });
+
 
     // Customers
     Route::get('/admin/customers', [CustomerController::class, 'index'])->name('admin.customers.index');

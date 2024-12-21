@@ -2,80 +2,19 @@
 @section('title', 'The Pets Medic | Home')
 @section('content')
 
-    <div class="axil-main-slider-area main-slider-style-4">
+    <div class="axil-main-slider-area main-slider-style-7 bg_image--8"
+        style="background-image: url({{ asset('assets/images/banners/home2-slider.jpg') }});">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
+                <div class="col-sm-8">
                     <div class="main-slider-content">
-                        <h1 class="title">Life is more than sunglasses and hit movies.</h1>
+                        <span class="subtitle  text-light"><i class="fas fa-fire"></i>Hot Deal In Diamond</span>
+                        <h1 class="title text-light">Exclusive Design Collection</h1>
+                        <p>Casual line with short design in 100% suede Diamond</p>
                         <div class="shop-btn">
-                            <a href="shop.html" class="axil-btn btn-bg-primary"><i class="far fa-shopping-cart"></i> Check
-                                it Out!</a>
+                            <a href="shop.html" class="axil-btn btn-bg-secondary right-icon  text-light">Browse Item <i
+                                    class="fal fa-long-arrow-right"></i></a>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="slide-thumb-area">
-                        <div class="main-thumb">
-                            <img src="assets/images/banner/women_sunglass.png" alt="Women's Product">
-                        </div>
-                        <div class="banner-product">
-                            <div class="product-details">
-                                <h4 class="title"><a href="single-product-8.html">Ladies Stylish Sunglasses</a></h4>
-                                <div class="price">$15.22 - $15.22</div>
-                                <div class="product-rating">
-                                    <span class="icon">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </span>
-                                    <span class="rating-number">6,400</span>
-                                </div>
-                            </div>
-                            <div class="plus-icon">
-                                <i class="far fa-plus"></i>
-                            </div>
-                        </div>
-                        <ul class="shape-group">
-                            <li class="shape-1">
-                                <svg width="717" height="569" viewBox="0 0 717 569" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M700.635 568.176C593.701 653.555 569.268 645.843 418.418 256.006C229.855 -231.289 -105.017 93.7591 62.1304 620.614"
-                                        stroke="url(#paint0_linear_3774_13416)" stroke-width="32" stroke-linecap="round" />
-                                    <defs>
-                                        <linearGradient id="paint0_linear_3774_13416" x1="359.308" y1="-263.741"
-                                            x2="-235.553" y2="631.772" gradientUnits="userSpaceOnUse">
-                                            <stop offset="0.258739" stop-color="#FAF1EE" />
-                                            <stop offset="1" stop-color="#FEEAE9" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </li>
-                            <li class="shape-2">
-                                <svg width="806" height="605" viewBox="0 0 806 605" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_1478_3882)">
-                                        <path
-                                            d="M786.673 3C806.703 135.413 745.738 384.513 341.63 321.606C-163.504 242.971 -51.9045 685.856 476.273 802"
-                                            stroke="url(#paint0_linear_1478_3882)" stroke-width="32"
-                                            stroke-linecap="round" />
-                                    </g>
-                                    <defs>
-                                        <linearGradient id="paint0_linear_1478_3882" x1="-232.181" y1="-67.0641"
-                                            x2="659.844" y2="1032.81" gradientUnits="userSpaceOnUse">
-                                            <stop offset="0.525282" stop-color="#FBE9E3" />
-                                            <stop offset="1" stop-color="#FFD3C5" />
-                                        </linearGradient>
-                                        <clipPath id="clip0_1478_3882">
-                                            <rect width="806" height="605" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -100,7 +39,7 @@
                                         src="{{ isset($category->image) ? asset('storage/' . $category->image) : 'https://www.ecommerce-nation.com/wp-content/uploads/2017/08/How-to-Give-Your-E-Commerce-No-Results-Page-the-Power-to-Sell.png' }}"
                                         alt="{{ $category->name }}">
                                     <h6 class="cat-title">{{ $category->name }}</h6>
-                                    <strong>{{ count($category->children) }} Items</strong>
+                                    {{-- <strong>{{ count($category->children) }} Items</strong> --}}
                                 </a>
                             </div>
                         </div>
@@ -220,7 +159,7 @@
                                     <a href="single-product.html">
                                         <img data-sal="zoom-out" data-sal-delay="200" data-sal-duration="800"
                                             loading="lazy" class="main-img"
-                                            src="assets/images/product/electric/product-01.png" alt="Product Images">
+                                            src="{{ asset('assets/images/banners/1.JPG') }}" alt="Product Images">
                                         <img class="hover-img" src="assets/images/product/electric/product-08.png"
                                             alt="Product Images">
                                     </a>
