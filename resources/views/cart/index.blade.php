@@ -2,60 +2,82 @@
 @section('title', 'The Pets Medic | Home')
 @section('content')
 
-    <div class="axil-product-cart-area axil-section-gap">
+    <!-- page-title -->
+    <div class="page-title" style="background-image: url(images/section/page-title.jpg);">
         <div class="container">
-            <div class="axil-product-cart-wrap">
-                <div class="product-table-heading">
-                    <h4 class="title">Your Cart</h4>
-                    <a href="#" class="cart-clear">Clear Shoping Cart</a>
+            <h3 class="heading text-center">Shopping Cart</h3>
+            <ul class="breadcrumbs d-flex align-items-center justify-content-center">
+                <li><a class="link" href="index.html">Homepage</a></li>
+                <li><i class="icon-arrRight"></i></li>
+                <li><a class="link" href="shop-default-grid.html">Shop</a></li>
+                <li><i class="icon-arrRight"></i></li>
+                <li>Shopping Cart</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="flat-spacing">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8">
+                    <div class="cart-body"></div>
+                    <div id="cartPageContentLoader">
+                        <div colspan="6" style="text-align: center;">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="cartPageContent" style="display: none">
+                        <table class="tf-table-page-cart table axil-cart-table">
+                            <thead>
+                                <tr>
+                                    <th>Products</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total Price</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+
+                    </form>
                 </div>
-                <div class="cart-body"></div>
-                <div id="cartPageContentLoader">
-                    <div colspan="6" style="text-align: center;">
-                        <div class="spinner-border text-primary" role="status">
-                            <span class="visually-hidden">Loading...</span>
+                <div class="col-xl-4">
+                    <div class="fl-sidebar-cart">
+                        <div class="box-order bg-surface">
+                            <h5 class="title">Order Summary</h5>
+                            <div class="subtotal text-button d-flex justify-content-between align-items-center">
+                                <span>Subtotal</span>
+                                <span class="total" id="cart-page-cart-subtotal">-Rs 0</span>
+                            </div>
+
+
+                            <h5 class="total-order d-flex justify-content-between align-items-center">
+                                <span>Total</span>
+                                <span class="total" id="cart-page-cart-subtotal1">Rs 0</span>
+                            </h5>
+                            <div class="box-progress-checkout">
+
+                                <a href="{{ route('checkout.index') }}" class="tf-btn btn-reset">Process To Checkout</a>
+                                <p class="text-button text-center">
+                                    <a href="{{ route('shop') }}" class="link">Or continue shopping</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="table-responsive " id="cartPageContent" style="display: none">
-                    <table class="table axil-product-table axil-cart-table mb--40">
-                        <thead>
-                            <tr>
-                                <th scope="col" class="product-remove"></th>
-                                <th scope="col" class="product-thumbnail">Product</th>
-                                <th scope="col" class="product-title"></th>
-                                <th scope="col" class="product-price">Price</th>
-                                <th scope="col" class="product-quantity">Quantity</th>
-                                <th scope="col" class="product-subtotal">Subtotal</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-
-                            {{-- Dynamic --}}
-
-
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="2" class="pt-5">
-                                    <h4>Subtotal</h4>
-                                </td>
-                                <td colspan="4" class="pt-5">
-                                    <h4 id="cart-page-cart-subtotal"></h4></span>
-                                </td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-
-
-                <div class="d-flex justify-content-end"> <a href="{{ route('checkout.index') }}"
-                        class="axil-btn btn-bg-primary checkout-btn">Process to Checkout</a>
-                </div>
-
             </div>
         </div>
-    </div>
+    </section>
+    <!-- /Section cart -->
+
+
+
+
+
 @endsection

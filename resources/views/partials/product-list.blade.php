@@ -15,6 +15,7 @@
     @endphp
 
     <x-product-item image="{{ Storage::url($product->cover_image) }}"
+        image1="{{ $product->gallery->isNotEmpty() ? Storage::url($product->gallery->first()->image_url) : $product->cover_image }}"
         detailsUrl="{{ route('product.details', $product->slug) }}"
         wishlistUrl="{{ route('wishlist.add', $product->id) }}" cartUrl="{{ route('cart.add', $product->id) }}"
         badge="{{ $product_discount_label }}" rating="0" reviewsCount="0" title="{{ $product->title }}"

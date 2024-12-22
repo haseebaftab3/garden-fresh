@@ -38,8 +38,8 @@
     @include('modals.search')
     @include('modals.mobile-menu')
     @include('modals.categories')
-    {{-- @include('modals.cart-dropdown') --}}
-    @include('modals.cart')
+    @include('modals.cart-dropdown')
+    {{-- @include('modals.cart') --}}
     @include('modals.quick-add')
 
     <!-- Javascript -->

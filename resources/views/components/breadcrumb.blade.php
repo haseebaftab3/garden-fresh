@@ -1,22 +1,17 @@
-<div class="axil-breadcrumb-area">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-8">
-                <div class="inner">
-                    <ul class="axil-breadcrumb">
-                        <li class="axil-breadcrumb-item"><a href="{{ $homeUrl }}">{{ $homeLabel }}</a></li>
-                        <li class="separator"></li>
-                        <li class="axil-breadcrumb-item active" aria-current="page">{{ $currentPage }}</li>
-                    </ul>
-                    <h1 class="title">{{ $title }}</h1>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-4">
-                <div class="inner">
-                    <div class="bradcrumb-thumb">
-                        <img src="{{ asset($image) }}" alt="{{ $imageAlt }}">
-                    </div>
-                </div>
+<div class="page-title" style="background-image: url('{{ asset($image) }}')">
+    <div class="container-full">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="heading text-center">{{ $title }}</h3>
+                <ul class="breadcrumbs d-flex align-items-center justify-content-center">
+                    <li>
+                        <a class="link" href="{{ $homeUrl }}">{{ $homeLabel }}</a>
+                    </li>
+                    <li>
+                        <i class="icon-arrRight"></i>
+                    </li>
+                    <li>{{ $currentPage }}</li>
+                </ul>
             </div>
         </div>
     </div>

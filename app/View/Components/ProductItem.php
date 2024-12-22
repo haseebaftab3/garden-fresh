@@ -9,6 +9,7 @@ use Illuminate\Contracts\View\View;
 class ProductItem extends Component
 {
     public $image;
+    public $image1;
     public $detailsUrl;
     public $wishlistUrl;
     public $cartUrl;
@@ -20,9 +21,10 @@ class ProductItem extends Component
     public $oldPrice;
     public $id;
 
-    public function __construct($image, $detailsUrl, $wishlistUrl,  $cartUrl, $badge = null, $rating = 0, $reviewsCount = 0, $title, $price, $oldPrice, $id)
+    public function __construct($image, $image1 = null, $detailsUrl, $wishlistUrl,  $cartUrl, $badge = null, $rating = 0, $reviewsCount = 0, $title, $price, $oldPrice, $id)
     {
         $this->image = $image;
+        $this->image1 = $image1;
         $this->detailsUrl = $detailsUrl;
         $this->wishlistUrl = $wishlistUrl;
         $this->cartUrl = $cartUrl;

@@ -183,10 +183,9 @@ class CartController extends Controller
             $basePrice = 0;
 
             // If no variants are selected, use the product's base price
-            if ($item->variants->isEmpty()) {
-                $basePrice = $item->product->price;
-            }
+            $basePrice = $item->product->price;
 
+            $productPrice = $item->product->price;
             $discountPercentage = $item->product->discount ?? 0;
 
             // Calculate total variant price
@@ -195,7 +194,7 @@ class CartController extends Controller
             });
 
 
-            $finalPrice = $variantPrice > 0 ? $variantPrice : $basePrice;
+            $finalPrice = $variantPrice > 0 ? $variantPrice + $productPrice : $basePrice;
 
             // Apply discount if applicable
             if ($discountPercentage > 0) {
