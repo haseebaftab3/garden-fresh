@@ -1,611 +1,1070 @@
 @extends('layouts.master')
 @section('title', 'The Pets Medic | Home')
 @section('content')
-
-    <div class="axil-main-slider-area main-slider-style-7 bg_image--8"
-        style="background-image: url({{ asset('assets/images/banners/home2-slider.jpg') }});">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-sm-8">
-                    <div class="main-slider-content">
-                        <span class="subtitle  text-light"><i class="fas fa-fire"></i>Hot Deal In Diamond</span>
-                        <h1 class="title text-light">Exclusive Design Collection</h1>
-                        <p>Casual line with short design in 100% suede Diamond</p>
-                        <div class="shop-btn">
-                            <a href="shop.html" class="axil-btn btn-bg-secondary right-icon  text-light">Browse Item <i
-                                    class="fal fa-long-arrow-right"></i></a>
+    <!-- /Header -->
+    <!-- Slider -->
+    <div class="slider-padding">
+        <div class="tf-slideshow slider-default slider-position slider-effect-fade slider-radius-2">
+            <div dir="ltr" class="swiper tf-sw-slideshow" data-preview="1" data-tablet="1" data-mobile="1"
+                data-centered="false" data-space="0" data-space-mb="0" data-loop="true" data-auto-play="false">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="wrap-slider">
+                            <img src="{{ asset('assets/images/slider/slider-organic.jpg') }}" alt="fashion-slideshow" />
+                            <div class="box-content">
+                                <div class="content-slider">
+                                    <div class="box-title-slider">
+                                        <div class="fade-item fade-item-1 heading title-display text-white">
+                                            Organic Fresh <br />
+                                            Produce
+                                        </div>
+                                        <p class="fade-item fade-item-2 body-text-1 text-white">
+                                            Enjoy the best of nature with our selection of fresh.
+                                        </p>
+                                    </div>
+                                    <div class="fade-item fade-item-3 box-btn-slider">
+                                        <a href="shop-default-grid.html" class="tf-btn btn-fill btn-white"><span
+                                                class="text">Shop Now</span><i class="icon icon-arrowUpRight"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="wrap-slider">
+                            <img src="{{ asset('assets/images/slider/slider-organic2.jpg') }}" alt="fashion-slideshow" />
+                            <div class="box-content">
+                                <div class="content-slider">
+                                    <div class="box-title-slider">
+                                        <div class="fade-item fade-item-1 heading title-display text-white">
+                                            100% Organic <br />
+                                            Vegetables
+                                        </div>
+                                        <p class="fade-item fade-item-2 body-text-1 text-white">
+                                            Savor the purest flavors with our pesticide-free,
+                                            farm-fresh produce.
+                                        </p>
+                                    </div>
+                                    <div class="fade-item fade-item-3 box-btn-slider">
+                                        <a href="shop-default-grid.html" class="tf-btn btn-fill btn-white"><span
+                                                class="text">Shop Now</span><i class="icon icon-arrowUpRight"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="wrap-slider">
+                            <img src="{{ asset('assets/images/slider/slider-organic3.jpg') }}" alt="fashion-slideshow" />
+                            <div class="box-content">
+                                <div class="content-slider">
+                                    <div class="box-title-slider">
+                                        <div class="fade-item fade-item-1 heading title-display text-white">
+                                            Fresh-Squeezed <br />
+                                            Orange Juice
+                                        </div>
+                                        <p class="fade-item fade-item-2 body-text-1 text-white">
+                                            Enjoy the bright, tangy flavor of freshly pressed
+                                            oranges with every sip.
+                                        </p>
+                                    </div>
+                                    <div class="fade-item fade-item-3 box-btn-slider">
+                                        <a href="shop-default-grid.html" class="tf-btn btn-fill btn-white"><span
+                                                class="text">Shop Now</span><i class="icon icon-arrowUpRight"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="wrap-pagination">
+                <div class="container">
+                    <div class="sw-dots sw-pagination-slider type-circle white-circle-line justify-content-center"></div>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- End Slider Area -->
-    <div class="axil-categorie-area bg-color-white axil-section-gap pb--0">
+    <!-- /Slider -->
+    <!-- Deal of the day -->
+    <section class="flat-spacing">
         <div class="container">
-            <div class="product-area pb--50">
-                <div class="section-title-wrapper">
-                    <span class="title-highlighter highlighter-secondary"><i class="far fa-shopping-basket"></i>The
-                        Categories</span>
-                    <h2 class="title">Browse by Category</h2>
+            <div class="heading-section text-center wow fadeInUp">
+                <h3 class="heading">Deal of the day</h3>
+                <p class="subheading text-secondary">
+                    Fresh styles just in! Elevate your look.
+                </p>
+            </div>
+            <div dir="ltr" class="swiper tf-sw-recent" data-preview="4" data-tablet="3" data-mobile="2"
+                data-space-lg="30" data-space-md="30" data-space="15" data-pagination="1" data-pagination-md="1"
+                data-pagination-lg="1">
+                <div class="swiper-wrapper">
+                    <!-- 1 -->
+                    <div class="swiper-slide">
+                        <div class="card-product card-product-size wow fadeInUp" data-wow-delay="0s">
+                            <div class="card-product-wrapper">
+                                <a href="product-detail.html" class="product-img">
+                                    <img class="lazyload img-product"
+                                        data-src="{{ asset('assets/images/products/organic/organic-1.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-1.jpg') }}"
+                                        alt="image-product" />
+                                    <img class="lazyload img-hover"
+                                        data-src="{{ asset('assets/images/products/organic/organic-2.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-2.jpg') }}"
+                                        alt="image-product" />
+                                </a>
+                                <div class="variant-wrap size-list">
+                                    <ul class="variant-box">
+                                        <li class="size-item">S</li>
+                                        <li class="size-item">M</li>
+                                        <li class="size-item">L</li>
+                                        <li class="size-item">XL</li>
+                                    </ul>
+                                </div>
+                                <div class="list-product-btn">
+                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
+                                        <span class="icon icon-heart"></span>
+                                        <span class="tooltip">Wishlist</span>
+                                    </a>
+                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare"
+                                        class="box-icon compare btn-icon-action">
+                                        <span class="icon icon-gitDiff"></span>
+                                        <span class="tooltip">Compare</span>
+                                    </a>
+                                    <a href="#quickView" data-bs-toggle="modal"
+                                        class="box-icon quickview tf-btn-loading">
+                                        <span class="icon icon-eye"></span>
+                                        <span class="tooltip">Quick View</span>
+                                    </a>
+                                </div>
+                                <div class="list-btn-main">
+                                    <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Quick Add</a>
+                                </div>
+                            </div>
+                            <div class="card-product-info">
+                                <a href="product-detail.html" class="title link">Zesty Yellow Lemons</a>
+                                <span class="price">$39.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="swiper-slide">
+                        <div class="card-product card-product-size wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="card-product-wrapper">
+                                <a href="product-detail.html" class="product-img">
+                                    <img class="lazyload img-product"
+                                        data-src="{{ asset('assets/images/products/organic/organic-3.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-3.jpg') }}"
+                                        alt="image-product" />
+                                    <img class="lazyload img-hover"
+                                        data-src="{{ asset('assets/images/products/organic/organic-4.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-4.jpg') }}"
+                                        alt="image-product" />
+                                </a>
+                                <div class="on-sale-wrap">
+                                    <span class="on-sale-item">-25%</span>
+                                </div>
+                                <div class="variant-wrap size-list">
+                                    <ul class="variant-box">
+                                        <li class="size-item">S</li>
+                                        <li class="size-item">M</li>
+                                        <li class="size-item">L</li>
+                                        <li class="size-item">XL</li>
+                                    </ul>
+                                </div>
+                                <div class="list-product-btn">
+                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
+                                        <span class="icon icon-heart"></span>
+                                        <span class="tooltip">Wishlist</span>
+                                    </a>
+                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare"
+                                        class="box-icon compare btn-icon-action">
+                                        <span class="icon icon-gitDiff"></span>
+                                        <span class="tooltip">Compare</span>
+                                    </a>
+                                    <a href="#quickView" data-bs-toggle="modal"
+                                        class="box-icon quickview tf-btn-loading">
+                                        <span class="icon icon-eye"></span>
+                                        <span class="tooltip">Quick View</span>
+                                    </a>
+                                </div>
+                                <div class="list-btn-main">
+                                    <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Quick Add</a>
+                                </div>
+                            </div>
+                            <div class="card-product-info">
+                                <a href="product-detail.html" class="title link">Organic White Cauliflower</a>
+                                <span class="price"><span class="old-price">$98.00</span>$129.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="swiper-slide">
+                        <div class="card-product card-product-size wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="card-product-wrapper">
+                                <a href="product-detail.html" class="product-img">
+                                    <img class="lazyload img-product"
+                                        data-src="{{ asset('assets/images/products/organic/organic-5.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-5.jpg') }}"
+                                        alt="image-product" />
+                                    <img class="lazyload img-hover"
+                                        data-src="{{ asset('assets/images/products/organic/organic-6.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-6.jpg') }}"
+                                        alt="image-product" />
+                                </a>
+                                <div class="on-sale-wrap">
+                                    <span class="on-sale-item">-25%</span>
+                                </div>
+                                <div class="variant-wrap size-list">
+                                    <ul class="variant-box">
+                                        <li class="size-item">S</li>
+                                        <li class="size-item">M</li>
+                                        <li class="size-item">L</li>
+                                        <li class="size-item">XL</li>
+                                    </ul>
+                                </div>
+                                <div class="list-product-btn">
+                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
+                                        <span class="icon icon-heart"></span>
+                                        <span class="tooltip">Wishlist</span>
+                                    </a>
+                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare"
+                                        class="box-icon compare btn-icon-action">
+                                        <span class="icon icon-gitDiff"></span>
+                                        <span class="tooltip">Compare</span>
+                                    </a>
+                                    <a href="#quickView" data-bs-toggle="modal"
+                                        class="box-icon quickview tf-btn-loading">
+                                        <span class="icon icon-eye"></span>
+                                        <span class="tooltip">Quick View</span>
+                                    </a>
+                                </div>
+                                <div class="list-btn-main">
+                                    <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Quick Add</a>
+                                </div>
+                            </div>
+                            <div class="card-product-info">
+                                <a href="product-detail.html" class="title link">Juicy Cherry Burst</a>
+                                <span class="price"><span class="old-price">$98.00</span>$219.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="swiper-slide">
+                        <div class="card-product wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="card-product-wrapper">
+                                <a href="product-detail.html" class="product-img">
+                                    <img class="lazyload img-product"
+                                        data-src="{{ asset('assets/images/products/organic/organic-7.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-7.jpg') }}"
+                                        alt="image-product" />
+                                    <img class="lazyload img-hover"
+                                        data-src="{{ asset('assets/images/products/organic/organic-8.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-8.jpg') }}"
+                                        alt="image-product" />
+                                </a>
+
+                                <div class="list-product-btn">
+                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
+                                        <span class="icon icon-heart"></span>
+                                        <span class="tooltip">Wishlist</span>
+                                    </a>
+                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare"
+                                        class="box-icon compare btn-icon-action">
+                                        <span class="icon icon-gitDiff"></span>
+                                        <span class="tooltip">Compare</span>
+                                    </a>
+                                    <a href="#quickView" data-bs-toggle="modal"
+                                        class="box-icon quickview tf-btn-loading">
+                                        <span class="icon icon-eye"></span>
+                                        <span class="tooltip">Quick View</span>
+                                    </a>
+                                </div>
+                                <div class="list-btn-main">
+                                    <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Quick Add</a>
+                                </div>
+                            </div>
+                            <div class="card-product-info">
+                                <a href="product-detail.html" class="title link">Sweet Strawberry Delight</a>
+                                <span class="price">$79.99</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="categrie-product-activation-3 slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide">
-                    @foreach ($categories_section as $category)
-                        <div class="slick-single-layout slick-slide">
-                            <div class="categrie-product categrie-product-3" data-sal="zoom-out" data-sal-delay="100"
-                                data-sal-duration="500">
-                                <a href="{{ route('category.show', $category->slug) }}">
-                                    <img class="img-fluid"
-                                        src="{{ isset($category->image) ? asset('storage/' . $category->image) : 'https://www.ecommerce-nation.com/wp-content/uploads/2017/08/How-to-Give-Your-E-Commerce-No-Results-Page-the-Power-to-Sell.png' }}"
-                                        alt="{{ $category->name }}">
-                                    <h6 class="cat-title">{{ $category->name }}</h6>
-                                    {{-- <strong>{{ count($category->children) }} Items</strong> --}}
+                <div class="sw-pagination-recent sw-dots type-circle justify-content-center"></div>
+            </div>
+        </div>
+    </section>
+    <!-- /Deal of the day -->
+    <!-- Collection -->
+    <section class="flat-spacing pt-0">
+        <div class="container">
+            <div dir="ltr" class="swiper tf-sw-collection" data-preview="3" data-tablet="2" data-mobile-sm="1.7"
+                data-mobile="1" data-space-lg="30" data-space-md="30" data-space="15" data-pagination="1"
+                data-pagination-md="1" data-pagination-lg="1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="collection-position-2 style-5 style-7 hover-img wow fadeInUp" data-wow-delay="0s">
+                            <a class="img-style">
+                                <img class="lazyload"
+                                    data-src="{{ asset('assets/images/collections/cls-organic-1.jpg') }}"
+                                    src="{{ asset('assets/images/collections/cls-organic-1.jpg') }}" alt="banner-cls" />
+                            </a>
+                            <div class="content">
+                                <span class="text-title text-white">Pure Organic-Vegan</span>
+                                <h4 class="title">
+                                    <a href="shop-collection.html" class="link text-white">Fresh Veggie Combos Start from
+                                        $22</a>
+                                </h4>
+                                <div>
+                                    <a href="shop-collection.html" class="btn-line style-white">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="collection-position-2 style-5 style-7 hover-img wow fadeInUp" data-wow-delay="0.1s">
+                            <a class="img-style">
+                                <img class="lazyload"
+                                    data-src="{{ asset('assets/images/collections/cls-organic-2.jpg') }}"
+                                    src="{{ asset('assets/images/collections/cls-organic-2.jpg') }}" alt="banner-cls" />
+                            </a>
+                            <div class="content">
+                                <span class="text-title text-white">Top-quality nuts and grains.</span>
+                                <h4 class="title">
+                                    <a href="shop-collection.html" class="link text-white">Nut & Grain Combos Start from
+                                        $22</a>
+                                </h4>
+                                <div>
+                                    <a href="shop-collection.html" class="btn-line style-white">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="collection-position-2 style-5 style-7 hover-img wow fadeInUp" data-wow-delay="0.2s">
+                            <a class="img-style">
+                                <img class="lazyload"
+                                    data-src="{{ asset('assets/images/collections/cls-organic-3.jpg') }}"
+                                    src="{{ asset('assets/images/collections/cls-organic-3.jpg') }}" alt="banner-cls" />
+                            </a>
+                            <div class="content">
+                                <span class="text-title text-white">Delicious and nutritious blends.</span>
+                                <h4 class="title">
+                                    <a href="shop-collection.html" class="link text-white">Smoothie Essentials Bundle
+                                        Start from $22</a>
+                                </h4>
+                                <div>
+                                    <a href="shop-collection.html" class="btn-line style-white">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sw-pagination-collection sw-dots type-circle justify-content-center"></div>
+            </div>
+        </div>
+    </section>
+    <!-- /Collection -->
+    <!-- Delivery -->
+    <section class="">
+        <div class="container">
+            <div class="wg-free-delivery align-items-center tf-grid-layout md-col-2 gap-0">
+                <div class="free-delivery-info text-center">
+                    <h3 class="free-delivery-heading text-white">
+                        Get Free Delivery 60 Days
+                    </h3>
+                    <p class="text text-white">
+                        Shop now and take advantage of this special offer to get your
+                        favorite items delivered to your doorstep at no extra cost.
+                    </p>
+                    <div class="tf-countdown style-2">
+                        <div class="js-countdown" data-timer="1007500" data-labels="Days,Hours,Mins,Secs"></div>
+                    </div>
+                    <a href="shop-default-grid.html" class="tf-btn btn-fill btn-white"><span class="text">Buy at a
+                            discount</span><i class="icon icon-arrowUpRight"></i></a>
+                </div>
+                <div class="free-delivery-img">
+                    <img class="lazyload" data-src="{{ asset('assets/images/section/delivery-1.jpg') }}"
+                        src="{{ asset('assets/images/section/delivery-1.jpg') }}" alt="delivery-img" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Delivery -->
+    <!-- Top picks -->
+    <section class="flat-spacing">
+        <div class="container">
+            <div class="heading-section text-center wow fadeInUp">
+                <h3 class="heading">Today's Top Picks</h3>
+                <p class="subheading text-secondary">
+                    Fresh styles just in! Elevate your look.
+                </p>
+            </div>
+            <div dir="ltr" class="swiper tf-sw-latest" data-preview="5" data-tablet="3" data-mobile="2"
+                data-space-lg="30" data-space-md="30" data-space="15" data-pagination="1" data-pagination-md="1"
+                data-pagination-lg="1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card-product wow fadeInUp" data-wow-delay="0s">
+                            <div class="card-product-wrapper">
+                                <a href="product-detail.html" class="product-img">
+                                    <img class="lazyload img-product"
+                                        data-src="{{ asset('assets/images/products/organic/organic-9.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-9.jpg') }}"
+                                        alt="image-product" />
+                                    <img class="lazyload img-hover"
+                                        data-src="{{ asset('assets/images/products/organic/organic-10.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-10.jpg') }}"
+                                        alt="image-product" />
+                                </a>
+                                <div class="on-sale-wrap">
+                                    <span class="on-sale-item">-25%</span>
+                                </div>
+                                <div class="marquee-product bg-main">
+                                    <div class="marquee-wrapper">
+                                        <div class="initial-child-container">
+                                            <div class="marquee-child-item">
+                                                <p class="font-2 text-btn-uppercase fw-6 text-white">
+                                                    Hot Sale 25% OFF
+                                                </p>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <span class="icon icon-lightning text-critical"></span>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <p class="font-2 text-btn-uppercase fw-6 text-white">
+                                                    Hot Sale 25% OFF
+                                                </p>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <span class="icon icon-lightning text-critical"></span>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <p class="font-2 text-btn-uppercase fw-6 text-white">
+                                                    Hot Sale 25% OFF
+                                                </p>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <span class="icon icon-lightning text-critical"></span>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <p class="font-2 text-btn-uppercase fw-6 text-white">
+                                                    Hot Sale 25% OFF
+                                                </p>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <span class="icon icon-lightning text-critical"></span>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <p class="font-2 text-btn-uppercase fw-6 text-white">
+                                                    Hot Sale 25% OFF
+                                                </p>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <span class="icon icon-lightning text-critical"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="marquee-wrapper">
+                                        <div class="initial-child-container">
+                                            <div class="marquee-child-item">
+                                                <p class="font-2 text-btn-uppercase fw-6 text-white">
+                                                    Hot Sale 25% OFF
+                                                </p>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <span class="icon icon-lightning text-critical"></span>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <p class="font-2 text-btn-uppercase fw-6 text-white">
+                                                    Hot Sale 25% OFF
+                                                </p>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <span class="icon icon-lightning text-critical"></span>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <p class="font-2 text-btn-uppercase fw-6 text-white">
+                                                    Hot Sale 25% OFF
+                                                </p>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <span class="icon icon-lightning text-critical"></span>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <p class="font-2 text-btn-uppercase fw-6 text-white">
+                                                    Hot Sale 25% OFF
+                                                </p>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <span class="icon icon-lightning text-critical"></span>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <p class="font-2 text-btn-uppercase fw-6 text-white">
+                                                    Hot Sale 25% OFF
+                                                </p>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <span class="icon icon-lightning text-critical"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-product-btn">
+                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
+                                        <span class="icon icon-heart"></span>
+                                        <span class="tooltip">Wishlist</span>
+                                    </a>
+                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare"
+                                        class="box-icon compare btn-icon-action">
+                                        <span class="icon icon-gitDiff"></span>
+                                        <span class="tooltip">Compare</span>
+                                    </a>
+                                    <a href="#quickView" data-bs-toggle="modal"
+                                        class="box-icon quickview tf-btn-loading">
+                                        <span class="icon icon-eye"></span>
+                                        <span class="tooltip">Quick View</span>
+                                    </a>
+                                </div>
+                                <div class="list-btn-main">
+                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
+                                        cart</a>
+                                </div>
+                            </div>
+                            <div class="card-product-info">
+                                <a href="product-detail.html" class="title link">Tender Beef Cuts</a>
+                                <span class="price"><span class="old-price">$98.00</span> $79.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-product card-product-size wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="card-product-wrapper">
+                                <a href="product-detail.html" class="product-img">
+                                    <img class="lazyload img-product"
+                                        data-src="{{ asset('assets/images/products/organic/organic-11.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-11.jpg') }}"
+                                        alt="image-product" />
+                                    <img class="lazyload img-hover"
+                                        data-src="{{ asset('assets/images/products/organic/organic-12.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-12.jpg') }}"
+                                        alt="image-product" />
+                                </a>
+                                <div class="variant-wrap size-list">
+                                    <ul class="variant-box">
+                                        <li class="size-item">2 lb</li>
+                                        <li class="size-item">5 lb</li>
+                                        <li class="size-item">25 lb</li>
+                                        <li class="size-item">50 lb</li>
+                                    </ul>
+                                </div>
+                                <div class="variant-wrap countdown-wrap">
+                                    <div class="variant-box">
+                                        <div class="js-countdown" data-timer="1007500" data-labels="D :,H :,M :,S"></div>
+                                    </div>
+                                </div>
+                                <div class="list-product-btn">
+                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
+                                        <span class="icon icon-heart"></span>
+                                        <span class="tooltip">Wishlist</span>
+                                    </a>
+                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare"
+                                        class="box-icon compare btn-icon-action">
+                                        <span class="icon icon-gitDiff"></span>
+                                        <span class="tooltip">Compare</span>
+                                    </a>
+                                    <a href="#quickView" data-bs-toggle="modal"
+                                        class="box-icon quickview tf-btn-loading">
+                                        <span class="icon icon-eye"></span>
+                                        <span class="tooltip">Quick View</span>
+                                    </a>
+                                </div>
+                                <div class="list-btn-main">
+                                    <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Quick Add</a>
+                                </div>
+                            </div>
+                            <div class="card-product-info">
+                                <a href="product-detail.html" class="title link">Fresh Blueberry Bliss
+                                </a>
+                                <span class="price"><span class="old-price">$98.00</span> $89.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-product wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="card-product-wrapper">
+                                <a href="product-detail.html" class="product-img">
+                                    <img class="lazyload img-product"
+                                        data-src="{{ asset('assets/images/products/organic/organic-13.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-13.jpg') }}"
+                                        alt="image-product" />
+                                    <img class="lazyload img-hover"
+                                        data-src="{{ asset('assets/images/products/organic/organic-14.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-14.jpg') }}"
+                                        alt="image-product" />
+                                </a>
+                                <div class="list-product-btn">
+                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
+                                        <span class="icon icon-heart"></span>
+                                        <span class="tooltip">Wishlist</span>
+                                    </a>
+                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare"
+                                        class="box-icon compare btn-icon-action">
+                                        <span class="icon icon-gitDiff"></span>
+                                        <span class="tooltip">Compare</span>
+                                    </a>
+                                    <a href="#quickView" data-bs-toggle="modal"
+                                        class="box-icon quickview tf-btn-loading">
+                                        <span class="icon icon-eye"></span>
+                                        <span class="tooltip">Quick View</span>
+                                    </a>
+                                </div>
+                                <div class="list-btn-main">
+                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
+                                        cart</a>
+                                </div>
+                            </div>
+                            <div class="card-product-info">
+                                <a href="product-detail.html" class="title link">Savory Beef Jerky</a>
+                                <span class="price">$69.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-product wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="card-product-wrapper">
+                                <a href="product-detail.html" class="product-img">
+                                    <img class="lazyload img-product"
+                                        data-src="{{ asset('assets/images/products/organic/organic-15.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-15.jpg') }}"
+                                        alt="image-product" />
+                                    <img class="lazyload img-hover"
+                                        data-src="{{ asset('assets/images/products/organic/organic-16.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-16.jpg') }}"
+                                        alt="image-product" />
+                                </a>
+                                <div class="list-product-btn">
+                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
+                                        <span class="icon icon-heart"></span>
+                                        <span class="tooltip">Wishlist</span>
+                                    </a>
+                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare"
+                                        class="box-icon compare btn-icon-action">
+                                        <span class="icon icon-gitDiff"></span>
+                                        <span class="tooltip">Compare</span>
+                                    </a>
+                                    <a href="#quickView" data-bs-toggle="modal"
+                                        class="box-icon quickview tf-btn-loading">
+                                        <span class="icon icon-eye"></span>
+                                        <span class="tooltip">Quick View</span>
+                                    </a>
+                                </div>
+                                <div class="list-btn-main">
+                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
+                                        cart</a>
+                                </div>
+                            </div>
+                            <div class="card-product-info">
+                                <a href="product-detail.html" class="title link">Aromatic Fresh Ginger</a>
+                                <span class="price">$69.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-product wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="card-product-wrapper">
+                                <a href="product-detail.html" class="product-img">
+                                    <img class="lazyload img-product"
+                                        data-src="{{ asset('assets/images/products/organic/organic-17.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-17.jpg') }}"
+                                        alt="image-product" />
+                                    <img class="lazyload img-hover"
+                                        data-src="{{ asset('assets/images/products/organic/organic-18.jpg') }}"
+                                        src="{{ asset('assets/images/products/organic/organic-18.jpg') }}"
+                                        alt="image-product" />
+                                </a>
+                                <div class="list-product-btn">
+                                    <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
+                                        <span class="icon icon-heart"></span>
+                                        <span class="tooltip">Wishlist</span>
+                                    </a>
+                                    <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare"
+                                        class="box-icon compare btn-icon-action">
+                                        <span class="icon icon-gitDiff"></span>
+                                        <span class="tooltip">Compare</span>
+                                    </a>
+                                    <a href="#quickView" data-bs-toggle="modal"
+                                        class="box-icon quickview tf-btn-loading">
+                                        <span class="icon icon-eye"></span>
+                                        <span class="tooltip">Quick View</span>
+                                    </a>
+                                </div>
+                                <div class="list-btn-main">
+                                    <a href="#shoppingCart" data-bs-toggle="modal" class="btn-main-product">Add To
+                                        cart</a>
+                                </div>
+                            </div>
+                            <div class="card-product-info">
+                                <a href="product-detail.html" class="title link">Crisp Green Lettuce</a>
+                                <span class="price">$69.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sw-pagination-latest sw-dots type-circle justify-content-center"></div>
+            </div>
+        </div>
+    </section>
+    <!-- /Top picks -->
+    <!-- Testimonial -->
+    <section class="flat-spacing pt-0">
+        <div class="container">
+            <div class="heading-section text-center wow fadeInUp">
+                <h3 class="heading">Customer Say!</h3>
+                <p class="subheading">
+                    Our customers adore our products, and we constantly aim to delight
+                    them.
+                </p>
+            </div>
+            <div dir="ltr" class="swiper tf-sw-testimonial" data-preview="3" data-tablet="2" data-mobile="1"
+                data-space-lg="30" data-space-md="30" data-space="15" data-pagination="1" data-pagination-md="1"
+                data-pagination-lg="1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-item hover-img style-row wow fadeInUp" data-wow-delay="0s">
+                            <div class="img-style">
+                                <img data-src="{{ asset('assets/images/testimonial/tes-14.jpg') }}"
+                                    src="{{ asset('assets/images/testimonial/tes-14.jpg') }}" alt="img-testimonial" />
+                                <a href="#quickView" data-bs-toggle="modal" class="box-icon hover-tooltip center">
+                                    <span class="icon icon-eye"></span>
+                                    <span class="tooltip">Quick View</span>
                                 </a>
                             </div>
-                        </div>
-                    @endforeach
-                    <!-- End .slick-single-layout -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Categorie Area  -->
-    <div class="product-collection-area bg-lighter axil-section-gapcommon">
-        <div class="container">
-            <div class="section-title-border">
-                <h2 class="title">Today’s Best Deals 💥</h2>
-                <div class="view-btn"><a href="shop.html">View All Deals</a></div>
-            </div>
-            <div class="row">
-                <div class="col-xl-7">
-                    <div class="product-collection product-collection-two">
-                        <div class="collection-content">
-                            <h3 class="title">Decorative Plant <br> For Home</h3>
-                            <div class="price-warp">
-                                <span class="price-text">Starting From</span>
-                                <span class="price">$35.00</span>
-                            </div>
-                            <div class="shop-btn">
-                                <a href="shop.html" class="axil-btn btn-bg-primary btn-size-md"><i
-                                        class="far fa-shopping-cart"></i> View All Items</a>
-                            </div>
-                            <div class="plus-btn">
-                                <a href="#" class="plus-icon"><i class="far fa-plus"></i></a>
-                            </div>
-                        </div>
-                        <div class="collection-thumbnail">
-                            <img src="assets/images/product/collection_5.jpg" alt="Mega Collection">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-5">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="product-collection-three">
-                                <div class="collection-content">
-                                    <h6 class="title"><a href="shop.html">Ladies Short Sleeve Dress</a></h6>
-                                    <div class="price-warp">
-                                        <span class="price-text">Starting From</span>
-                                        <span class="price">$30.00</span>
+                            <div class="content">
+                                <div class="content-top">
+                                    <div class="list-star-default">
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                    </div>
+                                    <p class="text-secondary">
+                                        "Fantastic shop! Great selection, fair prices, and
+                                        friendly staff. Highly recommended. The quality of the
+                                        products is exceptional, and the prices are very
+                                        reasonable!"
+                                    </p>
+                                    <div class="box-author">
+                                        <div class="text-title author">Sybil Sharp</div>
+                                        <svg class="icon" width="20" height="21" viewBox="0 0 20 21"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_15758_14563)">
+                                                <path d="M6.875 11.6255L8.75 13.5005L13.125 9.12549" stroke="#3DAB25"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M10 18.5005C14.1421 18.5005 17.5 15.1426 17.5 11.0005C17.5 6.85835 14.1421 3.50049 10 3.50049C5.85786 3.50049 2.5 6.85835 2.5 11.0005C2.5 15.1426 5.85786 18.5005 10 18.5005Z"
+                                                    stroke="#3DAB25" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_15758_14563">
+                                                    <rect width="20" height="20" fill="white"
+                                                        transform="translate(0 0.684082)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
                                     </div>
                                 </div>
-                                <div class="collection-thumbnail">
-                                    <img src="assets/images/product/collection_5.png" alt="Product">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="product-collection-three">
-                                <div class="collection-content">
-                                    <h6 class="title"><a href="shop.html">Oil Soap Wood Home Cleaner</a></h6>
-                                    <div class="price-warp">
-                                        <span class="price-text">Starting From</span>
-                                        <span class="price">$15.22</span>
+                                <div class="box-avt">
+                                    <div class="avatar avt-60 round">
+                                        <img src="{{ asset('assets/images/avatar/user-10.jpg') }}" alt="avt" />
                                     </div>
-                                </div>
-                                <div class="collection-thumbnail">
-                                    <img src="assets/images/product/collection_6.png" alt="Product">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="product-collection-three">
-                                <div class="collection-content">
-                                    <h6 class="title"><a href="shop.html">Large Pendant Light Ceiling </a></h6>
-                                    <div class="price-warp">
-                                        <span class="price-text">Starting From</span>
-                                        <span class="price">$11.70</span>
-                                    </div>
-                                </div>
-                                <div class="collection-thumbnail">
-                                    <img src="assets/images/product/collection_7.png" alt="Product">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="product-collection-three">
-                                <div class="collection-content">
-                                    <h6 class="title"><a href="shop.html">Iphone New Model</a></h6>
-                                    <div class="price-warp">
-                                        <span class="price-text">Starting From</span>
-                                        <span class="price">$499.00</span>
-                                    </div>
-                                </div>
-                                <div class="collection-thumbnail">
-                                    <img src="assets/images/product/collection_8.png" alt="Product">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Start Expolre Product Area  -->
-    <div class="axil-product-area bg-color-white axil-section-gap">
-        <div class="container">
-            <div class="section-title-wrapper">
-                <span class="title-highlighter highlighter-primary"> <i class="far fa-shopping-basket"></i> Our
-                    Products</span>
-                <h2 class="title">Explore our Products</h2>
-            </div>
-            <div
-                class="explore-product-activation slick-layout-wrapper slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide">
-                <div class="slick-single-layout">
-                    <div class="row row--15">
-                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb--30">
-                            <div class="axil-product product-style-one">
-                                <div class="thumbnail">
-                                    <a href="single-product.html">
-                                        <img data-sal="zoom-out" data-sal-delay="200" data-sal-duration="800"
-                                            loading="lazy" class="main-img"
-                                            src="{{ asset('assets/images/banners/1.JPG') }}" alt="Product Images">
-                                        <img class="hover-img" src="assets/images/product/electric/product-08.png"
-                                            alt="Product Images">
-                                    </a>
-                                    <div class="label-block label-right">
-                                        <div class="product-badget">20% Off</div>
-                                    </div>
-                                    <div class="product-hover-action">
-                                        <ul class="cart-action">
-                                            <li class="quickview"><a href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li>
-                                            <li class="select-option">
-                                                <a href="single-product.html">
-                                                    Add to Cart
-                                                </a>
-                                            </li>
-                                            <li class="wishlist"><a href="wishlist.html"><i class="far fa-heart"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <div class="inner">
-                                        <div class="product-rating">
-                                            <span class="icon">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span class="rating-number">(64)</span>
-                                        </div>
-                                        <h5 class="title"><a href="single-product.html">Yantiti Leather & Canvas Bags</a>
-                                        </h5>
-                                        <div class="product-price-variant">
-                                            <span class="price current-price">$29.99</span>
-                                            <span class="price old-price">$49.99</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Product  -->
-                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb--30">
-                            <div class="axil-product product-style-one">
-                                <div class="thumbnail">
-                                    <a href="single-product.html">
-                                        <img data-sal="zoom-out" data-sal-delay="300" data-sal-duration="800"
-                                            loading="lazy" src="assets/images/product/electric/product-02.png"
-                                            alt="Product Images">
-                                        <img class="hover-img" src="assets/images/product/electric/product-06.png"
-                                            alt="Product Images">
-                                    </a>
-                                    <div class="product-hover-action">
-                                        <ul class="cart-action">
-                                            <li class="quickview"><a href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li>
-                                            <li class="select-option"><a href="single-product.html">Select Option</a></li>
-                                            <li class="wishlist"><a href="wishlist.html"><i class="far fa-heart"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <div class="inner">
-                                        <h5 class="title"><a href="single-product.html">Level 20 RGB Cherry</a></h5>
-                                        <div class="product-price-variant">
-                                            <span class="price current-price">$29.99</span>
-                                            <span class="price old-price">$49.99</span>
-                                        </div>
-                                        <div class="color-variant-wrapper">
-                                            <ul class="color-variant">
-                                                <li class="color-extra-01 active"><span><span
-                                                            class="color"></span></span>
-                                                </li>
-                                                <li class="color-extra-02"><span><span class="color"></span></span>
-                                                </li>
-                                                <li class="color-extra-03"><span><span class="color"></span></span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Product  -->
-                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb--30">
-                            <div class="axil-product product-style-one">
-                                <div class="thumbnail">
-                                    <a href="single-product.html">
-                                        <img data-sal="zoom-out" data-sal-delay="400" data-sal-duration="800"
-                                            loading="lazy" src="assets/images/product/electric/product-03.png"
-                                            alt="Product Images">
-                                    </a>
-                                    <div class="label-block label-right">
-                                        <div class="product-badget">20% Off</div>
-                                    </div>
-                                    <div class="product-hover-action">
-                                        <ul class="cart-action">
-                                            <li class="quickview"><a href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li>
-                                            <li class="select-option"><a href="single-product.html">Select Option</a></li>
-                                            <li class="wishlist"><a href="wishlist.html"><i class="far fa-heart"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <div class="inner">
-                                        <h5 class="title"><a href="single-product.html">Logitech Streamcam</a></h5>
-                                        <div class="product-price-variant">
-                                            <span class="price current-price">$29.99</span>
-                                            <span class="price old-price">$49.99</span>
-                                        </div>
-                                        <div class="color-variant-wrapper">
-                                            <ul class="color-variant">
-                                                <li class="color-extra-01 active"><span><span
-                                                            class="color"></span></span>
-                                                </li>
-                                                <li class="color-extra-02"><span><span class="color"></span></span>
-                                                </li>
-                                                <li class="color-extra-03"><span><span class="color"></span></span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Product  -->
-                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb--30">
-                            <div class="axil-product product-style-one">
-                                <div class="thumbnail">
-                                    <a href="single-product.html">
-                                        <img data-sal="zoom-out" data-sal-delay="500" data-sal-duration="800"
-                                            loading="lazy" src="assets/images/product/electric/product-04.png"
-                                            alt="Product Images">
-                                        <img class="hover-img" src="assets/images/product/electric/product-05.png"
-                                            alt="Product Images">
-                                    </a>
-                                    <div class="product-hover-action">
-                                        <ul class="cart-action">
-                                            <li class="quickview"><a href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li>
-                                            <li class="select-option"><a href="single-product.html">Select Option</a></li>
-                                            <li class="wishlist"><a href="wishlist.html"><i class="far fa-heart"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <div class="inner">
-                                        <div class="product-rating">
-                                            <span class="icon">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </span>
-                                            <span class="rating-number">(44)</span>
-                                        </div>
-                                        <h5 class="title"><a href="single-product.html">3D™ wireless headset</a></h5>
-                                        <div class="product-price-variant">
-                                            <span class="price current-price">$29.99</span>
-                                            <span class="price old-price">$49.99</span>
-                                        </div>
+                                    <div class="box-price">
+                                        <p class="text-title text-line-clamp-1">
+                                            Sweet Strawberry Delight
+                                        </p>
+                                        <div class="text-button price">$60.00</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- End .slick-single-layout -->
-                <div class="slick-single-layout">
-                    <div class="row row--15">
-                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb--30">
-                            <div class="axil-product product-style-one">
-                                <div class="thumbnail">
-                                    <a href="single-product.html">
-                                        <img src="assets/images/product/electric/product-01.png" alt="Product Images">
-                                    </a>
-                                    <div class="label-block label-right">
-                                        <div class="product-badget">20% Off</div>
-                                    </div>
-                                    <div class="product-hover-action">
-                                        <ul class="cart-action">
-                                            <li class="quickview"><a href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li>
-                                            <li class="select-option"><a href="single-product.html">Select Option</a></li>
-                                            <li class="wishlist"><a href="wishlist.html"><i class="far fa-heart"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <div class="inner">
-                                        <h5 class="title"><a href="single-product.html">Yantiti Leather & Canvas Bags</a>
-                                        </h5>
-                                        <div class="product-price-variant">
-                                            <span class="price current-price">$29.99</span>
-                                            <span class="price old-price">$49.99</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Product  -->
-                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb--30">
-                            <div class="axil-product product-style-one">
-                                <div class="thumbnail">
-                                    <a href="single-product.html">
-                                        <img src="assets/images/product/electric/product-02.png" alt="Product Images">
-                                    </a>
-                                    <div class="product-hover-action">
-                                        <ul class="cart-action">
-                                            <li class="quickview"><a href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li>
-                                            <li class="select-option"><a href="single-product.html">Select Option</a></li>
-                                            <li class="wishlist"><a href="wishlist.html"><i class="far fa-heart"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <div class="inner">
-                                        <h5 class="title"><a href="single-product.html">3D™ wireless headset</a></h5>
-                                        <div class="product-price-variant">
-                                            <span class="price current-price">$29.99</span>
-                                            <span class="price old-price">$49.99</span>
-                                        </div>
-                                        <div class="color-variant-wrapper">
-                                            <ul class="color-variant">
-                                                <li class="color-extra-01 active"><span><span
-                                                            class="color"></span></span>
-                                                </li>
-                                                <li class="color-extra-02"><span><span class="color"></span></span>
-                                                </li>
-                                                <li class="color-extra-03"><span><span class="color"></span></span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Product  -->
-                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb--30">
-                            <div class="axil-product product-style-one">
-                                <div class="thumbnail">
-                                    <a href="single-product.html">
-                                        <img src="assets/images/product/electric/product-03.png" alt="Product Images">
-                                    </a>
-                                    <div class="label-block label-right">
-                                        <div class="product-badget">20% Off</div>
-                                    </div>
-                                    <div class="product-hover-action">
-                                        <ul class="cart-action">
-                                            <li class="quickview"><a href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li>
-                                            <li class="select-option"><a href="single-product.html">Select Option</a></li>
-                                            <li class="wishlist"><a href="wishlist.html"><i class="far fa-heart"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <div class="inner">
-                                        <h5 class="title"><a href="single-product.html">3D™ wireless headset</a></h5>
-                                        <div class="product-price-variant">
-                                            <span class="price current-price">$29.99</span>
-                                            <span class="price old-price">$49.99</span>
-                                        </div>
-                                        <div class="color-variant-wrapper">
-                                            <ul class="color-variant">
-                                                <li class="color-extra-01 active"><span><span
-                                                            class="color"></span></span>
-                                                </li>
-                                                <li class="color-extra-02"><span><span class="color"></span></span>
-                                                </li>
-                                                <li class="color-extra-03"><span><span class="color"></span></span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-                <!-- End .slick-single-layout -->
-            </div>
-            <div class="row">
-                <div class="col-lg-12 text-center mt--20 mt_sm--0">
-                    <a href="shop.html" class="axil-btn btn-bg-lighter btn-load-more">View All Products</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!-- End Expolre Product Area  -->
-
-
-    <div class="sale-banner-area">
-        <div class="container">
-            <div class="sale-banner-thumb">
-                <a href="shop.html"><img src="assets/images/banner/sale_banner.png" alt="Sale Banner"></a>
-            </div>
-        </div>
-    </div>
-    <!-- Start Best Sellers Product Area  -->
-    <div class="axil-best-seller-product-area bg-color-white axil-section-gap pb--50 pb_sm--30">
-        <div class="container">
-            <div class="section-title-wrapper">
-                <span class="title-highlighter highlighter-secondary"><i class="far fa-shopping-basket"></i>This
-                    Month</span>
-                <h2 class="title">Best Sellers</h2>
-            </div>
-            <div
-                class="new-arrivals-product-activation-2 product-transparent-layout slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide product-slide-mobile">
-
-                <div class="slick-single-layout">
-                    <div class="axil-product product-style-seven">
-                        <div class="product-content">
-                            <div class="cart-btn">
-                                <a href="cart.html">
-                                    <i class="flaticon-shopping-cart"></i>
+                    <div class="swiper-slide">
+                        <div class="testimonial-item hover-img style-row wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="img-style">
+                                <img data-src="{{ asset('assets/images/testimonial/tes-15.jpg') }}"
+                                    src="{{ asset('assets/images/testimonial/tes-15.jpg') }}" alt="img-testimonial" />
+                                <a href="#quickView" data-bs-toggle="modal" class="box-icon hover-tooltip center">
+                                    <span class="icon icon-eye"></span>
+                                    <span class="tooltip">Quick View</span>
                                 </a>
                             </div>
-                            <div class="inner">
-                                <h5 class="title"><a href="single-product.html">Comfort Unisex Hoddie</a></h5>
-                                <div class="product-price-variant">
-                                    <span class="price current-price">$29.99</span>
-                                    <span class="price old-price">$49.99</span>
+                            <div class="content">
+                                <div class="content-top">
+                                    <div class="list-star-default">
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                    </div>
+                                    <p class="text-secondary">
+                                        "I absolutely love this shop! The products are
+                                        high-quality and the customer service is excellent. I
+                                        always leave with exactly what I need and a smile on my
+                                        face."
+                                    </p>
+                                    <div class="box-author">
+                                        <div class="text-title author">Mark G.</div>
+                                        <svg class="icon" width="20" height="21" viewBox="0 0 20 21"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_15758_14563)">
+                                                <path d="M6.875 11.6255L8.75 13.5005L13.125 9.12549" stroke="#3DAB25"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M10 18.5005C14.1421 18.5005 17.5 15.1426 17.5 11.0005C17.5 6.85835 14.1421 3.50049 10 3.50049C5.85786 3.50049 2.5 6.85835 2.5 11.0005C2.5 15.1426 5.85786 18.5005 10 18.5005Z"
+                                                    stroke="#3DAB25" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_15758_14563">
+                                                    <rect width="20" height="20" fill="white"
+                                                        transform="translate(0 0.684082)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
                                 </div>
-                                <div class="product-rating">
-                                    <span class="icon">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </span>
-                                    <span class="rating-number">(44)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="thumbnail">
-                            <a href="single-product.html">
-                                <img data-sal="zoom-out" data-sal-delay="100" data-sal-duration="800" loading="lazy"
-                                    src="assets/images/product/fashion/product-17.png" alt="Product Images">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- End  Best Sellers Product Area  -->
-    <div class="axil-new-arrivals-product-area fullwidth-container flash-sale-area section-gap-80-35">
-        <div class="container ml--xxl-0">
-            <div class="section-title-border slider-section-title">
-                <h2 class="title">Recently Viewed 💥</h2>
-            </div>
-            <div class="recently-viwed-activation slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
-                <div class="slick-single-layout">
-                    <div class="axil-product product-style-eight">
-                        <div class="thumbnail">
-                            <a href="single-product-8.html">
-                                <img data-sal="zoom-out" data-sal-delay="100" data-sal-duration="800" loading="lazy"
-                                    class="main-img" src="assets/images/product/fashion/product-26.png"
-                                    alt="Product Images">
-                            </a>
-                            <div class="label-block label-left">
-                                <div class="product-badget sale">Sale</div>
-                            </div>
-                            <div class="product-hover-action">
-                                <ul class="cart-action">
-                                    <li class="select-option">
-                                        <a href="single-product-8.html">
-                                            <i class="far fa-shopping-cart"></i> Add to Cart
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <div class="inner">
-                                <h5 class="title"><a href="single-product-8.html">Kalrez® Spectrum™ 6375</a></h5>
-                                <div class="product-rating">
-                                    <span class="icon">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </span>
-                                    <span class="rating-number">6,400</span>
-                                </div>
-                                <div class="product-price-variant">
-                                    <span class="price old-price">$30.00</span>
-                                    <span class="price current-price">$17.84</span>
+                                <div class="box-avt">
+                                    <div class="avatar avt-60 round">
+                                        <img src="{{ asset('assets/images/avatar/user-11.jpg') }}" alt="avt" />
+                                    </div>
+                                    <div class="box-price">
+                                        <p class="text-title text-line-clamp-1">
+                                            Tender Beef Cuts
+                                        </p>
+                                        <div class="text-button price">$60.00</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-item hover-img style-row wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="img-style">
+                                <img data-src="{{ asset('assets/images/testimonial/tes-16.jpg') }}"
+                                    src="{{ asset('assets/images/testimonial/tes-16.jpg') }}" alt="img-testimonial" />
+                                <a href="#quickView" data-bs-toggle="modal" class="box-icon hover-tooltip center">
+                                    <span class="icon icon-eye"></span>
+                                    <span class="tooltip">Quick View</span>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <div class="content-top">
+                                    <div class="list-star-default">
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                    </div>
+                                    <p class="text-secondary">
+                                        "Fantastic shop! Great selection, fair prices, and
+                                        friendly staff. Highly recommended. The quality of the
+                                        products is exceptional, and the prices are very
+                                        reasonable!"
+                                    </p>
+                                    <div class="box-author">
+                                        <div class="text-title author">Sybil Sharp</div>
+                                        <svg class="icon" width="20" height="21" viewBox="0 0 20 21"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_15758_14563)">
+                                                <path d="M6.875 11.6255L8.75 13.5005L13.125 9.12549" stroke="#3DAB25"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M10 18.5005C14.1421 18.5005 17.5 15.1426 17.5 11.0005C17.5 6.85835 14.1421 3.50049 10 3.50049C5.85786 3.50049 2.5 6.85835 2.5 11.0005C2.5 15.1426 5.85786 18.5005 10 18.5005Z"
+                                                    stroke="#3DAB25" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_15758_14563">
+                                                    <rect width="20" height="20" fill="white"
+                                                        transform="translate(0 0.684082)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="box-avt">
+                                    <div class="avatar avt-60 round">
+                                        <img src="{{ asset('assets/images/avatar/user-12.jpg') }}" alt="avt" />
+                                    </div>
+                                    <div class="box-price">
+                                        <p class="text-title text-line-clamp-1">
+                                            Crisp Green Lettuce
+                                        </p>
+                                        <div class="text-button price">$60.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="sw-pagination-testimonial sw-dots type-circle d-flex justify-content-center"></div>
             </div>
         </div>
-    </div>
-    <!-- End Expolre Product Area  -->
-
-
-
-
-    <div class="delivery-poster-area">
+    </section>
+    <!-- /Testimonial -->
+    <!-- Iconbox -->
+    <section class="flat-spacing pt-0">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-6">
-                    <div class="delivery-poster pickup">
-                        <div class="content">
-                            <span class="badge">Always free</span>
-                            <h4 class="title">Order Pickup</h4>
-                            <p>Choose Order Pickup & we’ll have it waiting for you inside the store.</p>
+            <div dir="ltr" class="swiper tf-sw-iconbox" data-preview="4" data-tablet="3" data-mobile-sm="2"
+                data-mobile="1" data-space-lg="30" data-space-md="30" data-space="15" data-pagination="1"
+                data-pagination-sm="2" data-pagination-md="3" data-pagination-lg="4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="tf-icon-box">
+                            <div class="icon-box">
+                                <span class="icon icon-return"></span>
+                            </div>
+                            <div class="content text-center">
+                                <h6>14-Day Returns</h6>
+                                <p class="text-secondary">
+                                    Risk-free shopping with easy returns.
+                                </p>
+                            </div>
                         </div>
-                        <div class="thumbnail">
-                            <img src="assets/images/banner/delivery_1.png" alt="Man">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="tf-icon-box">
+                            <div class="icon-box">
+                                <span class="icon icon-shipping"></span>
+                            </div>
+                            <div class="content text-center">
+                                <h6>Free Shipping</h6>
+                                <p class="text-secondary">
+                                    No extra costs, just the price you see.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="tf-icon-box">
+                            <div class="icon-box">
+                                <span class="icon icon-headset"></span>
+                            </div>
+                            <div class="content text-center">
+                                <h6>24/7 Support</h6>
+                                <p class="text-secondary">
+                                    24/7 support, always here just for you
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="tf-icon-box">
+                            <div class="icon-box">
+                                <span class="icon icon-sealCheck"></span>
+                            </div>
+                            <div class="content text-center">
+                                <h6>Member Discounts</h6>
+                                <p class="text-secondary">
+                                    Special prices for our loyal customers.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6">
-                    <div class="delivery-poster delivery">
-                        <div class="content">
-                            <span class="badge">Fast delivery</span>
-                            <h4 class="title">Same Day Delivery</h4>
-                            <p>We will delivery your goods on the same day on your doorstep.</p>
-                        </div>
-                        <div class="thumbnail">
-                            <img src="assets/images/banner/delivery_2.png" alt="Man">
-                        </div>
-                    </div>
-                </div>
+                <div class="sw-pagination-iconbox sw-dots type-circle justify-content-center"></div>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- /Iconbox -->
+    <!-- Gallery shop gram -->
+    <section>
+        <div class="container-full2">
+            <div dir="ltr" class="swiper tf-sw-shop-gallery" data-preview="6" data-tablet="3" data-mobile="2"
+                data-space-lg="10" data-space-md="10" data-space="8" data-pagination="2" data-pagination-md="3"
+                data-pagination-lg="1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="gallery-item hover-overlay hover-img wow fadeInUp" data-wow-delay=".1s">
+                            <div class="img-style">
+                                <img class="lazyload img-hover"
+                                    data-src="{{ asset('assets/images/gallery/gallery-13.jpg') }}"
+                                    src="{{ asset('assets/images/gallery/gallery-13.jpg') }}" alt="image-gallery" />
+                            </div>
+                            <a href="product-detail.html" class="box-icon hover-tooltip"><span
+                                    class="icon icon-eye"></span>
+                                <span class="tooltip">View Product</span></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-item hover-overlay hover-img wow fadeInUp" data-wow-delay=".2s">
+                            <div class="img-style">
+                                <img class="lazyload img-hover"
+                                    data-src="{{ asset('assets/images/gallery/gallery-14.jpg') }}"
+                                    src="{{ asset('assets/images/gallery/gallery-14.jpg') }}" alt="image-gallery" />
+                            </div>
+                            <a href="product-detail.html" class="box-icon hover-tooltip"><span
+                                    class="icon icon-eye"></span>
+                                <span class="tooltip">View Product</span></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-item hover-overlay hover-img wow fadeInUp" data-wow-delay=".3s">
+                            <div class="img-style">
+                                <img class="lazyload img-hover"
+                                    data-src="{{ asset('assets/images/gallery/gallery-15.jpg') }}"
+                                    src="{{ asset('assets/images/gallery/gallery-15.jpg') }}" alt="image-gallery" />
+                            </div>
+                            <a href="product-detail.html" class="box-icon hover-tooltip"><span
+                                    class="icon icon-eye"></span>
+                                <span class="tooltip">View Product</span></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-item hover-overlay hover-img wow fadeInUp" data-wow-delay=".4s">
+                            <div class="img-style">
+                                <img class="lazyload img-hover"
+                                    data-src="{{ asset('assets/images/gallery/gallery-16.jpg') }}"
+                                    src="{{ asset('assets/images/gallery/gallery-16.jpg') }}" alt="image-gallery" />
+                            </div>
+                            <a href="product-detail.html" class="box-icon hover-tooltip"><span
+                                    class="icon icon-eye"></span>
+                                <span class="tooltip">View Product</span></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-item hover-overlay hover-img wow fadeInUp" data-wow-delay=".5s">
+                            <div class="img-style">
+                                <img class="lazyload img-hover"
+                                    data-src="{{ asset('assets/images/gallery/gallery-17.jpg') }}"
+                                    src="{{ asset('assets/images/gallery/gallery-17.jpg') }}" alt="image-gallery" />
+                            </div>
+                            <a href="product-detail.html" class="box-icon hover-tooltip"><span
+                                    class="icon icon-eye"></span>
+                                <span class="tooltip">View Product</span></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-item hover-overlay hover-img wow fadeInUp" data-wow-delay=".6s">
+                            <div class="img-style">
+                                <img class="lazyload img-hover"
+                                    data-src="{{ asset('assets/images/gallery/gallery-18.jpg') }}"
+                                    src="{{ asset('assets/images/gallery/gallery-18.jpg') }}" alt="image-gallery" />
+                            </div>
+                            <a href="product-detail.html" class="box-icon hover-tooltip"><span
+                                    class="icon icon-eye"></span>
+                                <span class="tooltip">View Product</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sw-pagination-gallery sw-dots type-circle justify-content-center"></div>
+            </div>
+        </div>
+    </section>
+    <!-- /Gallery shop gram -->
 @endsection

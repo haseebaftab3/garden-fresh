@@ -1,34 +1,48 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Pets Medic</title>
+    <title>Garden Fresh</title>
     <meta name="robots" content="noindex, follow">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="themesflat.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Themesflat Modave, Multipurpose eCommerce Template" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @include('layouts.head')
     @stack('css')
 </head>
 
-<body class="sticky-header overflow-md-visible">
+<body class="preload-wrapper">
 
-    <a href="#top" class="back-to-top" id="backto-top"><i class="fal fa-arrow-up"></i></a>
+    <!-- Scroll Top -->
+    @include('partials.back-to-top')
 
-    @include('layouts.header-shop')
+    <!-- preload -->
+    <div class="preload preload-container">
+        <div class="preload-logo">
+            <div class="spinner"></div>
+        </div>
+    </div>
 
-    <main class="main-wrapper">
+    <div id="wrapper">
+        @include('layouts.header')
         @yield('content')
-    </main>
+        @include('layouts.footer')
+    </div>
 
-    @include('layouts.footer')
 
     <!-- Include Modals -->
-    @include('modals.quick-view')
-    @include('modals.header-search')
-    @include('modals.cart-dropdown')
+    <!-- search -->
+    @include('modals.search')
+    @include('modals.mobile-menu')
+    @include('modals.categories')
+    {{-- @include('modals.cart-dropdown') --}}
+    @include('modals.cart')
+    @include('modals.quick-add')
+
+    <!-- Javascript -->
     @include('layouts.script')
     @stack('js')
 </body>

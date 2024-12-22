@@ -1,146 +1,164 @@
-<div class="modal fade quick-view-product" id="quick-view-modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+<div class="modal fullRight fade modal-quick-view" id="quickView">
+    <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
-                        class="far fa-times"></i></button>
+            <div class="tf-quick-view-image">
+                <div class="wrap-quick-view wrapper-scroll-quickview">
+                    <div class="quickView-item item-scroll-quickview" data-scroll-quickview="beige">
+                        <img class="lazyload" data-src="{{ asset('assets/images/products/womens/women-1.jpg') }}"
+                            src="{{ asset('assets/images/products/womens/women-1.jpg') }}" alt="" />
+                    </div>
+                    <div class="quickView-item item-scroll-quickview" data-scroll-quickview="beige">
+                        <img class="lazyload" data-src="{{ asset('assets/images/products/womens/women-2.jpg') }}"
+                            src="{{ asset('assets/images/products/womens/women-2.jpg') }}" alt="" />
+                    </div>
+                    <div class="quickView-item item-scroll-quickview" data-scroll-quickview="gray">
+                        <img class="lazyload" data-src="{{ asset('assets/images/products/womens/women-3.jpg') }}"
+                            src="{{ asset('assets/images/products/womens/women-3.jpg') }}" alt="" />
+                    </div>
+                    <div class="quickView-item item-scroll-quickview" data-scroll-quickview="gray">
+                        <img class="lazyload" data-src="{{ asset('assets/images/products/womens/women-4.jpg') }}"
+                            src="{{ asset('assets/images/products/womens/women-4.jpg') }}" alt="" />
+                    </div>
+                    <div class="quickView-item item-scroll-quickview" data-scroll-quickview="grey">
+                        <img class="lazyload" data-src="{{ asset('assets/images/products/womens/women-19.jpg') }}"
+                            src="{{ asset('assets/images/products/womens/women-19.jpg') }}" alt="" />
+                    </div>
+                    <div class="quickView-item item-scroll-quickview" data-scroll-quickview="grey">
+                        <img class="lazyload" data-src="{{ asset('assets/images/products/womens/women-20.jpg') }}"
+                            src="{{ asset('assets/images/products/womens/women-20.jpg') }}" alt="" />
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-                <div class="single-product-thumb">
-                    <div class="row">
-                        <div class="col-lg-7 mb--40" id="QuickViewModalImageData">
-                            {{-- <div class="row">
-                                <div class="col-lg-10 order-lg-2">
-                                    <div
-                                        class="single-product-thumbnail product-large-thumbnail axil-product thumbnail-badge zoom-gallery">
-                                        <div class="thumbnail">
-                                            <img src="assets/images/product/product-big-01.png" alt="Product Images">
-                                            <div class="label-block label-right">
-                                                <div class="product-badget">20% OFF</div>
-                                            </div>
-                                            <div class="product-quick-view position-view">
-                                                <a href="assets/images/product/product-big-01.png" class="popup-zoom">
-                                                    <i class="far fa-search-plus"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="thumbnail">
-                                            <img src="assets/images/product/product-big-02.png" alt="Product Images">
-                                            <div class="label-block label-right">
-                                                <div class="product-badget">20% OFF</div>
-                                            </div>
-                                            <div class="product-quick-view position-view">
-                                                <a href="assets/images/product/product-big-02.png" class="popup-zoom">
-                                                    <i class="far fa-search-plus"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="thumbnail">
-                                            <img src="assets/images/product/product-big-03.png" alt="Product Images">
-                                            <div class="label-block label-right">
-                                                <div class="product-badget">20% OFF</div>
-                                            </div>
-                                            <div class="product-quick-view position-view">
-                                                <a href="assets/images/product/product-big-03.png" class="popup-zoom">
-                                                    <i class="far fa-search-plus"></i>
-                                                </a>
-                                            </div>
-                                        </div>
+            <div class="wrap">
+                <div class="header">
+                    <h5 class="title">Quick View</h5>
+                    <span class="icon-close icon-close-popup" data-bs-dismiss="modal"></span>
+                </div>
+                <div class="tf-product-info-list">
+                    <div class="tf-product-info-heading">
+                        <div class="tf-product-info-name">
+                            <div class="text text-btn-uppercase">Clothing</div>
+                            <h3 class="name">Stretch Strap Top</h3>
+                            <div class="sub">
+                                <div class="tf-product-info-rate">
+                                    <div class="list-star">
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
                                     </div>
+                                    <div class="text text-caption-1">(134 reviews)</div>
                                 </div>
-                                <div class="col-lg-2 order-lg-1">
-                                    <div class="product-small-thumb small-thumb-wrapper">
-                                        <div class="small-thumb-img">
-                                            <img src="assets/images/product/product-thumb/thumb-08.png"
-                                                alt="thumb image">
-                                        </div>
-                                        <div class="small-thumb-img">
-                                            <img src="assets/images/product/product-thumb/thumb-07.png"
-                                                alt="thumb image">
-                                        </div>
-                                        <div class="small-thumb-img">
-                                            <img src="assets/images/product/product-thumb/thumb-09.png"
-                                                alt="thumb image">
-                                        </div>
+                                <div class="tf-product-info-sold">
+                                    <i class="icon icon-lightning"></i>
+                                    <div class="text text-caption-1">
+                                        18 sold in last 32 hours
                                     </div>
-                                </div>
-                            </div> --}}
-                        </div>
-                        <div class="col-lg-5 mb--40">
-                            <div class="single-product-content">
-                                <div class="inner">
-                                    <div class="product-rating">
-                                        <div class="star-rating">
-                                            <img src="assets/images/icons/rate.png" alt="Rate Images">
-                                        </div>
-                                        <div class="review-link">
-                                            <a href="#">(<span>1</span> customer reviews)</a>
-                                        </div>
-                                    </div>
-                                    <h3 class="product-title">Serif Coffee Table</h3>
-                                    <span class="price-amount">$155.00 - $255.00</span>
-                                    <ul class="product-meta">
-                                        <li><i class="fal fa-check"></i>In stock</li>
-                                        <li><i class="fal fa-check"></i>Free delivery available</li>
-                                        <li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>
-                                    </ul>
-                                    <p class="description">In ornare lorem ut est dapibus, ut tincidunt nisi pretium.
-                                        Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu
-                                        dignissim tellus.</p>
-
-                                    <div class="product-variations-wrapper">
-
-                                        <!-- Start Product Variation  -->
-                                        <div class="product-variation">
-                                            <h6 class="title">Colors:</h6>
-                                            <div class="color-variant-wrapper">
-                                                <ul class="color-variant mt--0">
-                                                    <li class="color-extra-01 active"><span><span
-                                                                class="color"></span></span>
-                                                    </li>
-                                                    <li class="color-extra-02"><span><span class="color"></span></span>
-                                                    </li>
-                                                    <li class="color-extra-03"><span><span class="color"></span></span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- End Product Variation  -->
-
-                                        <!-- Start Product Variation  -->
-                                        <div class="product-variation">
-                                            <h6 class="title">Size:</h6>
-                                            <ul class="range-variant">
-                                                <li>xs</li>
-                                                <li>s</li>
-                                                <li>m</li>
-                                                <li>l</li>
-                                                <li>xl</li>
-                                            </ul>
-                                        </div>
-                                        <!-- End Product Variation  -->
-
-                                    </div>
-
-                                    <!-- Start Product Action Wrapper  -->
-                                    <div class="product-action-wrapper d-flex-center">
-                                        <!-- Start Quentity Action  -->
-                                        <div class="pro-qty"><input type="text" value="1"></div>
-                                        <!-- End Quentity Action  -->
-
-                                        <!-- Start Product Action  -->
-                                        <ul class="product-action d-flex-center mb--0">
-                                            <li class="add-to-cart"><a href="cart.html"
-                                                    class="axil-btn btn-bg-primary">Add to Cart</a></li>
-                                            <li class="wishlist"><a href="wishlist.html"
-                                                    class="axil-btn wishlist-btn"><i class="far fa-heart"></i></a></li>
-                                        </ul>
-                                        <!-- End Product Action  -->
-
-                                    </div>
-                                    <!-- End Product Action Wrapper  -->
                                 </div>
                             </div>
+                        </div>
+                        <div class="tf-product-info-desc">
+                            <div class="tf-product-info-price">
+                                <h5 class="price-on-sale font-2">$79.99</h5>
+                                <div class="compare-at-price font-2">$98.99</div>
+                                <div class="badges-on-sale text-btn-uppercase">-25%</div>
+                            </div>
+                            <p>
+                                The garments labelled as Committed are products that have
+                                been produced using sustainable fibres or processes,
+                                reducing their environmental impact.
+                            </p>
+                            <div class="tf-product-info-liveview">
+                                <i class="icon icon-eye"></i>
+                                <p class="text-caption-1">
+                                    <span class="liveview-count">28</span> people are viewing
+                                    this right now
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tf-product-info-choose-option">
+                        <div class="variant-picker-item">
+                            <div class="variant-picker-label mb_12">
+                                Colors:<span class="text-title variant-picker-label-value">Beige</span>
+                            </div>
+                            <div class="variant-picker-values">
+                                <input id="values-beige1" type="radio" name="color2" checked />
+                                <label class="hover-tooltip tooltip-bot radius-60 color-btn btn-scroll-quickview active"
+                                    data-slide="0" data-price="79.99" for="values-beige1" data-value="Beige"
+                                    data-scroll-quickview="beige">
+                                    <span class="btn-checkbox bg-color-beige1"></span>
+                                    <span class="tooltip">Beige</span>
+                                </label>
+                                <input id="values-gray1" type="radio" name="color2" />
+                                <label class="hover-tooltip tooltip-bot radius-60 color-btn btn-scroll-quickview"
+                                    data-slide="1" data-price="79.99" for="values-gray1" data-value="Gray"
+                                    data-scroll-quickview="gray">
+                                    <span class="btn-checkbox bg-color-gray"></span>
+                                    <span class="tooltip">Gray</span>
+                                </label>
+                                <input id="values-grey1" type="radio" name="color2" />
+                                <label class="hover-tooltip tooltip-bot radius-60 color-btn btn-scroll-quickview"
+                                    data-slide="2" data-price="89.99" for="values-grey1" data-value="Grey"
+                                    data-scroll-quickview="grey">
+                                    <span class="btn-checkbox bg-color-grey"></span>
+                                    <span class="tooltip">Grey</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="variant-picker-item">
+                            <div class="d-flex justify-content-between mb_12">
+                                <div class="variant-picker-label">
+                                    Size:<span class="text-title variant-picker-label-value">L</span>
+                                </div>
+                                <a class="size-guide text-title link show-size-guide">Size Guide</a>
+                            </div>
+                            <div class="variant-picker-values gap12">
+                                <input type="radio" name="size2" id="values-s1" />
+                                <label class="style-text size-btn" for="values-s1" data-value="S">
+                                    <span class="text-title">S</span>
+                                </label>
+                                <input type="radio" name="size2" id="values-m1" />
+                                <label class="style-text size-btn" for="values-m1" data-value="M">
+                                    <span class="text-title">M</span>
+                                </label>
+                                <input type="radio" name="size2" id="values-l1" checked />
+                                <label class="style-text size-btn" for="values-l1" data-value="L"
+                                    data-price="89.99">
+                                    <span class="text-title">L</span>
+                                </label>
+                                <input type="radio" name="size2" id="values-xl1" />
+                                <label class="style-text size-btn" for="values-xl1" data-value="XL"
+                                    data-price="89.99">
+                                    <span class="text-title">XL</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="tf-product-info-quantity">
+                            <div class="title mb_12">Quantity:</div>
+                            <div class="wg-quantity">
+                                <span class="btn-quantity btn-decrease">-</span>
+                                <input class="quantity-product" type="text" name="number" value="1" />
+                                <span class="btn-quantity btn-increase">+</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tf-product-info-by-btn mb_10">
+                                <a class="btn-style-2 flex-grow-1 text-btn-uppercase fw-6 show-shopping-cart"><span>Add
+                                        to cart -&nbsp;</span><span class="tf-qty-price total-price">$79.99</span></a>
+                                <a href="#compare" data-bs-toggle="offcanvas" aria-controls="compare"
+                                    class="box-icon hover-tooltip compare btn-icon-action show-compare">
+                                    <span class="icon icon-gitDiff"></span>
+                                    <span class="tooltip text-caption-2">Compare</span>
+                                </a>
+                                <a href="javascript:void(0);"
+                                    class="box-icon hover-tooltip text-caption-2 wishlist btn-icon-action">
+                                    <span class="icon icon-heart"></span>
+                                    <span class="tooltip text-caption-2">Wishlist</span>
+                                </a>
+                            </div>
+                            <a href="#" class="btn-style-3 text-btn-uppercase">Buy it now</a>
                         </div>
                     </div>
                 </div>
