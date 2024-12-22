@@ -643,6 +643,10 @@
 
 @push('css')
     <style>
+        strong {
+            font-weight: inherit !important;
+        }
+
         .loader-overlay {
             position: absolute;
             top: 0;
