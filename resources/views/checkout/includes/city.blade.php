@@ -1,242 +1,98 @@
-<option value="" disabled selected>Select The City</option>
-<option value="Islamabad">Islamabad</option>
-<option value="" disabled>Punjab Cities</option>
-<option value="Ahmed Nager Chatha">Ahmed Nager Chatha</option>
-<option value="Ahmadpur East">Ahmadpur East</option>
-<option value="Ali Khan Abad">Ali Khan Abad</option>
-<option value="Alipur">Alipur</option>
-<option value="Arifwala">Arifwala</option>
-<option value="Attock">Attock</option>
-<option value="Bhera">Bhera</option>
-<option value="Bhalwal">Bhalwal</option>
-<option value="Bahawalnagar">Bahawalnagar</option>
-<option value="Bahawalpur">Bahawalpur</option>
-<option value="Bhakkar">Bhakkar</option>
-<option value="Burewala">Burewala</option>
-<option value="Chillianwala">Chillianwala</option>
-<option value="Chakwal">Chakwal</option>
-<option value="Chichawatni">Chichawatni</option>
-<option value="Chiniot">Chiniot</option>
-<option value="Chishtian">Chishtian</option>
-<option value="Daska">Daska</option>
-<option value="Darya Khan">Darya Khan</option>
-<option value="Dera Ghazi Khan">Dera Ghazi Khan</option>
-<option value="Dhaular">Dhaular</option>
-<option value="Dina">Dina</option>
-<option value="Dinga">Dinga</option>
-<option value="Dipalpur">Dipalpur</option>
-<option value="Faisalabad">Faisalabad</option>
-<option value="Ferozewala">Ferozewala</option>
-<option value="Fateh Jhang">Fateh Jang</option>
-<option value="Ghakhar Mandi">Ghakhar Mandi</option>
-<option value="Gojra">Gojra</option>
-<option value="Gujranwala">Gujranwala</option>
-<option value="Gujrat">Gujrat</option>
-<option value="Gujar Khan">Gujar Khan</option>
-<option value="Hafizabad">Hafizabad</option>
-<option value="Haroonabad">Haroonabad</option>
-<option value="Hasilpur">Hasilpur</option>
-<option value="Haveli Lakha">Haveli Lakha</option>
-<option value="Jatoi">Jatoi</option>
-<option value="Jalalpur">Jalalpur</option>
-<option value="Jattan">Jattan</option>
-<option value="Jampur">Jampur</option>
-<option value="Jaranwala">Jaranwala</option>
-<option value="Jhang">Jhang</option>
-<option value="Jhelum">Jhelum</option>
-<option value="Kalabagh">Kalabagh</option>
-<option value="Karor Lal Esan">Karor Lal Esan</option>
-<option value="Kasur">Kasur</option>
-<option value="Kamalia">Kamalia</option>
-<option value="Kamoke">Kamoke</option>
-<option value="Khanewal">Khanewal</option>
-<option value="Khanpur">Khanpur</option>
-<option value="Kharian">Kharian</option>
-<option value="Khushab">Khushab</option>
-<option value="Kot Addu">Kot Addu</option>
-<option value="Jauharabad">Jauharabad</option>
-<option value="Lahore">Lahore</option>
-<option value="Lalamusa">Lalamusa</option>
-<option value="Layyah">Layyah</option>
-<option value="Liaquat Pur">Liaquat Pur</option>
-<option value="Lodhran">Lodhran</option>
-<option value="Malakwal">Malakwal</option>
-<option value="Mamoori">Mamoori</option>
-<option value="Mailsi">Mailsi</option>
-<option value="Mandi Bahauddin">Mandi Bahauddin</option>
-<option value="Mian Channu">Mian Channu</option>
-<option value="Mianwali">Mianwali</option>
-<option value="Multan">Multan</option>
-<option value="Murree">Murree</option>
-<option value="Muridke">Muridke</option>
-<option value="Mianwali Bangla">Mianwali Bangla</option>
-<option value="Muzaffargarh">Muzaffargarh</option>
-<option value="Narowal">Narowal</option>
-<option value="Nankana Sahib">Nankana Sahib</option>
-<option value="Okara">Okara</option>
-<option value="Renala Khurd">Renala Khurd</option>
-<option value="Pakpattan">Pakpattan</option>
-<option value="Pattoki">Pattoki</option>
-<option value="Pir Mahal">Pir Mahal</option>
-<option value="Qaimpur">Qaimpur</option>
-<option value="Qila Didar Singh">Qila Didar Singh</option>
-<option value="Rabwah">Rabwah</option>
-<option value="Raiwind">Raiwind</option>
-<option value="Rajanpur">Rajanpur</option>
-<option value="Rahim Yar Khan">Rahim Yar Khan</option>
-<option value="Rawalpindi">Rawalpindi</option>
-<option value="Sadiqabad">Sadiqabad</option>
-<option value="Safdarabad">Safdarabad</option>
-<option value="Sahiwal">Sahiwal</option>
-<option value="Sangla Hill">Sangla Hill</option>
-<option value="Sarai Alamgir">Sarai Alamgir</option>
-<option value="Sargodha">Sargodha</option>
-<option value="Shakargarh">Shakargarh</option>
-<option value="Sheikhupura">Sheikhupura</option>
-<option value="Sialkot">Sialkot</option>
-<option value="Sohawa">Sohawa</option>
-<option value="Soianwala">Soianwala</option>
-<option value="Siranwali">Siranwali</option>
-<option value="Talagang">Talagang</option>
-<option value="Taxila">Taxila</option>
-<option value="Toba Tek Singh">Toba Tek Singh</option>
-<option value="Vehari">Vehari</option>
-<option value="Wah Cantonment">Wah Cantonment</option>
-<option value="Wazirabad">Wazirabad</option>
-<option value="" disabled>Sindh Cities</option>
-<option value="Badin">Badin</option>
-<option value="Bhirkan">Bhirkan</option>
-<option value="Rajo Khanani">Rajo Khanani</option>
-<option value="Chak">Chak</option>
-<option value="Dadu">Dadu</option>
-<option value="Digri">Digri</option>
-<option value="Diplo">Diplo</option>
-<option value="Dokri">Dokri</option>
-<option value="Ghotki">Ghotki</option>
-<option value="Haala">Haala</option>
-<option value="Hyderabad">Hyderabad</option>
-<option value="Islamkot">Islamkot</option>
-<option value="Jacobabad">Jacobabad</option>
-<option value="Jamshoro">Jamshoro</option>
-<option value="Jungshahi">Jungshahi</option>
-<option value="Kandhkot">Kandhkot</option>
-<option value="Kandiaro">Kandiaro</option>
-<option value="Karachi">Karachi</option>
-<option value="Kashmore">Kashmore</option>
-<option value="Keti Bandar">Keti Bandar</option>
-<option value="Khairpur">Khairpur</option>
-<option value="Kotri">Kotri</option>
-<option value="Larkana">Larkana</option>
-<option value="Matiari">Matiari</option>
-<option value="Mehar">Mehar</option>
-<option value="Mirpur Khas">Mirpur Khas</option>
-<option value="Mithani">Mithani</option>
-<option value="Mithi">Mithi</option>
-<option value="Mehrabpur">Mehrabpur</option>
-<option value="Moro">Moro</option>
-<option value="Nagarparkar">Nagarparkar</option>
-<option value="Naudero">Naudero</option>
-<option value="Naushahro Feroze">Naushahro Feroze</option>
-<option value="Naushara">Naushara</option>
-<option value="Nawabshah">Nawabshah</option>
-<option value="Nazimabad">Nazimabad</option>
-<option value="Qambar">Qambar</option>
-<option value="Qasimabad">Qasimabad</option>
-<option value="Ranipur">Ranipur</option>
-<option value="Ratodero">Ratodero</option>
-<option value="Rohri">Rohri</option>
-<option value="Sakrand">Sakrand</option>
-<option value="Sanghar">Sanghar</option>
-<option value="Shahbandar">Shahbandar</option>
-<option value="Shahdadkot">Shahdadkot</option>
-<option value="Shahdadpur">Shahdadpur</option>
-<option value="Shahpur Chakar">Shahpur Chakar</option>
-<option value="Shikarpaur">Shikarpaur</option>
-<option value="Sukkur">Sukkur</option>
-<option value="Tangwani">Tangwani</option>
-<option value="Tando Adam Khan">Tando Adam Khan</option>
-<option value="Tando Allahyar">Tando Allahyar</option>
-<option value="Tando Muhammad Khan">Tando Muhammad Khan</option>
-<option value="Thatta">Thatta</option>
-<option value="Umerkot">Umerkot</option>
-<option value="Warah">Warah</option>
-<option value="" disabled>Khyber Cities</option>
-<option value="Abbottabad">Abbottabad</option>
-<option value="Adezai">Adezai</option>
-<option value="Alpuri">Alpuri</option>
-<option value="Akora Khattak">Akora Khattak</option>
-<option value="Ayubia">Ayubia</option>
-<option value="Banda Daud Shah">Banda Daud Shah</option>
-<option value="Bannu">Bannu</option>
-<option value="Batkhela">Batkhela</option>
-<option value="Battagram">Battagram</option>
-<option value="Birote">Birote</option>
-<option value="Chakdara">Chakdara</option>
-<option value="Charsadda">Charsadda</option>
-<option value="Chitral">Chitral</option>
-<option value="Daggar">Daggar</option>
-<option value="Dargai">Dargai</option>
-<option value="Darya Khan">Darya Khan</option>
-<option value="Dera Ismail Khan">Dera Ismail Khan</option>
-<option value="Doaba">Doaba</option>
-<option value="Dir">Dir</option>
-<option value="Drosh">Drosh</option>
-<option value="Hangu">Hangu</option>
-<option value="Haripur">Haripur</option>
-<option value="Karak">Karak</option>
-<option value="Kohat">Kohat</option>
-<option value="Kulachi">Kulachi</option>
-<option value="Lakki Marwat">Lakki Marwat</option>
-<option value="Latamber">Latamber</option>
-<option value="Madyan">Madyan</option>
-<option value="Mansehra">Mansehra</option>
-<option value="Mardan">Mardan</option>
-<option value="Mastuj">Mastuj</option>
-<option value="Mingora">Mingora</option>
-<option value="Nowshera">Nowshera</option>
-<option value="Paharpur">Paharpur</option>
-<option value="Pabbi">Pabbi</option>
-<option value="Peshawar">Peshawar</option>
-<option value="Saidu Sharif">Saidu Sharif</option>
-<option value="Shorkot">Shorkot</option>
-<option value="Shewa Adda">Shewa Adda</option>
-<option value="Swabi">Swabi</option>
-<option value="Swat">Swat</option>
-<option value="Tangi">Tangi</option>
-<option value="Tank">Tank</option>
-<option value="Thall">Thall</option>
-<option value="Timergara">Timergara</option>
-<option value="Tordher">Tordher</option>
-<option value="" disabled>Balochistan Cities</option>
-<option value="Awaran">Awaran</option>
-<option value="Barkhan">Barkhan</option>
-<option value="Chagai">Chagai</option>
-<option value="Dera Bugti">Dera Bugti</option>
-<option value="Gwadar">Gwadar</option>
-<option value="Harnai">Harnai</option>
-<option value="Jafarabad">Jafarabad</option>
-<option value="Jhal Magsi">Jhal Magsi</option>
-<option value="Kacchi">Kacchi</option>
-<option value="Kalat">Kalat</option>
-<option value="Kech">Kech</option>
-<option value="Kharan">Kharan</option>
-<option value="Khuzdar">Khuzdar</option>
-<option value="Killa Abdullah">Killa Abdullah</option>
-<option value="Killa Saifullah">Killa Saifullah</option>
-<option value="Kohlu">Kohlu</option>
-<option value="Lasbela">Lasbela</option>
-<option value="Lehri">Lehri</option>
-<option value="Loralai">Loralai</option>
-<option value="Mastung">Mastung</option>
-<option value="Musakhel">Musakhel</option>
-<option value="Nasirabad">Nasirabad</option>
-<option value="Nushki">Nushki</option>
-<option value="Panjgur">Panjgur</option>
-<option value="Pishin Valley">Pishin Valley</option>
-<option value="Quetta">Quetta</option>
-<option value="Sherani">Sherani</option>
-<option value="Sibi">Sibi</option>
-<option value="Sohbatpur">Sohbatpur</option>
-<option value="Washuk">Washuk</option>
-<option value="Zhob">Zhob</option>
-<option value="Ziarat">Ziarat</option>
+<option value="" disabled {{ old('cities') ? '' : 'selected' }}>Select a city</option>
+<option value="ABBOTTABAD" {{ old('cities') == 'ABBOTTABAD' ? 'selected' : '' }}>ABBOTTABAD</option>
+<option value="ABPRA" {{ old('cities') == 'ABPRA' ? 'selected' : '' }}>ABPRA</option>
+<option value="ATTOCK" {{ old('cities') == 'ATTOCK' ? 'selected' : '' }}>ATTOCK</option>
+<option value="BAGH" {{ old('cities') == 'BAGH' ? 'selected' : '' }}>BAGH</option>
+<option value="BAHAWALPUR" {{ old('cities') == 'BAHAWALPUR' ? 'selected' : '' }}>BAHAWALPUR</option>
+<option value="BALLO KHEL" {{ old('cities') == 'BALLO KHEL' ? 'selected' : '' }}>BALLO KHEL</option>
+<option value="BARIKOT" {{ old('cities') == 'BARIKOT' ? 'selected' : '' }}>BARIKOT</option>
+<option value="BATKHELA" {{ old('cities') == 'BATKHELA' ? 'selected' : '' }}>BATKHELA</option>
+<option value="BHAKKAR" {{ old('cities') == 'BHAKKAR' ? 'selected' : '' }}>BHAKKAR</option>
+<option value="BHALWAL" {{ old('cities') == 'BHALWAL' ? 'selected' : '' }}>BHALWAL</option>
+<option value="BHERA" {{ old('cities') == 'BHERA' ? 'selected' : '' }}>BHERA</option>
+<option value="CENTRUM" {{ old('cities') == 'CENTRUM' ? 'selected' : '' }}>CENTRUM</option>
+<option value="CHAKWAL" {{ old('cities') == 'CHAKWAL' ? 'selected' : '' }}>CHAKWAL</option>
+<option value="CHARSADA" {{ old('cities') == 'CHARSADA' ? 'selected' : '' }}>CHARSADA</option>
+<option value="CHASHMA" {{ old('cities') == 'CHASHMA' ? 'selected' : '' }}>CHASHMA</option>
+<option value="CHECHAWATNI" {{ old('cities') == 'CHECHAWATNI' ? 'selected' : '' }}>CHECHAWATNI</option>
+<option value="CHOTI" {{ old('cities') == 'CHOTI' ? 'selected' : '' }}>CHOTI</option>
+<option value="CHOWK BAHADURPUR" {{ old('cities') == 'CHOWK BAHADURPUR' ? 'selected' : '' }}>CHOWK BAHADURPUR</option>
+<option value="DASKA" {{ old('cities') == 'DASKA' ? 'selected' : '' }}>DASKA</option>
+<option value="DERA GHAZI KHAN" {{ old('cities') == 'DERA GHAZI KHAN' ? 'selected' : '' }}>DERA GHAZI KHAN</option>
+<option value="DERA ISMAIL KHAN" {{ old('cities') == 'DERA ISMAIL KHAN' ? 'selected' : '' }}>DERA ISMAIL KHAN</option>
+<option value="DG KHAN" {{ old('cities') == 'DG KHAN' ? 'selected' : '' }}>DG KHAN</option>
+<option value="ESA KHEL" {{ old('cities') == 'ESA KHEL' ? 'selected' : '' }}>ESA KHEL</option>
+<option value="FAISALABAD" {{ old('cities') == 'FAISALABAD' ? 'selected' : '' }}>FAISALABAD</option>
+<option value="FRN G-11" {{ old('cities') == 'FRN G-11' ? 'selected' : '' }}>FRN G-11</option>
+<option value="G-JOHAR" {{ old('cities') == 'G-JOHAR' ? 'selected' : '' }}>G-JOHAR</option>
+<option value="GHAGHAR" {{ old('cities') == 'GHAGHAR' ? 'selected' : '' }}>GHAGHAR</option>
+<option value="GHOTKI" {{ old('cities') == 'GHOTKI' ? 'selected' : '' }}>GHOTKI</option>
+<option value="GUJRANWALA" {{ old('cities') == 'GUJRANWALA' ? 'selected' : '' }}>GUJRANWALA</option>
+<option value="GUJRAT" {{ old('cities') == 'GUJRAT' ? 'selected' : '' }}>GUJRAT</option>
+<option value="HARIPUR / SHAH MAQSOOD" {{ old('cities') == 'HARIPUR / SHAH MAQSOOD' ? 'selected' : '' }}>HARIPUR / SHAH
+    MAQSOOD</option>
+<option value="HASSAN ABDAL" {{ old('cities') == 'HASSAN ABDAL' ? 'selected' : '' }}>HASSAN ABDAL</option>
+<option value="HATTAR" {{ old('cities') == 'HATTAR' ? 'selected' : '' }}>HATTAR</option>
+<option value="HYDERABAD" {{ old('cities') == 'HYDERABAD' ? 'selected' : '' }}>HYDERABAD</option>
+<option value="ISLAMABAD" {{ old('cities') == 'ISLAMABAD' ? 'selected' : '' }}>ISLAMABAD</option>
+<option value="JACCOBABAD" {{ old('cities') == 'JACCOBABAD' ? 'selected' : '' }}>JACCOBABAD</option>
+<option value="JAMPUR" {{ old('cities') == 'JAMPUR' ? 'selected' : '' }}>JAMPUR</option>
+<option value="JHANG" {{ old('cities') == 'JHANG' ? 'selected' : '' }}>JHANG</option>
+<option value="JHANG ROAD" {{ old('cities') == 'JHANG ROAD' ? 'selected' : '' }}>JHANG ROAD</option>
+<option value="JHELUM" {{ old('cities') == 'JHELUM' ? 'selected' : '' }}>JHELUM</option>
+<option value="KABIR WALA" {{ old('cities') == 'KABIR WALA' ? 'selected' : '' }}>KABIR WALA</option>
+<option value="KALA BAGH" {{ old('cities') == 'KALA BAGH' ? 'selected' : '' }}>KALA BAGH</option>
+<option value="KAMALIA" {{ old('cities') == 'KAMALIA' ? 'selected' : '' }}>KAMALIA</option>
+<option value="KAMRA CANTT" {{ old('cities') == 'KAMRA CANTT' ? 'selected' : '' }}>KAMRA CANTT</option>
+<option value="KARACHI" {{ old('cities') == 'KARACHI' ? 'selected' : '' }}>KARACHI</option>
+<option value="KASUR" {{ old('cities') == 'KASUR' ? 'selected' : '' }}>KASUR</option>
+<option value="KHAN PUR" {{ old('cities') == 'KHAN PUR' ? 'selected' : '' }}>KHAN PUR</option>
+<option value="KHANEWAL" {{ old('cities') == 'KHANEWAL' ? 'selected' : '' }}>KHANEWAL</option>
+<option value="KHURRIAN WALA" {{ old('cities') == 'KHURRIAN WALA' ? 'selected' : '' }}>KHURRIAN WALA</option>
+<option value="KOHAT" {{ old('cities') == 'KOHAT' ? 'selected' : '' }}>KOHAT</option>
+<option value="KORANGI" {{ old('cities') == 'KORANGI' ? 'selected' : '' }}>KORANGI</option>
+<option value="KOT MOMIN" {{ old('cities') == 'KOT MOMIN' ? 'selected' : '' }}>KOT MOMIN</option>
+<option value="KOTCHHUTA" {{ old('cities') == 'KOTCHHUTA' ? 'selected' : '' }}>KOTCHHUTA</option>
+<option value="KOTLI" {{ old('cities') == 'KOTLI' ? 'selected' : '' }}>KOTLI</option>
+<option value="KUNDIAN" {{ old('cities') == 'KUNDIAN' ? 'selected' : '' }}>KUNDIAN</option>
+<option value="LAHORE" {{ old('cities') == 'LAHORE' ? 'selected' : '' }}>LAHORE</option>
+<option value="LARKANA" {{ old('cities') == 'LARKANA' ? 'selected' : '' }}>LARKANA</option>
+<option value="MANA" {{ old('cities') == 'MANA' ? 'selected' : '' }}>MANA</option>
+<option value="MANGA MANDI" {{ old('cities') == 'MANGA MANDI' ? 'selected' : '' }}>MANGA MANDI</option>
+<option value="MANSEHRA" {{ old('cities') == 'MANSEHRA' ? 'selected' : '' }}>MANSEHRA</option>
+<option value="MARDAN" {{ old('cities') == 'MARDAN' ? 'selected' : '' }}>MARDAN</option>
+<option value="MIAN CHANNU" {{ old('cities') == 'MIAN CHANNU' ? 'selected' : '' }}>MIAN CHANNU</option>
+<option value="MIANWALI" {{ old('cities') == 'MIANWALI' ? 'selected' : '' }}>MIANWALI</option>
+<option value="MIRPUR AZAD KASHMIR" {{ old('cities') == 'MIRPUR AZAD KASHMIR' ? 'selected' : '' }}>MIRPUR AZAD KASHMIR
+</option>
+<option value="MORO" {{ old('cities') == 'MORO' ? 'selected' : '' }}>MORO</option>
+<option value="MPKHAS" {{ old('cities') == 'MPKHAS' ? 'selected' : '' }}>MPKHAS</option>
+<option value="MULTAN" {{ old('cities') == 'MULTAN' ? 'selected' : '' }}>MULTAN</option>
+<option value="MURREE" {{ old('cities') == 'MURREE' ? 'selected' : '' }}>MURREE</option>
+<option value="MUZAFARGARH" {{ old('cities') == 'MUZAFARGARH' ? 'selected' : '' }}>MUZAFARGARH</option>
+<option value="MUZAFFARABAD" {{ old('cities') == 'MUZAFFARABAD' ? 'selected' : '' }}>MUZAFFARABAD</option>
+<option value="NOWSHERA" {{ old('cities') == 'NOWSHERA' ? 'selected' : '' }}>NOWSHERA</option>
+<option value="OKARA" {{ old('cities') == 'OKARA' ? 'selected' : '' }}>OKARA</option>
+<option value="PEER" {{ old('cities') == 'PEER' ? 'selected' : '' }}>PEER</option>
+<option value="PESHAWAR" {{ old('cities') == 'PESHAWAR' ? 'selected' : '' }}>PESHAWAR</option>
+<option value="PHULARWAN" {{ old('cities') == 'PHULARWAN' ? 'selected' : '' }}>PHULARWAN</option>
+<option value="QUETTA" {{ old('cities') == 'QUETTA' ? 'selected' : '' }}>QUETTA</option>
+<option value="RAIWIND CITY" {{ old('cities') == 'RAIWIND CITY' ? 'selected' : '' }}>RAIWIND CITY</option>
+<option value="RAWALKOT" {{ old('cities') == 'RAWALKOT' ? 'selected' : '' }}>RAWALKOT</option>
+<option value="RAWALPINDI" {{ old('cities') == 'RAWALPINDI' ? 'selected' : '' }}>RAWALPINDI</option>
+<option value="SADIQABAD" {{ old('cities') == 'SADIQABAD' ? 'selected' : '' }}>SADIQABAD</option>
+<option value="SAHIWAL" {{ old('cities') == 'SAHIWAL' ? 'selected' : '' }}>SAHIWAL</option>
+<option value="SAKHI" {{ old('cities') == 'SAKHI' ? 'selected' : '' }}>SAKHI</option>
+<option value="SAKRAND" {{ old('cities') == 'SAKRAND' ? 'selected' : '' }}>SAKRAND</option>
+<option value="SHADAN" {{ old('cities') == 'SHADAN' ? 'selected' : '' }}>SHADAN</option>
+<option value="SHAHDARA" {{ old('cities') == 'SHAHDARA' ? 'selected' : '' }}>SHAHDARA</option>
+<option value="SHAHSADARDIN" {{ old('cities') == 'SHAHSADARDIN' ? 'selected' : '' }}>SHAHSADARDIN</option>
+<option value="SHEIKHUPURA" {{ old('cities') == 'SHEIKHUPURA' ? 'selected' : '' }}>SHEIKHUPURA</option>
+<option value="SHORKOT" {{ old('cities') == 'SHORKOT' ? 'selected' : '' }}>SHORKOT</option>
+<option value="SIALKOT" {{ old('cities') == 'SIALKOT' ? 'selected' : '' }}>SIALKOT</option>
+<option value="SIKANDAR ABAD" {{ old('cities') == 'SIKANDAR ABAD' ? 'selected' : '' }}>SIKANDAR ABAD</option>
+<option value="SUKKAR" {{ old('cities') == 'SUKKAR' ? 'selected' : '' }}>SUKKAR</option>
+<option value="SWAT" {{ old('cities') == 'SWAT' ? 'selected' : '' }}>SWAT</option>
+<option value="TAXILA" {{ old('cities') == 'TAXILA' ? 'selected' : '' }}>TAXILA</option>
+<option value="TOBA TEK SINGH" {{ old('cities') == 'TOBA TEK SINGH' ? 'selected' : '' }}>TOBA TEK SINGH</option>
+<option value="WAH CANTT" {{ old('cities') == 'WAH CANTT' ? 'selected' : '' }}>WAH CANTT</option>

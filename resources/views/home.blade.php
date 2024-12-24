@@ -10,20 +10,20 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="wrap-slider">
-                            <img src="{{ asset('assets/images/slider/slider-organic.jpg') }}" alt="fashion-slideshow" />
+                            <img src="{{ asset('assets/images/slider/slider-organic.jpeg') }}" alt="fashion-slideshow" />
                             <div class="box-content">
                                 <div class="content-slider">
                                     <div class="box-title-slider">
                                         <div class="fade-item fade-item-1 heading title-display text-white">
-                                            Organic Fresh <br />
-                                            Produce
+                                            Export Quality <br />
+                                            Oranges
                                         </div>
                                         <p class="fade-item fade-item-2 body-text-1 text-white">
-                                            Enjoy the best of nature with our selection of fresh.
+                                            From Our Garden to Your Doorstep
                                         </p>
                                     </div>
                                     <div class="fade-item fade-item-3 box-btn-slider">
-                                        <a href="shop-default-grid.html" class="tf-btn btn-fill btn-white"><span
+                                        <a href="{{ route('shop') }}" class="tf-btn btn-fill btn-white"><span
                                                 class="text">Shop Now</span><i class="icon icon-arrowUpRight"></i></a>
                                     </div>
                                 </div>
@@ -32,44 +32,20 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="wrap-slider">
-                            <img src="{{ asset('assets/images/slider/slider-organic2.jpg') }}" alt="fashion-slideshow" />
+                            <img src="{{ asset('assets/images/slider/slider-organic2.jpeg') }}" alt="fashion-slideshow" />
                             <div class="box-content">
                                 <div class="content-slider">
                                     <div class="box-title-slider">
                                         <div class="fade-item fade-item-1 heading title-display text-white">
-                                            100% Organic <br />
-                                            Vegetables
+                                            Vibrant, Juicy and <br />
+                                            Always Fresh
                                         </div>
                                         <p class="fade-item fade-item-2 body-text-1 text-white">
-                                            Savor the purest flavors with our pesticide-free,
-                                            farm-fresh produce.
+                                            Experience the taste of Garden Fresh Oranges.
                                         </p>
                                     </div>
                                     <div class="fade-item fade-item-3 box-btn-slider">
-                                        <a href="shop-default-grid.html" class="tf-btn btn-fill btn-white"><span
-                                                class="text">Shop Now</span><i class="icon icon-arrowUpRight"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="wrap-slider">
-                            <img src="{{ asset('assets/images/slider/slider-organic3.jpg') }}" alt="fashion-slideshow" />
-                            <div class="box-content">
-                                <div class="content-slider">
-                                    <div class="box-title-slider">
-                                        <div class="fade-item fade-item-1 heading title-display text-white">
-                                            Fresh-Squeezed <br />
-                                            Orange Juice
-                                        </div>
-                                        <p class="fade-item fade-item-2 body-text-1 text-white">
-                                            Enjoy the bright, tangy flavor of freshly pressed
-                                            oranges with every sip.
-                                        </p>
-                                    </div>
-                                    <div class="fade-item fade-item-3 box-btn-slider">
-                                        <a href="shop-default-grid.html" class="tf-btn btn-fill btn-white"><span
+                                        <a href="{{ route('shop') }}" class="tf-btn btn-fill btn-white"><span
                                                 class="text">Shop Now</span><i class="icon icon-arrowUpRight"></i></a>
                                     </div>
                                 </div>
@@ -131,8 +107,7 @@
                                         <span class="icon icon-gitDiff"></span>
                                         <span class="tooltip">Compare</span>
                                     </a>
-                                    <a href="#quickView" data-bs-toggle="modal"
-                                        class="box-icon quickview tf-btn-loading">
+                                    <a href="#quickView" data-bs-toggle="modal" class="box-icon quickview tf-btn-loading">
                                         <span class="icon icon-eye"></span>
                                         <span class="tooltip">Quick View</span>
                                     </a>

@@ -13,9 +13,9 @@
             </div>
         @endif
 
-        <div class="list-btn-main">
+        {{-- <div class="list-btn-main">
             <a href="#quickAdd" data-bs-toggle="modal" class="btn-main-product">Quick Add</a>
-        </div>
+        </div> --}}
     </div>
     <div class="card-product-info">
         <a href="{{ $detailsUrl }}" class="title link">{{ $title }}
