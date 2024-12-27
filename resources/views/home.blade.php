@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'The Pets Medic | Home')
+@section('title', 'Garden Fresh | Home')
 @section('content')
     <!-- /Header -->
     <!-- Slider -->

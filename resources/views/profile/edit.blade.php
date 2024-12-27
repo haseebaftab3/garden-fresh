@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'The Pets Medic | Home')
+@section('title', 'Garden Fresh | Home')
 @section('content')
     <div class="axil-dashboard-area axil-section-gap">
         <div class="container">

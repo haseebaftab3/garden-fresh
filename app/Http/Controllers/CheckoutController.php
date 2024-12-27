@@ -287,7 +287,7 @@ class CheckoutController extends Controller
         if (!$order) {
             return redirect()->route('checkout.index')->with('error', 'Order not found.');
         }
-        Mail::to($order->customer->email)->queue(new OrderSuccessMail($order));
+        Mail::to($order->shippingAddress->email)->queue(new OrderSuccessMail($order));
         return view('checkout.success', compact('order'));
     }
 }

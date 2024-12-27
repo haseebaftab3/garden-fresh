@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'The Pets Medic | Home')
+@section('title', 'Garden Fresh | Home')
 @section('content')
     <!-- Start Breadcrumb Area  -->
     <x-breadcrumb home-url="index.html" home-label="Home" current-page="My Account" title="Explore All Products"
@@ -26,7 +26,7 @@
                                 @endauth
                             </h5>
                             @auth
-                                <span class="joining-date">Pets medic Member Since,
+                                <span class="joining-date">Garden Fresh Member Since,
                                     {{ auth()->user()->created_at->format('M Y') }}</span>
                             @else
                                 <span class="joining-date">Sign in to access your account</span>

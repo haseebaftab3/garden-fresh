@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'The Pets Medic | Home')
+@section('title', 'Garden Fresh | Home')
 @section('content')
     <x-breadcrumb home-url="/" home-label="Home" current-page="My Account" title="Explore All Products"
         image="assets/images/product/product-45.png" image-alt="Product Thumbnail" />

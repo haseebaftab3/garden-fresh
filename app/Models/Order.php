@@ -57,6 +57,7 @@ class Order extends Model
     {
         return $this->hasOne(Address::class, 'order_id', 'id');
     }
+
     public function timelines()
     {
         return $this->hasMany(OrderTimeline::class);
