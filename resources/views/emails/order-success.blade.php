@@ -4,98 +4,103 @@
 <head>
     <title>Order Confirmation</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
         body {
             font-family: 'Poppins', Arial, sans-serif;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            color: #333;
         }
 
         .email-container {
-            max-width: 650px;
+            max-width: 700px;
             margin: 40px auto;
             background-color: #ffffff;
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-top: 6px solid #4C9A2A;
         }
 
         .header {
             text-align: center;
-            padding: 25px;
+            padding: 30px;
             background-color: #4C9A2A;
-            color: #fff;
+            color: #ffffff;
         }
 
         .header img {
-            width: 100px;
-            margin-bottom: 10px;
+            width: 120px;
+            margin-bottom: 15px;
         }
 
         .header h1 {
             margin: 0;
-            font-size: 22px;
+            font-size: 26px;
             font-weight: 600;
-            color: #fff;
+            line-height: 1.4;
         }
 
         .content {
-            padding: 20px;
-            text-align: center;
+            padding: 25px;
         }
 
         .content h3 {
-            font-size: 18px;
-            color: #F6841F;
-            font-weight: 600;
+            text-align: center;
             margin-bottom: 20px;
+            color: #333333;
+            font-weight: 600;
         }
 
         .content p {
-            font-size: 14px;
+            color: #555555;
             line-height: 1.8;
-            color: #555;
+            margin-bottom: 15px;
+            font-size: 15px;
         }
 
-        .summary-table {
+        .table {
             width: 100%;
-            margin: 20px 0;
             border-collapse: collapse;
+            margin-bottom: 20px;
         }
 
-        .summary-table th,
-        .summary-table td {
-            text-align: left;
+        .table th,
+        .table td {
             padding: 12px;
+            border: 1px solid #dddddd;
+            text-align: left;
             font-size: 14px;
-            border: 1px solid #eaeaea;
         }
 
-        .summary-table th {
-            background-color: #F6841F;
-            color: #fff;
+        .table th {
+            background-color: #71BF44;
+            color: #ffffff;
             font-weight: 600;
         }
 
-        .summary-table .total-row td {
+        .table td {
+            color: #555555;
+        }
+
+        .total-row td {
             font-weight: 600;
-            color: #fff;
+            color: #ffffff;
             background-color: #4C9A2A;
             font-size: 15px;
         }
 
         .footer {
             text-align: center;
-            padding: 20px;
-            background-color: #F6841F;
-            color: #fff;
+            padding: 25px;
+            background-color: #f4f4f4;
+            font-size: 14px;
+            color: #777777;
         }
 
         .footer a {
-            color: #fff;
+            color: #4C9A2A;
             text-decoration: none;
             font-weight: 500;
         }
@@ -105,23 +110,27 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
+        @media only screen and (max-width: 768px) {
             .email-container {
                 margin: 20px;
             }
 
-            .content p {
-                font-size: 13px;
+            .header h1 {
+                font-size: 22px;
             }
 
-            .summary-table th,
-            .summary-table td {
-                font-size: 12px;
-                padding: 8px;
+            .content p {
+                font-size: 14px;
+            }
+
+            .table th,
+            .table td {
+                font-size: 13px;
+                padding: 10px;
             }
 
             .footer {
-                font-size: 12px;
+                font-size: 13px;
             }
         }
     </style>
@@ -137,13 +146,19 @@
 
         <!-- Content Section -->
         <div class="content">
-            <p>Hello, {{ $order->customer_name }}!</p>
-            <p>Your order <strong>#{{ $order->order_number }}</strong> has been successfully placed. A confirmation
-                email has been sent to your inbox. You will receive updates when your order ships.</p>
+            <p>
+                Hello, {{ $order->customer_name }}!<br>
+                Your order <strong>#{{ $order->order_number }}</strong> has been successfully placed. Thank you for
+                choosing Garden Fresh!
+            </p>
+            <p>
+                We’ve sent a confirmation email to your inbox. You will receive another email when your order is
+                shipped.
+            </p>
 
             <!-- Order Summary -->
             <h3>Order Summary</h3>
-            <table class="summary-table">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>Product</th>
@@ -169,15 +184,21 @@
             </table>
 
             <!-- Payment Details -->
-            <p><strong>Payment Method:</strong>
+            <h3>Payment Details</h3>
+            <p>
+                <strong>Payment Method:</strong>
                 {{ ucfirst($order->payment->payment_method === 'cod' ? 'Cash on Delivery' : $order->payment->payment_method ?? 'N/A') }}
             </p>
-            <p><strong>Total Paid:</strong> PKR {{ number_format($order->total, 2) }}</p>
+            <p>
+                <strong>Total Paid:</strong> PKR {{ number_format($order->total, 2) }}
+            </p>
         </div>
 
         <!-- Footer Section -->
         <div class="footer">
-            <p><a href="{{ route('home') }}">Visit Our Website</a> | <a href="{{ route('shop') }}">Shop More</a></p>
+            <p>
+                <a href="{{ route('home') }}">Visit Our Website</a> | <a href="{{ route('shop') }}">Shop More</a>
+            </p>
             <p>&copy; {{ date('Y') }} Garden Fresh. All rights reserved.</p>
         </div>
     </div>
