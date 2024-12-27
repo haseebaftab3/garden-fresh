@@ -181,25 +181,12 @@
     </section>
     <!-- /Delivery -->
     <!-- Iconbox -->
-    <section class="flat-spacing pt-0">
+    <section class="flat-spacing">
         <div class="container">
             <div dir="ltr" class="swiper tf-sw-iconbox" data-preview="4" data-tablet="3" data-mobile-sm="2"
                 data-mobile="1" data-space-lg="30" data-space-md="30" data-space="15" data-pagination="1"
                 data-pagination-sm="2" data-pagination-md="3" data-pagination-lg="4">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="tf-icon-box">
-                            <div class="icon-box">
-                                <span class="icon icon-return"></span>
-                            </div>
-                            <div class="content text-center">
-                                <h6>14-Day Returns</h6>
-                                <p class="text-secondary">
-                                    Risk-free shopping with easy returns.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                     <div class="swiper-slide">
                         <div class="tf-icon-box">
                             <div class="icon-box">
@@ -215,13 +202,18 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="tf-icon-box">
-                            <div class="icon-box">
-                                <span class="icon icon-headset"></span>
-                            </div>
+
+                            <img src="{{ asset('assets/images/icons/2.png') }}"
+                                style="
+                                height: 42px;
+                                margin: 0;
+                                padding: 0;
+                            "
+                                alt="">
                             <div class="content text-center">
-                                <h6>24/7 Support</h6>
+                                <h6>Export Quality</h6>
                                 <p class="text-secondary">
-                                    24/7 support, always here just for you
+                                    Premium products with global standards.
                                 </p>
                             </div>
                         </div>
@@ -229,12 +221,31 @@
                     <div class="swiper-slide">
                         <div class="tf-icon-box">
                             <div class="icon-box">
-                                <span class="icon icon-sealCheck"></span>
+                                <span class="icon icon-headset"></span>
                             </div>
                             <div class="content text-center">
-                                <h6>Member Discounts</h6>
+                                <h6>24/7 Support</h6>
                                 <p class="text-secondary">
-                                    Special prices for our loyal customers.
+                                    Always here, ready to assist you.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="tf-icon-box">
+
+                            <img src="{{ asset('assets/images/icons/1.png') }}"
+                                style="
+                                height: 42px;
+                                margin: 0;
+                                padding: 0;
+                            "
+                                alt="">
+
+                            <div class="content text-center">
+                                <h6>Organic</h6>
+                                <p class="text-secondary">
+                                    Sustainable and eco-friendly products.
                                 </p>
                             </div>
                         </div>
@@ -244,6 +255,7 @@
             </div>
         </div>
     </section>
+
     <!-- /Iconbox -->
     <!-- Gallery shop gram -->
     <section class="mb-5">
