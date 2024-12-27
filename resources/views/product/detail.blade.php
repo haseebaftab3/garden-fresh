@@ -14,7 +14,6 @@
                     <i class="icon icon-arrRight"></i>
                     <span class="text text-caption-1">{{ $product->title }}</span>
                 </div>
-
             </div>
         </div>
     </div>
