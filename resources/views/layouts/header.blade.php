@@ -1,3 +1,40 @@
+<div class="tf-topbar topbar-white bg-main">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-12 text-center">
+                <div class="wrapper-slider-topbar">
+                    <div class="swiper tf-sw-top_bar" data-preview="1" data-space="0" data-loop="true" data-speed="2000"
+                        data-auto-play="true" data-delay="2000">
+                        <div class="swiper-wrapper">
+                            <!-- English: Free Shipping -->
+                            <div class="swiper-slide">
+                                <p class="top-bar-text text-line-clamp-1 text-btn-uppercase fw-semibold letter-1">
+                                    Free shipping on all orders. <span class="text-primary">13% Off</span>
+                                </p>
+                            </div>
+
+                            <!-- English: 13% Off -->
+                            <div class="swiper-slide">
+                                <p class="top-bar-text text-line-clamp-1 text-btn-uppercase fw-semibold letter-1">
+                                    Enjoy 13% off - Limited Time Only!
+                                </p>
+                            </div>
+                            <!-- Urdu: 13% Off -->
+                            <div class="swiper-slide">
+                                <p class="top-bar-text text-line-clamp-1 text-btn-uppercase fw-semibold letter-1">
+                                    Delivering Nationwide Across Pakistan - Shop Now!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navigation-topbar nav-next-topbar"><span class="icon icon-arrLeft"></span></div>
+                    <div class="navigation-topbar nav-prev-topbar"><span class="icon icon-arrRight"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <header id="header" class="header-default header-fullwidth">
     <div class="row wrapper-header align-items-center">
         <div class="col-md-4 col-3 d-xl-none">
