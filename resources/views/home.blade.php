@@ -66,9 +66,10 @@
     <section class="flat-spacing">
         <div class="container">
             <div class="heading-section text-center wow fadeInUp">
-                <h3 class="heading">Deal of the day</h3>
+                <h3 class="heading">Discover Our Finest
+                </h3>
                 <p class="subheading text-secondary">
-                    Fresh styles just in! Elevate your look.
+                    Treat yourself to the freshest, juiciest oranges today!
                 </p>
             </div>
             <div dir="ltr" class="swiper tf-sw-recent" data-preview="4" data-tablet="3" data-mobile="2"
