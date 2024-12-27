@@ -481,8 +481,8 @@
 @push('css')
     <style>
         /* strong {
-                                                                                                                                    font-weight: inherit !important;
-                                                                                                                                } */
+                                                                                                                                        font-weight: inherit !important;
+                                                                                                                                    } */
 
         .loader-overlay {
             position: absolute;
@@ -1116,16 +1116,42 @@
             <div class="overflow-y-auto">
                 <div id="alert-placeholder-share"></div>
                 <ul class="tf-social-icon d-flex gap-10">
-                    <li><a href="#" class="box-icon social-facebook bg_line"><i class="icon icon-fb"></i></a>
+                    <!-- Facebook Share -->
+                    <li>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}"
+                            target="_blank" class="box-icon social-facebook bg_line">
+                            <i class="icon icon-fb"></i>
+                        </a>
                     </li>
-                    <li><a href="#" class="box-icon social-twiter bg_line"><i class="icon icon-x"></i></a></li>
-                    <li><a href="#" class="box-icon social-instagram bg_line"><i
-                                class="icon icon-instagram"></i></a></li>
-                    <li><a href="#" class="box-icon social-tiktok bg_line"><i class="icon icon-tiktok"></i></a>
+                    <!-- Twitter Share -->
+                    <li>
+                        <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&text=Check%20this%20out!"
+                            target="_blank" class="box-icon social-twiter bg_line">
+                            <i class="icon icon-x"></i>
+                        </a>
                     </li>
-                    <li><a href="#" class="box-icon social-pinterest bg_line"><i
-                                class="icon icon-pinterest"></i></a></li>
+                    <!-- Instagram (No native share feature, link to profile/page) -->
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank"
+                            class="box-icon social-instagram bg_line">
+                            <i class="icon icon-instagram"></i>
+                        </a>
+                    </li>
+                    <!-- TikTok (No native share feature, link to profile/page) -->
+                    <li>
+                        <a href="https://www.tiktok.com/" target="_blank" class="box-icon social-tiktok bg_line">
+                            <i class="icon icon-tiktok"></i>
+                        </a>
+                    </li>
+                    <!-- Pinterest Share -->
+                    <li>
+                        <a href="https://pinterest.com/pin/create/button/?url={{ urlencode(url()->current()) }}&media=&description=Check%20this%20out!"
+                            target="_blank" class="box-icon social-pinterest bg_line">
+                            <i class="icon icon-pinterest"></i>
+                        </a>
+                    </li>
                 </ul>
+
                 {{-- <form class="form-share" method="post" action="{{ route('share.link') }}" accept-charset="utf-8"> --}}
                 <form class="form-share" accept-charset="utf-8">
                     @csrf
