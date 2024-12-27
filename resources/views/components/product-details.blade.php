@@ -383,7 +383,7 @@
                                         });
 
                                         // Add 'text-btn-uppercase mb_12' classes to all heading tags (h1, h2, h3, h4)
-                                        const headingTags = contentDiv.querySelectorAll("h1, h2, h3, h4");
+                                        const headingTags = contentDiv.querySelectorAll("h1, h2, h3, h4,strong");
                                         headingTags.forEach(heading => {
                                             heading.classList.add("text-btn-uppercase", "mb_12");
                                         });
@@ -578,8 +578,8 @@
 @push('css')
     <style>
         /* strong {
-                                                                                                                                                                                                                                    font-weight: inherit !important;
-                                                                                                                                                                                                                                } */
+                                                                                                                                                                                                                                            font-weight: inherit !important;
+                                                                                                                                                                                                                                        } */
 
         .loader-overlay {
             position: absolute;
