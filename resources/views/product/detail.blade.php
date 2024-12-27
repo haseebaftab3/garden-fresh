@@ -8,6 +8,11 @@
 @section('og_description', $product->metaData->meta_description ?? null)
 @section('og_image', Storage::url($product->cover_image) ?? null)
 @section('canonical_url', url()->current() ?? null)
+@section('twitter_card', 'summary_large_image')
+@section('twitter_title', $product->metaData->meta_title ?? ($product->title ?? null))
+@section('twitter_description', $product->metaData->meta_description ?? null)
+@section('twitter_image', Storage::url($product->cover_image) ?? asset('images/default-twitter-image.jpg'))
+@section('twitter_site', '@gardenfreshpk')
 
 @section('content')
     <div class="product-details">
