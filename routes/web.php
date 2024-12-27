@@ -35,7 +35,6 @@ use App\Http\Controllers\CheckoutController;
 Route::get('/admin/auth/login', [AdminController::class, 'showLoginForm'])->name('admin.login')->middleware('guest:admin');
 Route::post('/admin/auth/login', [AdminController::class, 'login'])->name('admin.login.submit')->middleware('guest:admin');
 Route::post('/admin/auth/logout', [AdminController::class, 'logout'])->name('admin.logout')->middleware('guest:admin');
-Route::get('/admin', [AdminDashboardController::class, 'dashboard'])->name('admin.dashboard');
 
 Route::post('/cart/add', [CartController::class, 'addToCart']);
 Route::delete('/cart/remove/{id}', [CartController::class, 'removeFromCart']);
@@ -69,6 +68,7 @@ Route::prefix('category')->group(function () {
 // Dashboard
 Route::middleware(['auth:admin'])->group(function () {
     // Dashboard
+    Route::get('/admin', [AdminDashboardController::class, 'dashboard'])->name('admin.dashboard');
 
     // Products
     Route::prefix('admin/')->group(function () {
