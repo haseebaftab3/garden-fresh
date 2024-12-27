@@ -14,50 +14,50 @@
         }
 
         .email-container {
-            max-width: 650px;
-            margin: 30px auto;
+            max-width: 700px;
+            margin: 40px auto;
             background-color: #ffffff;
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-top: 5px solid #71BF44;
-            /* Updated to match the logo */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-top: 6px solid #4C9A2A;
         }
 
         .header {
             text-align: center;
             padding: 30px;
             background-color: #4C9A2A;
-            /* Softer green for a cohesive look */
-            color: #fff;
+            color: #ffffff;
         }
 
         .header img {
-            width: 100px;
+            width: 120px;
             margin-bottom: 15px;
         }
 
         .header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 600;
+            line-height: 1.4;
         }
 
         .content {
-            padding: 20px;
+            padding: 25px;
         }
 
         .content h3 {
             text-align: center;
             margin-bottom: 20px;
-            color: #4C4C4C;
+            color: #333333;
             font-weight: 600;
         }
 
         .content p {
-            color: #555;
-            line-height: 1.6;
+            color: #555555;
+            line-height: 1.8;
             margin-bottom: 15px;
+            font-size: 15px;
         }
 
         .table {
@@ -68,44 +68,70 @@
 
         .table th,
         .table td {
-            padding: 10px;
-            border: 1px solid #ddd;
+            padding: 12px;
+            border: 1px solid #dddddd;
             text-align: left;
+            font-size: 14px;
         }
 
         .table th {
             background-color: #71BF44;
-            color: #fff;
+            color: #ffffff;
             font-weight: 600;
         }
 
         .table td {
-            font-size: 14px;
-            color: #555;
+            color: #555555;
         }
 
         .total-row td {
-            font-weight: bold;
-            color: #fff;
+            font-weight: 600;
+            color: #ffffff;
             background-color: #4C9A2A;
+            font-size: 15px;
         }
 
         .footer {
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             background-color: #f4f4f4;
             font-size: 14px;
-            color: #777;
+            color: #777777;
         }
 
         .footer a {
-            color: #71BF44;
+            color: #4C9A2A;
             text-decoration: none;
             font-weight: 500;
         }
 
         .footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media only screen and (max-width: 768px) {
+            .email-container {
+                margin: 20px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .content p {
+                font-size: 14px;
+            }
+
+            .table th,
+            .table td {
+                font-size: 13px;
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 13px;
+            }
         }
     </style>
 </head>
@@ -120,8 +146,15 @@
 
         <!-- Content Section -->
         <div class="content">
-            <p>Your order <strong>#{{ $order->order_number }}</strong> has been successfully placed!</p>
-            <p>A confirmation email has been sent to your inbox. We’ll notify you once your order is on the way.</p>
+            <p>
+                Hello, {{ $order->customer_name }}!<br>
+                Your order <strong>#{{ $order->order_number }}</strong> has been successfully placed. Thank you for
+                choosing Garden Fresh!
+            </p>
+            <p>
+                We’ve sent a confirmation email to your inbox. You will receive another email when your order is
+                shipped.
+            </p>
 
             <!-- Order Summary -->
             <h3>Order Summary</h3>
@@ -152,10 +185,13 @@
 
             <!-- Payment Details -->
             <h3>Payment Details</h3>
-            <p><strong>Payment Method:</strong>
+            <p>
+                <strong>Payment Method:</strong>
                 {{ ucfirst($order->payment->payment_method === 'cod' ? 'Cash on Delivery' : $order->payment->payment_method ?? 'N/A') }}
             </p>
-            <p><strong>Total Paid:</strong> PKR {{ number_format($order->total, 2) }}</p>
+            <p>
+                <strong>Total Paid:</strong> PKR {{ number_format($order->total, 2) }}
+            </p>
         </div>
 
         <!-- Footer Section -->
