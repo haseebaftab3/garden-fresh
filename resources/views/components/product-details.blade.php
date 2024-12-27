@@ -481,8 +481,8 @@
 @push('css')
     <style>
         /* strong {
-                                                                                                                                            font-weight: inherit !important;
-                                                                                                                                        } */
+                                                                                                                                                        font-weight: inherit !important;
+                                                                                                                                                    } */
 
         .loader-overlay {
             position: absolute;
@@ -1123,6 +1123,22 @@
                             <i class="icon icon-fb"></i>
                         </a>
                     </li>
+                    <li>
+                        <a href="#" class="box-icon social-whatsapp" id="share-whatsapp"
+                            style="background-color: #25D366;">
+                            <i class="icon icon-whatsapp"></i>
+                        </a>
+                    </li>
+                    <script>
+                        document.getElementById('share-whatsapp').addEventListener('click', function(e) {
+                            e.preventDefault();
+                            const url = encodeURIComponent(window.location.href); // URL to share
+                            const message = encodeURIComponent("Check this out! Here's the link: " + url); // Custom message
+                            const whatsappURL = `https://wa.me/?text=${message}`;
+                            window.open(whatsappURL, '_blank');
+                        });
+                    </script>
+
                     <!-- Twitter Share -->
                     <li>
                         <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&text=Check%20this%20out!"
@@ -1130,13 +1146,8 @@
                             <i class="icon icon-x"></i>
                         </a>
                     </li>
-                    <!-- Instagram (No native share feature, link to profile/page) -->
-                    <li>
-                        <a href="https://www.instagram.com/" target="_blank"
-                            class="box-icon social-instagram bg_line">
-                            <i class="icon icon-instagram"></i>
-                        </a>
-                    </li>
+
+
                     <!-- TikTok (No native share feature, link to profile/page) -->
                     <li>
                         <a href="#" class="box-icon social-instagram bg_line" id="share-instagram-chat">
