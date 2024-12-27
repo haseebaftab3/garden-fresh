@@ -110,7 +110,7 @@ class ProductController extends Controller
             'cover_image' => $coverImage,
             'price' => $validatedData['price'],
             'discount' => $validatedData['discount'] ?? 0.00,
-            $validatedData['sku'] = $validatedData['sku'] ?? 'pmed-' . strtoupper(bin2hex(random_bytes(4))),
+            $validatedData['sku'] = $validatedData['sku'] ?? 'grdf-' . strtoupper(bin2hex(random_bytes(4))),
             'weight' => $validatedData['weight'] ?? null,
             'return_policy' => $validatedData['return_policy'],
             'return_period' => $validatedData['return_period'] ?? null,
@@ -292,7 +292,7 @@ class ProductController extends Controller
         }
         if (empty($validatedData['sku'])) {
             if (empty($product->sku)) {
-                $sku = $validatedData['sku'] = 'pmed-' . strtoupper(bin2hex(random_bytes(4)));
+                $sku = $validatedData['sku'] = 'grdf-' . strtoupper(bin2hex(random_bytes(4)));
             } else {
                 $sku = $product->sku;
             }
