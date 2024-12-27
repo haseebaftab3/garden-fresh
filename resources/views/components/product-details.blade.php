@@ -481,8 +481,8 @@
 @push('css')
     <style>
         /* strong {
-                                                                                                                                        font-weight: inherit !important;
-                                                                                                                                    } */
+                                                                                                                                            font-weight: inherit !important;
+                                                                                                                                        } */
 
         .loader-overlay {
             position: absolute;
@@ -1139,17 +1139,49 @@
                     </li>
                     <!-- TikTok (No native share feature, link to profile/page) -->
                     <li>
-                        <a href="https://www.tiktok.com/" target="_blank" class="box-icon social-tiktok bg_line">
+                        <a href="#" class="box-icon social-instagram bg_line" id="share-instagram-chat">
+                            <i class="icon icon-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="box-icon social-tiktok bg_line" id="share-tiktok-chat">
                             <i class="icon icon-tiktok"></i>
                         </a>
                     </li>
-                    <!-- Pinterest Share -->
-                    <li>
-                        <a href="https://pinterest.com/pin/create/button/?url={{ urlencode(url()->current()) }}&media=&description=Check%20this%20out!"
-                            target="_blank" class="box-icon social-pinterest bg_line">
-                            <i class="icon icon-pinterest"></i>
-                        </a>
-                    </li>
+                    <script>
+                        document.getElementById('share-instagram-chat').addEventListener('click', function(e) {
+                            e.preventDefault();
+                            if (navigator.share) {
+                                navigator.share({
+                                    title: 'Check this out!',
+                                    url: window.location.href,
+                                }).then(() => {
+                                    console.log('Shared successfully');
+                                }).catch(err => {
+                                    console.error('Error sharing:', err);
+                                });
+                            } else {
+                                alert('Sharing not supported on this browser. Copy the link manually!');
+                            }
+                        });
+
+                        document.getElementById('share-tiktok-chat').addEventListener('click', function(e) {
+                            e.preventDefault();
+                            if (navigator.share) {
+                                navigator.share({
+                                    title: 'Check this out!',
+                                    url: window.location.href,
+                                }).then(() => {
+                                    console.log('Shared successfully');
+                                }).catch(err => {
+                                    console.error('Error sharing:', err);
+                                });
+                            } else {
+                                alert('Sharing not supported on this browser. Copy the link manually!');
+                            }
+                        });
+                    </script>
+
                 </ul>
 
                 {{-- <form class="form-share" method="post" action="{{ route('share.link') }}" accept-charset="utf-8"> --}}
