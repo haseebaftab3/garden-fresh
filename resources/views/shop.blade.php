@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Garden Fresh | Home')
+@section('title', 'Buy Premium Quality Farm-Fresh Kinnow Oranges Online – Garden Fresh Pakistan')
 @section('content')
 
     <!-- Start Breadcrumb Area  -->

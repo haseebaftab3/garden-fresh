@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Garden Fresh | Home')
+@section('title', 'Garden Fresh | Fresh Organic Produce Delivered to Your Doorstep')
 @section('content')
     <!-- /Header -->
     <!-- Slider -->

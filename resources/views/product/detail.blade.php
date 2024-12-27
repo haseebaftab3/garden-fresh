@@ -1,5 +1,37 @@
 @extends('layouts.master')
-@section('title', 'Product Details')
+@extends('layouts.app')
+
+@section('title', $product->metaData->meta_title ?? $product->title)
+@section('meta_description', $product->metaData->meta_description)
+@section('meta_keywords', $product->metaData->meta_keywords)
+@section('og_title', $product->metaData->meta_title ?? $product->title)
+@section('og_description', $product->metaData->meta_description)
+@section('og_image', Storage::url($product->cover_image))
+@section('canonical_url', url()->current())
+
+@section('content')
+    <div class="product-details">
+        <h1>{{ $product->title }}</h1>
+        <p>{{ $product->description }}</p>
+        <img src="{{ Storage::url($product->cover_image) }}" alt="{{ $product->title }}">
+        <ul>
+            <li>Price: PKR {{ $product->price }}</li>
+            <li>Weight: {{ $product->weight }} grams</li>
+            <li>Manufacturer: {{ $product->manufacturer_name }}</li>
+        </ul>
+
+        <h2>Tags</h2>
+        @foreach ($product->tags as $tag)
+            <span>{{ $tag->tag }}</span>
+        @endforeach
+
+        <h2>Gallery</h2>
+        @foreach ($product->gallery as $image)
+            <img src="{{ Storage::url($image->path) }}" alt="Product Image">
+        @endforeach
+    </div>
+@endsection
+
 @section('content')
 
 
