@@ -4,8 +4,10 @@
 <head>
     <title>Order Confirmation</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
@@ -18,24 +20,27 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-top: 5px solid #F6841F;
+            border-top: 5px solid #71BF44;
+            /* Updated to match the logo */
         }
 
         .header {
             text-align: center;
             padding: 30px;
-            background-color: #71BF44;
+            background-color: #4C9A2A;
+            /* Softer green for a cohesive look */
             color: #fff;
         }
 
         .header img {
-            width: 120px;
-            margin-bottom: 20px;
+            width: 100px;
+            margin-bottom: 15px;
         }
 
         .header h1 {
             margin: 0;
             font-size: 24px;
+            font-weight: 600;
         }
 
         .content {
@@ -45,7 +50,14 @@
         .content h3 {
             text-align: center;
             margin-bottom: 20px;
-            color: #333;
+            color: #4C4C4C;
+            font-weight: 600;
+        }
+
+        .content p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
 
         .table {
@@ -62,14 +74,20 @@
         }
 
         .table th {
-            background-color: #F6841F;
+            background-color: #71BF44;
             color: #fff;
+            font-weight: 600;
+        }
+
+        .table td {
+            font-size: 14px;
+            color: #555;
         }
 
         .total-row td {
             font-weight: bold;
             color: #fff;
-            background-color: #71BF44;
+            background-color: #4C9A2A;
         }
 
         .footer {
@@ -81,8 +99,13 @@
         }
 
         .footer a {
-            color: #F6841F;
+            color: #71BF44;
             text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
