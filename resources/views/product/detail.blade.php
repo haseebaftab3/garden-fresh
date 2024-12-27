@@ -1,13 +1,13 @@
 @extends('layouts.master')
 @extends('layouts.app')
 
-@section('title', $product->metaData->meta_title ?? $product->title)
-@section('meta_description', $product->metaData->meta_description)
-@section('meta_keywords', $product->metaData->meta_keywords)
-@section('og_title', $product->metaData->meta_title ?? $product->title)
-@section('og_description', $product->metaData->meta_description)
-@section('og_image', Storage::url($product->cover_image))
-@section('canonical_url', url()->current())
+@section('title', $product->metaData->meta_title ?? ($product->title ?? null))
+@section('meta_description', $product->metaData->meta_description ?? null)
+@section('meta_keywords', $product->metaData->meta_keywords ?? null)
+@section('og_title', $product->metaData->meta_title ?? ($product->title ?? null))
+@section('og_description', $product->metaData->meta_description ?? null)
+@section('og_image', Storage::url($product->cover_image) ?? null)
+@section('canonical_url', url()->current() ?? null)
 
 @section('content')
     <div class="product-details">
