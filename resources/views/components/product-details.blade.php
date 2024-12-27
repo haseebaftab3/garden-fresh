@@ -313,7 +313,7 @@
                                     </li>
                                     <li>
                                         <p class="text-caption-1">Categories:</p>
-                                        <p class="text-caption-1"><a href="#"
+                                        <p class="text-caption-1"><a href="{{ route('shop') }}"
                                                 class="text-1 link">{{ $product->category->name }}</a>
 
                                         </p>
@@ -481,8 +481,8 @@
 @push('css')
     <style>
         /* strong {
-                                                                            font-weight: inherit !important;
-                                                                        } */
+                                                                                    font-weight: inherit !important;
+                                                                                } */
 
         .loader-overlay {
             position: absolute;
@@ -599,11 +599,20 @@
                 // Apply discount if available
                 if (discount > 0) {
                     discountedPrice = originalPrice * (1 - discount / 100);
-                    oldPriceElement.textContent = originalPrice.toFixed(2);
+                    oldPriceElement.textContent = originalPrice.toLocaleString('en-US', {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    });
                 }
 
-                finalPriceElement.textContent = discountedPrice.toFixed(2);
-                SuccessPrice.textContent = discountedPrice.toFixed(2);
+                finalPriceElement.textContent = discountedPrice.toLocaleString('en-US', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                });
+                SuccessPrice.textContent = discountedPrice.toLocaleString('en-US', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                });
             }
 
 
