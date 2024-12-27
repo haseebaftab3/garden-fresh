@@ -157,7 +157,7 @@
 
                                     @if (!empty($product->description))
                                         <p>
-                                            {!! \Illuminate\Support\Str::limit($product->description, 150) !!}
+                                            {!! \Illuminate\Support\Str::limit(strip_tags($product->description), 150) !!}
                                         </p>
                                     @else
                                         <p>Description not available.</p>
@@ -515,9 +515,9 @@
 
 @push('css')
     <style>
-        strong {
-            font-weight: inherit !important;
-        }
+        /* strong {
+                    font-weight: inherit !important;
+                } */
 
         .loader-overlay {
             position: absolute;
