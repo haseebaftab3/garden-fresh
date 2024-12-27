@@ -16,7 +16,7 @@
                             <!-- English: 13% Off -->
                             <div class="swiper-slide">
                                 <p class="top-bar-text text-line-clamp-1 text-btn-uppercase fw-semibold letter-1">
-                                    Enjoy <span class="text-primary">14% Off</span> off - Limited Time Only!
+                                    Enjoy <span class="text-primary">15% Off</span> off - Limited Time Only!
                                 </p>
                             </div>
                             <!-- Urdu: 13% Off -->
