@@ -1,5 +1,4 @@
 @extends('layouts.master')
-@extends('layouts.app')
 
 @section('title', $product->metaData->meta_title ?? ($product->title ?? null))
 @section('meta_description', $product->metaData->meta_description ?? null)
