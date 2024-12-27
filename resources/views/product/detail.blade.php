@@ -13,28 +13,7 @@
 @section('twitter_image', Storage::url($product->cover_image) ?? asset('images/default-twitter-image.jpg'))
 @section('twitter_site', '@gardenfreshpk')
 
-@section('content')
-    <div class="product-details">
-        <h1>{{ $product->title }}</h1>
-        <p>{{ $product->description }}</p>
-        <img src="{{ Storage::url($product->cover_image) }}" alt="{{ $product->title }}">
-        <ul>
-            <li>Price: PKR {{ $product->price }}</li>
-            <li>Weight: {{ $product->weight }} grams</li>
-            <li>Manufacturer: {{ $product->manufacturer_name }}</li>
-        </ul>
 
-        <h2>Tags</h2>
-        @foreach ($product->tags as $tag)
-            <span>{{ $tag->tag }}</span>
-        @endforeach
-
-        <h2>Gallery</h2>
-        @foreach ($product->gallery as $image)
-            <img src="{{ Storage::url($image->path) }}" alt="Product Image">
-        @endforeach
-    </div>
-@endsection
 
 @section('content')
 
