@@ -15378,6 +15378,10 @@ button .icon {
   }
 }
 @media only screen and (max-width: 767px) {
+    .tf-grid-layout.tf-col-4 {
+        grid-template-columns: none;
+    }
+    
   footer.has-pb {
     padding-bottom: 197px;
   }
