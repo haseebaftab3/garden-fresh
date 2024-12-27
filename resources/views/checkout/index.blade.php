@@ -53,6 +53,7 @@
                             <h5 class="title">Information</h5>
                             <div class="info-box">
 
+                                <!-- Validation Errors -->
                                 @if ($errors->any() || session('error'))
                                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                         <strong>Error:</strong>
@@ -73,15 +74,16 @@
                                 @endif
 
                                 <div class="container">
-                                    <div class="row mb-3">
-                                        <div class="col-md-6">
+                                    <!-- First and Last Name -->
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-6">
                                             <input type="text" id="first-name" name="first_name" class="form-control"
                                                 placeholder="First Name*" value="{{ old('first_name') }}" required>
                                             @error('first_name')
                                                 <span class="text-danger">{{ $message }}</span>
                                             @enderror
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-12 col-md-6">
                                             <input type="text" id="last-name" name="last_name" class="form-control"
                                                 placeholder="Last Name*" value="{{ old('last_name') }}" required>
                                             @error('last_name')
@@ -90,8 +92,9 @@
                                         </div>
                                     </div>
 
-                                    <div class="row mb-3">
-                                        <div class="col-md-6">
+                                    <!-- Email and Phone -->
+                                    <div class="row g-3 mt-2">
+                                        <div class="col-12 col-md-6">
                                             <input type="email" id="email_1" name="email" class="form-control"
                                                 placeholder="Email Address*" value="{{ old('email') }}" required>
                                             @error('email')
@@ -99,39 +102,18 @@
                                             @enderror
                                         </div>
 
-                                        <div class="col-md-6">
+                                        <div class="col-12 col-md-6">
                                             <input type="tel" id="phone" name="phone" class="form-control"
                                                 placeholder="Phone Number*" value="{{ old('phone') }}" required>
                                             @error('phone')
                                                 <span class="text-danger">{{ $message }}</span>
                                             @enderror
                                         </div>
-                                        @push('css')
-                                            <link
-                                                href="https://cdn.jsdelivr.net/npm/jquery.inputmask@3.3.4/extra/css/inputmask.min.css"
-                                                rel="stylesheet">
-                                        @endpush
-                                        @push('js')
-                                            <script src="https://cdn.jsdelivr.net/npm/jquery.inputmask@3.3.4/dist/jquery.inputmask.bundle.min.js"></script>
-
-                                            <script>
-                                                // Apply Inputmask for Pakistani phone numbers
-                                                document.addEventListener('DOMContentLoaded', function() {
-                                                    Inputmask({
-                                                        mask: "03##-#######",
-                                                        placeholder: "03XX-XXXXXXX",
-                                                        showMaskOnHover: false,
-                                                        showMaskOnFocus: true
-                                                    }).mask(document.getElementById("phone"));
-                                                });
-                                            </script>
-                                        @endpush
-
-
                                     </div>
 
-                                    <div class="row mb-3">
-                                        <div class="col-md-6">
+                                    <!-- City and Address Line 1 -->
+                                    <div class="row g-3 mt-2">
+                                        <div class="col-12 col-md-6">
                                             <select id="Location" name="city" class="form-select" required>
                                                 @include('checkout.includes.city', [
                                                     'selectedCity' => old('city'),
@@ -141,7 +123,7 @@
                                                 <span class="text-danger">{{ $message }}</span>
                                             @enderror
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-12 col-md-6">
                                             <input type="text" id="address1" name="address_line1" class="form-control"
                                                 placeholder="Street Address*" value="{{ old('address_line1') }}" required>
                                             @error('address_line1')
@@ -150,13 +132,14 @@
                                         </div>
                                     </div>
 
-                                    <div class="row mb-3">
-                                        <div class="col-md-6">
+                                    <!-- Address Line 2 and Postal Code -->
+                                    <div class="row g-3 mt-2">
+                                        <div class="col-12 col-md-6">
                                             <input type="text" id="address2" name="address_line2" class="form-control"
                                                 placeholder="Apartment, suite, etc. (optional)"
                                                 value="{{ old('address_line2') }}">
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-12 col-md-6">
                                             <input type="text" id="postal_code" name="postal_code" class="form-control"
                                                 placeholder="Postal Code*" value="{{ old('postal_code') }}" required>
                                             @error('postal_code')
@@ -165,37 +148,38 @@
                                         </div>
                                     </div>
 
-                                    <div class="row mb-3">
+                                    <!-- Notes -->
+                                    <div class="row mt-3">
                                         <div class="col-12">
                                             <textarea id="notes" name="notes" class="form-control" placeholder="Write note...">{{ old('notes') }}</textarea>
                                         </div>
                                     </div>
 
+                                    <!-- Account Creation -->
                                     @guest
-                                        <div class="row mb-3">
+                                        <div class="row mt-3">
                                             <div class="col-12">
                                                 <div class="form-check">
                                                     <input type="checkbox" id="checkbox1" name="account_create"
                                                         class="form-check-input" value="1"
                                                         {{ old('account_create') ? 'checked' : '' }}
                                                         onclick="togglePasswordFields()">
-                                                    <label for="checkbox1" class="form-check-label">Create an
-                                                        account</label>
+                                                    <label for="checkbox1" class="form-check-label">Create an account</label>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div id="password-fields"
                                             style="display: {{ old('account_create') ? 'block' : 'none' }};">
-                                            <div class="row mb-3">
-                                                <div class="col-md-6">
+                                            <div class="row g-3 mt-2">
+                                                <div class="col-12 col-md-6">
                                                     <input type="password" id="password_1" name="password"
                                                         class="form-control" placeholder="Password*">
                                                     @error('password')
                                                         <span class="text-danger">{{ $message }}</span>
                                                     @enderror
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-12 col-md-6">
                                                     <input type="password" id="password_confirmation"
                                                         name="password_confirmation" class="form-control"
                                                         placeholder="Confirm Password*">
@@ -209,6 +193,27 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- InputMask for Phone Number -->
+                        @push('css')
+                            <link href="https://cdn.jsdelivr.net/npm/jquery.inputmask@3.3.4/extra/css/inputmask.min.css"
+                                rel="stylesheet">
+                        @endpush
+                        @push('js')
+                            <script src="https://cdn.jsdelivr.net/npm/jquery.inputmask@3.3.4/dist/jquery.inputmask.bundle.min.js"></script>
+                            <script>
+                                // Apply Inputmask for Pakistani phone numbers
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    Inputmask({
+                                        mask: "03##-#######",
+                                        placeholder: "03XX-XXXXXXX",
+                                        showMaskOnHover: false,
+                                        showMaskOnFocus: true
+                                    }).mask(document.getElementById("phone"));
+                                });
+                            </script>
+                        @endpush
+
 
                         @push('js')
                             <script>
@@ -245,7 +250,7 @@
                                     </div>
 
                                 </div>
-                                <button type="submit" class="tf-btn btn-reset">Payment</button>
+                                <button type="submit" class="tf-btn btn-reset">Place Order</button>
                             </div>
                         </div>
                     </div>
