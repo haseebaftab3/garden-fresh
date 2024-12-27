@@ -369,6 +369,29 @@
                             </div>
                         </div>
 
+                        @push('js')
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    // Select the div containing the content
+                                    const contentDiv = document.querySelector(".widget-content-inner.active.description-cnt");
+
+                                    if (contentDiv) {
+                                        // Add 'mb_12 text-secondary' classes to all <p> tags
+                                        const pTags = contentDiv.querySelectorAll("p");
+                                        pTags.forEach(p => {
+                                            p.classList.add("mb_12", "text-secondary");
+                                        });
+
+                                        // Add 'text-btn-uppercase mb_12' classes to all heading tags (h1, h2, h3, h4)
+                                        const headingTags = contentDiv.querySelectorAll("h1, h2, h3, h4");
+                                        headingTags.forEach(heading => {
+                                            heading.classList.add("text-btn-uppercase", "mb_12");
+                                        });
+                                    }
+                                });
+                            </script>
+                        @endpush
+
                         <div class="widget-content-inner p-4"
                             style="background-color: #fef8f3; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                             <div class="tab-nutrition">
@@ -555,8 +578,8 @@
 @push('css')
     <style>
         /* strong {
-                                                                                                                                                                                                                                font-weight: inherit !important;
-                                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                                    font-weight: inherit !important;
+                                                                                                                                                                                                                                } */
 
         .loader-overlay {
             position: absolute;
