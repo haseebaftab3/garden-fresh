@@ -252,13 +252,72 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    function renderOrderSummary(cartItems, subtotal) {
-        // Check if required DOM elements exist
-        const $orderTableBody = $("#summery-table-body");
-        const $totalElement = $("#order-total-amount");
+    // function renderOrderSummary(cartItems, subtotal) {
+    //     // Check if required DOM elements exist
+    //     const $orderTableBody = $("#summery-table-body");
+    //     const $totalElement = $("#order-total-amount");
+    //     if (
+    //         $(".axil-order-summery").length == 0 ||
+    //         $(".order-checkout-summery").length == 0
+    //     ) {
+    //         console.log("Required DOM elements are missing.");
+    //         return;
+    //     }
+
+    //     toggleLoader("loader", "summery-table", true);
+
+    //     // Clear the order summary table before rendering
+    //     $orderTableBody.empty();
+
+    //     cartItems.forEach((item) => {
+    //         const productRow = `
+    //             <tr class="order-product">
+    //                 <td>
+    //                     ${item.product_name}
+    //                     <span class="quantity">x${item.quantity}</span>
+    //                     <ul class="variant-details">
+    //                         ${item.variants
+    //                             .map(
+    //                                 (variant) =>
+    //                                     `<li style="list-style: circle" class="m-0">${variant.type}: <span class="text-primary">${variant.value}</span></li>`
+    //                             )
+    //                             .join("")}
+    //                     </ul>
+    //                 </td>
+    //                 <td>${formatCurrency(item.total_price)}</td>
+    //             </tr>
+    //         `;
+    //         $orderTableBody.append(productRow);
+    //     });
+
+    //     // Add subtotal row
+    //     const subtotalRow = `
+    //         <tr class="order-subtotal">
+    //             <td>Subtotal</td>
+    //             <td>${formatCurrency(subtotal)}</td>
+    //         </tr>
+    //     `;
+    //     $orderTableBody.append(subtotalRow);
+
+    //     toggleLoader("loader", "summery-table", false);
+
+    //     // Update the total
+    //     const totalPrice = subtotal + 50; // Example adding fixed shipping cost
+    //     $totalElement.text(formatCurrency(totalPrice));
+    // }
+
+    function renderOrderSummary(
+        cartItems,
+        subtotal,
+        shipping = "Free",
+        discounts = 0
+    ) {
+        // Select DOM elements based on the provided design
+        const $cartList = document.querySelector(".list-product");
+        const $totalElement = document.querySelector(".total-price-checkout");
         if (
-            $(".axil-order-summery").length == 0 ||
-            $(".order-checkout-summery").length == 0
+            $(".list-product").length === 0 ||
+            $(".sec-total-price").length === 0
         ) {
             console.log("Required DOM elements are missing.");
             return;
@@ -266,44 +325,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
         toggleLoader("loader", "summery-table", true);
 
-        // Clear the order summary table before rendering
-        $orderTableBody.empty();
+        // Clear the cart list before rendering
+        $cartList.innerHTML = "";
 
+        // Render each cart item
         cartItems.forEach((item) => {
-            const productRow = `
-                <tr class="order-product">
-                    <td>
-                        ${item.product_name}
-                        <span class="quantity">x${item.quantity}</span>
-                        <ul class="variant-details">
-                            ${item.variants
-                                .map(
-                                    (variant) =>
-                                        `<li style="list-style: circle" class="m-0">${variant.type}: <span class="text-primary">${variant.value}</span></li>`
-                                )
-                                .join("")}
-                        </ul>
-                    </td>
-                    <td>${formatCurrency(item.total_price)}</td>
-                </tr>
+            const variants = item.variants
+                .map(
+                    (variant) =>
+                        `<span class="variant text-caption-1 text-secondary">${variant.type}: ${variant.value}</span>`
+                )
+                .join(", ");
+
+            const cartItemHTML = `
+                <div class="item-product">
+                    <a href="/product/${item.slug}" class="img-product">
+                        <img src="/storage/${item.product_image}" alt="${
+                item.product_name
+            }">
+                    </a>
+                    <div class="content-box">
+                        <div class="info">
+                            <a href="/product/${
+                                item.slug
+                            }" class="name-product link text-title">${
+                item.product_name
+            }</a>
+                            <div class="variant text-caption-1 text-secondary">${variants} Kg</div>
+                        </div>
+                        <div class="total-price text-button">
+                            <span class="count">${item.quantity}</span>X
+                            <span class="price">${formatCurrency(
+                                item.price_per_item
+                            )}</span>
+                        </div>
+                    </div>
+                </div>
             `;
-            $orderTableBody.append(productRow);
+            $cartList.insertAdjacentHTML("beforeend", cartItemHTML);
         });
 
-        // Add subtotal row
-        const subtotalRow = `
-            <tr class="order-subtotal">
-                <td>Subtotal</td>
-                <td>${formatCurrency(subtotal)}</td>
-            </tr>
-        `;
-        $orderTableBody.append(subtotalRow);
-
         toggleLoader("loader", "summery-table", false);
-
-        // Update the total
-        const totalPrice = subtotal + 50; // Example adding fixed shipping cost
-        $totalElement.text(formatCurrency(totalPrice));
+        $totalElement.textContent = `${formatCurrency(subtotal)}`;
     }
 
     window.updateCartQuantity = function (

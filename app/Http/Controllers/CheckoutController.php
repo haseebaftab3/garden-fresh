@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 use App\Models\{Product, CartItem, User, Order, OrderItem, Address, Payment, OrderTimeline};
 use Exception;
+use App\Mail\OrderSuccessMail;
+use Illuminate\Support\Facades\Mail;
 
 class CheckoutController extends Controller
 {
@@ -94,7 +96,7 @@ class CheckoutController extends Controller
                 'address_line1' => 'required|string|max:255',
                 'address_line2' => 'nullable|string|max:255',
                 'city' => 'required|string|max:255',
-                'phone' => ['required', 'regex:/^((\+92)|(0092)|0)?3[0-9]{9}$/'],
+                'phone' => ['required', 'regex:/^03[0-9]{2}-[0-9]{7}$/'],
                 'email' => 'required|email|max:255',
                 'account_create' => 'nullable|boolean',
                 'password' => 'nullable|required_if:account_create,1|min:8|confirmed',
@@ -138,13 +140,19 @@ class CheckoutController extends Controller
     {
         try {
             return $cartItems->map(function ($item) {
-                $basePrice = $item->variants->isEmpty() ? $item->product->price : 0;
-                $discountPercentage = $item->product->discount ?? 0;
+                // Determine base price
+                $basePrice = $item->product->price;
+
+                // Calculate the total variant price
                 $variantPrice = $item->variants->sum(function ($variant) {
-                    return $variant->variant->variation_price ?? 0;
+                    return $variant->variant->variation_price > 0 ? $variant->variant->variation_price : 0;
                 });
+
+                // Final price is the greater of the variant price or base price
                 $finalPrice = $variantPrice > 0 ? $variantPrice : $basePrice;
 
+                // Apply discount if applicable
+                $discountPercentage = $item->product->discount ?? 0;
                 if ($discountPercentage > 0) {
                     $finalPrice *= (1 - $discountPercentage / 100);
                 }
@@ -169,6 +177,7 @@ class CheckoutController extends Controller
                 ];
             });
         } catch (Exception $e) {
+            // Log the error
             // Log::error('Calculating Subtotal Failed: ' . $e->getMessage());
             throw $e;
         }
@@ -180,7 +189,7 @@ class CheckoutController extends Controller
             return Order::create([
                 'user_id' => optional(auth()->user())->id,
                 'session_id' => $sessionId,
-                'order_number' => uniqid('PMD_ORD_'),
+                'order_number' => 'GF_' . strtoupper(bin2hex(random_bytes(2))),
                 'subtotal' => $subtotal,
                 'total' => $subtotal,
                 'status' => 'pending',
@@ -278,6 +287,7 @@ class CheckoutController extends Controller
         if (!$order) {
             return redirect()->route('checkout.index')->with('error', 'Order not found.');
         }
+        Mail::to($order->customer->email)->queue(new OrderSuccessMail($order));
         return view('checkout.success', compact('order'));
     }
 }
