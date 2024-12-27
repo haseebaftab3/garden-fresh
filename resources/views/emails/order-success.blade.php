@@ -91,7 +91,7 @@
     <div class="email-container">
         <!-- Header Section -->
         <div class="header">
-            <img src="{{ asset('assets/logo/logo-1.png') }}" alt="Garden Fresh Logo">
+            <img src="{{ asset('assets/images/logo/logo-1.png') }}" alt="Garden Fresh Logo">
             <h1>Thank You for Your Order!</h1>
         </div>
 
