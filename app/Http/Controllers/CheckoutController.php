@@ -68,7 +68,7 @@ class CheckoutController extends Controller
             $this->saveOrderItems($data, $cartItemsWithPrices, $order->id);
 
             // Step 6: Save billing address
-            $this->saveAddress($data,  $order, 'billing');
+            $this->saveAddress($data, $order->id, 'billing');
 
             // Step 7: Save payment details
             $this->savePaymentDetails($data, $order->id, $subtotal);
@@ -77,6 +77,11 @@ class CheckoutController extends Controller
             $this->clearCart($sessionId);
 
             DB::commit();
+
+            $order = Order::with('orderItems.product')
+                ->where('id', $order->id)
+                ->firstOrFail();
+            Mail::to($data['email'])->queue(new OrderSuccessMail($order));
 
             return redirect()->route('order.success', ['orderId' => $order->id])
                 ->with('message', 'Your order has been placed successfully!');
@@ -234,11 +239,12 @@ class CheckoutController extends Controller
         }
     }
 
-    private function saveAddress($data,   $order, $type)
+    private function saveAddress($data, $orderId, $type)
     {
         try {
+
             Address::create([
-                'order_id' => $order->id,
+                'order_id' => $orderId,
                 'type' => $type,
                 'address_line1' => $data['address_line1'],
                 'address_line2' => $data['address_line2'] ?? null,
@@ -248,7 +254,6 @@ class CheckoutController extends Controller
                 'email' => $data['email'] ?? null,
                 'postal_code' => $data['postal_code'],
             ]);
-            Mail::to($data['email'])->queue(new OrderSuccessMail($order));
         } catch (Exception $e) {
             // Log::error('Saving Address Failed: ' . $e->getMessage());
             throw $e;

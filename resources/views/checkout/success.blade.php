@@ -230,7 +230,7 @@
         </div>
 
         <div class="order-summary-card">
-            <h3 class="subtitle text-center">Order Summary</h3>
+            <h3 class="subtitle text-center mb-3">Order Summary</h3>
             <table class="table order-table">
                 <thead>
                     <tr>
