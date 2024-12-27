@@ -8,50 +8,52 @@
         <style>
             .order-success-container {
                 background-color: #ffffff;
-                padding: 40px;
+                padding: 40px 20px;
                 border-radius: 15px;
                 max-width: 850px;
-                margin: 50px auto;
+                margin: 30px auto;
                 box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
                 border-top: 5px solid #F6841F;
             }
 
             /* Header Section */
             .order-success-header {
-                margin-bottom: 30px;
+                margin-bottom: 20px;
+                text-align: center;
             }
 
             .icon-circle {
-                width: 90px;
-                height: 90px;
+                width: 70px;
+                height: 70px;
                 border-radius: 50%;
                 background-color: #71BF44;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin: 0 auto 20px;
-                font-size: 50px;
+                margin: 0 auto 15px;
+                font-size: 40px;
                 color: #fff;
             }
 
             .success-title {
-                font-size: 28px;
+                font-size: 24px;
                 font-weight: 700;
                 color: #222;
-                margin-bottom: 15px;
+                margin-bottom: 10px;
             }
 
             .order-message {
-                font-size: 18px;
+                font-size: 16px;
                 color: #555;
-                line-height: 1.8;
+                line-height: 1.6;
+                padding: 0 10px;
             }
 
             /* Order Summary Table */
             .order-summary-card {
                 background-color: #fdfdfd;
                 border-radius: 10px;
-                padding: 20px;
+                padding: 15px;
                 box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
                 margin-bottom: 20px;
             }
@@ -59,20 +61,22 @@
             .order-table {
                 width: 100%;
                 border-collapse: collapse;
+                font-size: 14px;
             }
 
             .order-table th {
                 background-color: #F6841F;
                 color: #fff;
                 font-weight: bold;
-                padding: 12px;
+                padding: 10px;
                 text-align: left;
             }
 
             .order-table td {
-                padding: 12px;
+                padding: 10px;
                 border-bottom: 1px solid #ddd;
                 color: #333;
+                word-wrap: break-word;
             }
 
             .order-total {
@@ -83,7 +87,7 @@
 
             .order-total td {
                 border: none;
-                padding: 15px;
+                padding: 12px;
             }
 
             /* Payment Info Section */
@@ -91,7 +95,7 @@
                 background-color: #f9f9f9;
                 border-radius: 10px;
                 padding: 20px;
-                margin-top: 20px;
+                margin-top: 15px;
             }
 
             .payment-info-list {
@@ -103,7 +107,7 @@
             .payment-info-list li {
                 display: flex;
                 justify-content: space-between;
-                font-size: 16px;
+                font-size: 14px;
                 margin-bottom: 10px;
                 color: #555;
             }
@@ -120,15 +124,16 @@
             /* Action Buttons */
             .action-buttons .axil-btn {
                 display: inline-block;
-                padding: 12px 25px;
-                font-size: 16px;
+                padding: 10px 20px;
+                font-size: 14px;
                 font-weight: 500;
                 border-radius: 25px;
                 text-transform: uppercase;
                 text-decoration: none;
                 transition: all 0.3s ease;
-                margin: 10px;
+                margin: 10px 5px;
                 color: #fff;
+                text-align: center;
             }
 
             .btn-primary {
@@ -150,13 +155,70 @@
             }
 
             .axil-btn i {
-                margin-right: 10px;
+                margin-right: 8px;
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+
+                .order-summary-card,
+                .payment-info-card {
+                    padding: 15px;
+                }
+
+                .order-table th,
+                .order-table td {
+                    padding: 8px;
+                }
+
+                .success-title {
+                    font-size: 20px;
+                }
+
+                .order-message {
+                    font-size: 14px;
+                }
+
+                .action-buttons .axil-btn {
+                    padding: 10px 15px;
+                    font-size: 12px;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .order-success-container {
+                    padding: 20px;
+                }
+
+                .icon-circle {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 30px;
+                }
+
+                .success-title {
+                    font-size: 18px;
+                }
+
+                .order-message {
+                    font-size: 12px;
+                }
+
+                .order-table th,
+                .order-table td {
+                    font-size: 12px;
+                }
+
+                .action-buttons .axil-btn {
+                    font-size: 12px;
+                    padding: 8px 10px;
+                }
             }
         </style>
     @endpush
 
     <div class="order-success-container">
-        <div class="order-success-header text-center">
+        <div class="order-success-header">
             <div class="icon-circle">
                 <i class="fa fa-check-circle" aria-hidden="true"></i>
             </div>
@@ -182,7 +244,7 @@
                     @foreach ($order->orderItems as $item)
                         <tr>
                             <td>{{ $item->product_name }}</td>
-                            <td class="text-center">{{ $item->quantity }}</td>
+                            <td>{{ $item->quantity }}</td>
                             <td>PKR {{ number_format($item->price_per_item, 2) }}</td>
                             <td>PKR {{ number_format($item->total_price, 2) }}</td>
                         </tr>
