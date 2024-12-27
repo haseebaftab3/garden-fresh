@@ -18,7 +18,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="@yield('og_title', 'Buy Premium Quality Farm-Fresh Kinnow Oranges Online – Garden Fresh Pakistan')">
     <meta property="og:description" content="@yield('og_description', 'Order farm-fresh Kinnow oranges with free shipping anywhere in Pakistan. Garden Fresh delivers the juiciest and healthiest oranges to your doorstep.')">
-    <meta property="og:image" content="@yield('og_image', asset('images/kinnow-og-image.jpg'))">
+    <meta property="og:image" content="@yield('og_image', asset('assets/images/og/1.jpeg'))">
     <meta property="og:url" content="@yield('og_url', url()->current())">
     <meta property="og:type" content="@yield('og_type', 'website')">
     <meta property="og:site_name" content="@yield('og_site_name', 'Garden Fresh')">
@@ -27,15 +27,22 @@
     <meta name="twitter:card" content="@yield('twitter_card', 'summary_large_image')">
     <meta name="twitter:title" content="@yield('twitter_title', 'Buy Premium Quality Farm-Fresh Kinnow Oranges Online – Garden Fresh Pakistan')">
     <meta name="twitter:description" content="@yield('twitter_description', 'Get farm-fresh Kinnow oranges delivered to your doorstep in Pakistan. Free shipping on every order.')">
-    <meta name="twitter:image" content="@yield('twitter_image', asset('images/kinnow-twitter-image.jpg'))">
+    <meta name="twitter:image" content="@yield('twitter_image', asset('assets/images/og/1.jpeg'))">
     <meta name="twitter:site" content="@yield('twitter_site', '@gardenfreshpk')">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="@yield('canonical_url', url()->current())">
 
     <!-- Favicon -->
-    <link rel="icon" href="@yield('favicon', asset('images/favicon.ico'))" type="image/x-icon">
-    <link rel="shortcut icon" href="@yield('favicon', asset('images/favicon.ico'))" type="image/x-icon">
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('icons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('icons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('icons/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('icons/site.webmanifest') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('icons/android-chrome-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('icons/android-chrome-512x512.png') }}">
+
+
 
     <script type="application/ld+json">
         {
@@ -51,7 +58,7 @@
             "offers": {
                 "@type": "Offer",
                 "priceCurrency": "@yield('schema_currency', 'PKR')",
-                "price": "@yield('schema_price', '999')",
+                "price": "@yield('schema_price', '3000')",
                 "itemCondition": "https://schema.org/NewCondition",
                 "availability": "https://schema.org/InStock",
                 "url": "@yield('schema_url', url()->current())"
