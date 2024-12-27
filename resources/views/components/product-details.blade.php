@@ -355,7 +355,7 @@
                         </li>
                     </ul>
                     <div class="widget-content-tab">
-                        <div class="widget-content-inner active">
+                        <div class="widget-content-inner active description-cnt">
                             <div>
                                 <p class="mb_12 text-secondary">
                                     @if (!empty($product->description))
@@ -368,7 +368,13 @@
                                 </p>
                             </div>
                         </div>
-
+                        @push('css')
+                            <style>
+                                .description-cnt ul {
+                                    padding-left: 10px
+                                }
+                            </style>
+                        @endpush
                         <div class="widget-content-inner p-4"
                             style="background-color: #fef8f3; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                             <div class="tab-nutrition">
@@ -488,33 +494,35 @@
 
                         <div class="widget-content-inner">
                             <div class="tab-policies">
-                                <div class="text-btn-uppercase mb_12">Return Policies</div>
-                                <p class="mb_12 text-secondary">At Modave, we stand behind the quality of our products.
-                                    If you're not completely satisfied with your purchase, we offer hassle-free returns
-                                    within 30 days of delivery.</p>
-                                <div class="text-btn-uppercase mb_12">Easy Exchanges or Refunds</div>
+                                <div class="text-btn-uppercase mb_12">Return Policy</div>
+                                <p class="mb_12 text-secondary">At Garden Fresh, we take pride in delivering the
+                                    highest quality kinnow oranges. Please note that we do not offer refunds. In the
+                                    rare case of damaged products, we will provide a discount voucher for your next
+                                    order as a gesture of goodwill.</p>
+                                <div class="text-btn-uppercase mb_12">Discount Voucher Eligibility</div>
                                 <ul class="list-text type-disc mb_12 gap-6">
-                                    <li class="text-secondary font-2">Exchange your item for a different size, color,
-                                        or style, or receive a full refund.</li>
-                                    <li class="text-secondary font-2">All returned items must be unworn, in their
-                                        original packaging, and with tags attached.</li>
+                                    <li class="text-secondary font-2">Discount vouchers are issued only if the kinnow
+                                        oranges are proven to be damaged during delivery.</li>
+                                    <li class="text-secondary font-2">You must provide clear proof of damage, including
+                                        photos of the product and packaging.</li>
+                                    <li class="text-secondary font-2">The original packaging and labels must be intact
+                                        for the claim to be processed.</li>
                                 </ul>
                                 <div class="text-btn-uppercase mb_12">Simple Process</div>
                                 <ul class="list-text type-number">
-                                    <li class="text-secondary font-2">Initiate your return online or contact our
-                                        customer service team for assistance.</li>
-                                    <li class="text-secondary font-2">Pack your item securely and include the original
-                                        packing slip.</li>
-                                    <li class="text-secondary font-2">Ship your return back to us using our prepaid
-                                        shipping label.</li>
-                                    <li class="text-secondary font-2">Once received, your refund will be processed
-                                        promptly.</li>
+                                    <li class="text-secondary font-2">Contact our customer service team within 24 hours
+                                        of receiving the product to report any damage.</li>
+                                    <li class="text-secondary font-2">Provide photographic evidence of the damage along
+                                        with your order details.</li>
+                                    <li class="text-secondary font-2">Once approved, you will receive a discount
+                                        voucher code for your next purchase.</li>
                                 </ul>
-                                <p class="text-secondary font-2">For any questions or concerns regarding returns, don't
-                                    hesitate to reach out to our dedicated customer service team. Your satisfaction is
-                                    our priority.</p>
+                                <p class="text-secondary font-2">For any questions or concerns, feel free to reach out
+                                    to the Garden Fresh customer service team. Your satisfaction is our priority, and we
+                                    are here to assist you promptly.</p>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -553,8 +561,8 @@
 @push('css')
     <style>
         /* strong {
-                                                                                                                                                                                        font-weight: inherit !important;
-                                                                                                                                                                                    } */
+                                                                                                                                                                                                        font-weight: inherit !important;
+                                                                                                                                                                                                    } */
 
         .loader-overlay {
             position: absolute;
