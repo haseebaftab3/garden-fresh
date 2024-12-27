@@ -10,21 +10,11 @@
                 <div class="tf-breadcrumb-list">
                     <a href="{{ route('home') }}" class="text text-caption-1">Homepage</a>
                     <i class="icon icon-arrRight"></i>
-                    <a href="#" class="text text-caption-1">Women</a>
+                    <a href="{{ route('shop') }}" class="text text-caption-1">{{ $product->category->name }}</a>
                     <i class="icon icon-arrRight"></i>
-                    <span class="text text-caption-1">Leather boots with tall leg</span>
+                    <span class="text text-caption-1">{{ $product->title }}</span>
                 </div>
-                <div class="tf-breadcrumb-prev-next">
-                    <a href="product-bottom-thumbnails.html" class="tf-breadcrumb-prev">
-                        <i class="icon icon-arrLeft"></i>
-                    </a>
-                    <a href="product-bottom-thumbnails.html" class="tf-breadcrumb-back">
-                        <i class="icon icon-squares-four"></i>
-                    </a>
-                    <a href="product-bottom-thumbnails.html" class="tf-breadcrumb-next">
-                        <i class="icon icon-arrRight"></i>
-                    </a>
-                </div>
+
             </div>
         </div>
     </div>
