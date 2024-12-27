@@ -9,7 +9,7 @@
                             <!-- English: Free Shipping -->
                             <div class="swiper-slide">
                                 <p class="top-bar-text text-line-clamp-1 text-btn-uppercase fw-semibold letter-1">
-                                    Free shipping on all orders. <span class="text-primary">13% Off</span>
+                                    Free shipping on all orders. <span class="text-primary">12% Off</span>
                                 </p>
                             </div>
 

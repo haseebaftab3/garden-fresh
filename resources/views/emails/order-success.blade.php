@@ -8,70 +8,72 @@
 
         body {
             font-family: 'Poppins', Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
+            color: #333333;
         }
 
         .email-container {
             max-width: 700px;
-            margin: 40px auto;
+            margin: 30px auto;
             background-color: #ffffff;
             border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             border-top: 6px solid #4C9A2A;
         }
 
         .header {
             text-align: center;
-            padding: 30px;
+            padding: 40px;
             background-color: #4C9A2A;
             color: #ffffff;
         }
 
         .header img {
-            width: 120px;
-            margin-bottom: 15px;
+            width: 100px;
+            margin-bottom: 10px;
         }
 
         .header h1 {
+            font-size: 28px;
+            font-weight: 700;
             margin: 0;
-            font-size: 26px;
-            font-weight: 600;
-            line-height: 1.4;
+            line-height: 1.3;
         }
 
         .content {
-            padding: 25px;
+            padding: 25px 30px;
         }
 
         .content h3 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #4C9A2A;
             font-weight: 600;
         }
 
         .content p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
             color: #555555;
-            line-height: 1.8;
-            margin-bottom: 15px;
-            font-size: 15px;
         }
 
         .table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
+            margin-top: 20px;
         }
 
         .table th,
         .table td {
-            padding: 12px;
-            border: 1px solid #dddddd;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
             text-align: left;
-            font-size: 14px;
+            font-size: 15px;
         }
 
         .table th {
@@ -85,16 +87,16 @@
         }
 
         .total-row td {
-            font-weight: 600;
-            color: #ffffff;
+            font-weight: 700;
             background-color: #4C9A2A;
-            font-size: 15px;
+            color: #ffffff;
+            font-size: 16px;
         }
 
         .footer {
-            text-align: center;
-            padding: 25px;
             background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px 30px;
             font-size: 14px;
             color: #777777;
         }
@@ -102,7 +104,7 @@
         .footer a {
             color: #4C9A2A;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .footer a:hover {
@@ -112,11 +114,11 @@
         /* Responsive Design */
         @media only screen and (max-width: 768px) {
             .email-container {
-                margin: 20px;
+                margin: 15px;
             }
 
             .header h1 {
-                font-size: 22px;
+                font-size: 24px;
             }
 
             .content p {
@@ -125,7 +127,7 @@
 
             .table th,
             .table td {
-                font-size: 13px;
+                font-size: 14px;
                 padding: 10px;
             }
 
@@ -140,20 +142,18 @@
     <div class="email-container">
         <!-- Header Section -->
         <div class="header">
-            <img src="{{ asset('assets/images/logo/logo-1.png') }}" alt="Garden Fresh Logo">
-            <h1>Thank You for Your Order!</h1>
+            <img src="{{ asset('assets/images/logo/logo-white.png') }}" alt="Garden Fresh Logo">
+            <h1>Order Confirmation</h1>
         </div>
 
         <!-- Content Section -->
         <div class="content">
             <p>
-                Hello, {{ $order->customer_name }}!<br>
-                Your order <strong>#{{ $order->order_number }}</strong> has been successfully placed. Thank you for
-                choosing Garden Fresh!
+                Hello <strong>{{ $order->customer_name }}</strong>,<br>
+                Thank you for placing your order <strong>#{{ $order->order_number }}</strong> with Garden Fresh!
             </p>
             <p>
-                We’ve sent a confirmation email to your inbox. You will receive another email when your order is
-                shipped.
+                A confirmation email has been sent to your inbox. You will be notified again once your order is shipped.
             </p>
 
             <!-- Order Summary -->
@@ -170,14 +170,14 @@
                 <tbody>
                     @foreach ($order->orderItems as $item)
                         <tr>
-                            <td>{{ $item->product_name }}</td>
+                            <td><strong>{{ $item->product_name }}</strong></td>
                             <td>{{ $item->quantity }}</td>
                             <td>PKR {{ number_format($item->price_per_item, 2) }}</td>
                             <td>PKR {{ number_format($item->total_price, 2) }}</td>
                         </tr>
                     @endforeach
                     <tr class="total-row">
-                        <td colspan="3">Total</td>
+                        <td colspan="3">Grand Total</td>
                         <td>PKR {{ number_format($order->total, 2) }}</td>
                     </tr>
                 </tbody>
@@ -190,7 +190,7 @@
                 {{ ucfirst($order->payment->payment_method === 'cod' ? 'Cash on Delivery' : $order->payment->payment_method ?? 'N/A') }}
             </p>
             <p>
-                <strong>Total Paid:</strong> PKR {{ number_format($order->total, 2) }}
+                <strong>Amount Paid:</strong> PKR {{ number_format($order->total, 2) }}
             </p>
         </div>
 
