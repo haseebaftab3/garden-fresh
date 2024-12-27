@@ -347,8 +347,9 @@
                             <span class="inner">Customer Reviews</span>
                         </li> --}}
                         <li class="item-title">
-                            <span class="inner">Shipping & Returns</span>
+                            <span class="inner">Nutritional Value of Oranges</span>
                         </li>
+
                         <li class="item-title">
                             <span class="inner">Return Policies</span>
                         </li>
@@ -368,52 +369,123 @@
                             </div>
                         </div>
 
-                        <div class="widget-content-inner">
-                            <div class="tab-shipping">
-                                <div class="w-100">
-                                    <div class="text-btn-uppercase mb_12">We've got your back</div>
-                                    <p class="mb_12">One delivery fee to most locations (check our Orders & Delivery
-                                        page)</p>
-                                    <p class="">Free returns within 14 days (excludes final sale and
-                                        made-to-order items, face masks and certain products containing hazardous or
-                                        flammable materials, such as fragrances and aerosols)</p>
+                        <div class="widget-content-inner p-4"
+                            style="background-color: #fef8f3; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                            <div class="tab-nutrition">
+                                <!-- Nutritional Facts Heading -->
+                                <div class="w-100 text-center mb-4">
+                                    <h2 class="text-uppercase font-weight-bold" style="color: #F6841F;">Nutritional
+                                        Value of Oranges</h2>
+                                    <p class="text-muted" style="font-size: 16px;">Explore the rich nutrients packed
+                                        in every orange!</p>
                                 </div>
+
+                                <!-- Nutritional Facts Table -->
                                 <div class="w-100">
-                                    <div class="text-btn-uppercase mb_12">Import duties information</div>
-                                    <p>Let us handle the legwork. Delivery duties are included in the item price when
-                                        shipping to all EU countries (excluding the Canary Islands), plus The United
-                                        Kingdom, USA, Canada, China Mainland, Australia, New Zealand, Puerto Rico,
-                                        Switzerland, Singapore, Republic Of Korea, Kuwait, Mexico, Qatar, India, Norway,
-                                        Saudi Arabia, Taiwan Region, Thailand, U.A.E., Japan, Brazil, Isle of Man, San
-                                        Marino, Colombia, Chile, Argentina, Egypt, Lebanon, Hong Kong SAR, Bahrain and
-                                        Turkey. All import duties are included in your order – the price you see is the
-                                        price you pay.</p>
-                                </div>
-                                <div class="w-100">
-                                    <div class="text-btn-uppercase mb_12">Estimated delivery</div>
-                                    <p class="mb_6 font-2">Express: May 10 - May 17</p>
-                                    <p class="font-2">Sending from USA</p>
-                                </div>
-                                <div class="w-100">
-                                    <div class="text-btn-uppercase mb_12">Need more information?</div>
-                                    <div>
-                                        <a href="#"
-                                            class="link text-secondary text-decoration-underline mb_6 font-2">Orders &
-                                            delivery</a>
+                                    <div class="text-btn-uppercase mb-3"
+                                        style="color: #71BF44; font-weight: bold; font-size: 18px;">Nutritional Facts
                                     </div>
-                                    <div>
-                                        <a href="#"
-                                            class="link text-secondary text-decoration-underline mb_6 font-2">Returns &
-                                            refunds</a>
+                                    <p class="text-muted mb-4" style="font-size: 15px;">Here is the nutritional value
+                                        per 100g of an orange:</p>
+                                    <table class="table table-hover table-striped text-center"
+                                        style="border-radius: 8px; overflow: hidden;">
+                                        <thead style="background-color: #F6841F; color: #fff;">
+                                            <tr>
+                                                <th class="text-uppercase" style="font-size: 14px;">Nutrient</th>
+                                                <th class="text-uppercase" style="font-size: 14px;">Amount (per 100g)
+                                                </th>
+                                                <th class="text-uppercase" style="font-size: 14px;">% Daily Value*
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Calories</td>
+                                                <td>47 kcal</td>
+                                                <td>2%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Carbohydrates</td>
+                                                <td>11.8 g</td>
+                                                <td>4%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sugars</td>
+                                                <td>9.4 g</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dietary Fiber</td>
+                                                <td>2.4 g</td>
+                                                <td>9%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vitamin C</td>
+                                                <td>53.2 mg</td>
+                                                <td>59%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Potassium</td>
+                                                <td>181 mg</td>
+                                                <td>5%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Calcium</td>
+                                                <td>40 mg</td>
+                                                <td>4%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Magnesium</td>
+                                                <td>10 mg</td>
+                                                <td>3%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Protein</td>
+                                                <td>0.9 g</td>
+                                                <td>2%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Fat</td>
+                                                <td>0.1 g</td>
+                                                <td>0%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- Health Benefits Section -->
+                                <div class="w-100 mt-4">
+                                    <div class="text-btn-uppercase mb-3"
+                                        style="color: #71BF44; font-weight: bold; font-size: 18px;">Health Benefits
                                     </div>
-                                    <div>
-                                        <a href="#"
-                                            class="link text-secondary text-decoration-underline font-2">Duties &
-                                            taxes</a>
+                                    <div class="card border-0 shadow-sm p-3"
+                                        style="border-left: 5px solid #71BF44; background-color: #f9fff5; border-radius: 8px;">
+                                        <p style="font-size: 15px; line-height: 1.6; color: #333;">Oranges are packed
+                                            with health benefits. They help boost the immune system, promote glowing
+                                            skin, and may reduce the risk of chronic diseases due to their high
+                                            antioxidant content.</p>
                                     </div>
                                 </div>
+
+                                <!-- Additional Information Links -->
+                                {{-- <div class="w-100 mt-4">
+                                    <div class="text-btn-uppercase mb-3"
+                                        style="color: #F6841F; font-weight: bold; font-size: 18px;">Want to know more?
+                                    </div>
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="link text-decoration-underline"
+                                                style="color: #F6841F; font-size: 16px;">More about orange benefits</a>
+                                        </li>
+                                        <li><a href="#" class="link text-decoration-underline"
+                                                style="color: #F6841F; font-size: 16px;">Citrus recipes and tips</a>
+                                        </li>
+                                    </ul>
+                                </div> --}}
                             </div>
                         </div>
+
+
+
                         <div class="widget-content-inner">
                             <div class="tab-policies">
                                 <div class="text-btn-uppercase mb_12">Return Policies</div>
@@ -481,8 +553,8 @@
 @push('css')
     <style>
         /* strong {
-                                                                                                                                                        font-weight: inherit !important;
-                                                                                                                                                    } */
+                                                                                                                                                                                        font-weight: inherit !important;
+                                                                                                                                                                                    } */
 
         .loader-overlay {
             position: absolute;
@@ -556,6 +628,18 @@
             cursor: not-allowed;
             opacity: 0.6;
             pointer-events: none;
+        }
+
+        .social-whatsapp {
+            color: #25D366;
+            /* WhatsApp green */
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .social-whatsapp:hover {
+            color: #128C7E;
+            /* Darker WhatsApp green */
         }
     </style>
 @endpush
