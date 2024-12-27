@@ -13,35 +13,46 @@ class OrderSuccessMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
-    public $order; // Variable to hold order details
+    /**
+     * The order instance.
+     *
+     * @var mixed
+     */
+    public $order;
 
     /**
      * Create a new message instance.
+     *
+     * @param mixed $order Order details
      */
     public function __construct($order)
     {
-        $this->order = $order; // Pass order data to the mail class
+        $this->order = $order;
     }
 
     /**
      * Get the message envelope.
+     *
+     * @return \Illuminate\Mail\Mailables\Envelope
      */
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Thank You for Your Order!',
+            subject: 'Thank You for Your Order!', // Subject of the email
         );
     }
 
     /**
      * Get the message content definition.
+     *
+     * @return \Illuminate\Mail\Mailables\Content
      */
     public function content(): Content
     {
         return new Content(
-            view: 'emails.order-success', // Path to your email blade template
+            view: 'emails.order-success', // Path to the email Blade template
             with: [
-                'order' => $this->order, // Pass order data to the view
+                'order' => $this->order, // Pass the order data to the view
             ],
         );
     }
@@ -53,6 +64,7 @@ class OrderSuccessMail extends Mailable implements ShouldQueue
      */
     public function attachments(): array
     {
+        // Attach order invoice or any relevant file if needed
         return [];
     }
 }

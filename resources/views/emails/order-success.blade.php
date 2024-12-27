@@ -28,6 +28,11 @@
             color: #fff;
         }
 
+        .header img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
         .header h1 {
             margin: 0;
             font-size: 24px;
@@ -84,13 +89,18 @@
 
 <body>
     <div class="email-container">
+        <!-- Header Section -->
         <div class="header">
+            <img src="{{ asset('assets/logo/logo-1.png') }}" alt="Garden Fresh Logo">
             <h1>Thank You for Your Order!</h1>
         </div>
+
+        <!-- Content Section -->
         <div class="content">
             <p>Your order <strong>#{{ $order->order_number }}</strong> has been successfully placed!</p>
             <p>A confirmation email has been sent to your inbox. We’ll notify you once your order is on the way.</p>
 
+            <!-- Order Summary -->
             <h3>Order Summary</h3>
             <table class="table">
                 <thead>
@@ -117,12 +127,15 @@
                 </tbody>
             </table>
 
+            <!-- Payment Details -->
             <h3>Payment Details</h3>
             <p><strong>Payment Method:</strong>
                 {{ ucfirst($order->payment->payment_method === 'cod' ? 'Cash on Delivery' : $order->payment->payment_method ?? 'N/A') }}
             </p>
             <p><strong>Total Paid:</strong> PKR {{ number_format($order->total, 2) }}</p>
         </div>
+
+        <!-- Footer Section -->
         <div class="footer">
             <p>
                 <a href="{{ route('home') }}">Visit Our Website</a> | <a href="{{ route('shop') }}">Shop More</a>
