@@ -368,13 +368,7 @@
                                 </p>
                             </div>
                         </div>
-                        @push('css')
-                            <style>
-                                .description-cnt ul {
-                                    padding-left: 10px
-                                }
-                            </style>
-                        @endpush
+
                         <div class="widget-content-inner p-4"
                             style="background-color: #fef8f3; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                             <div class="tab-nutrition">
@@ -561,8 +555,8 @@
 @push('css')
     <style>
         /* strong {
-                                                                                                                                                                                                        font-weight: inherit !important;
-                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                font-weight: inherit !important;
+                                                                                                                                                                                                            } */
 
         .loader-overlay {
             position: absolute;
