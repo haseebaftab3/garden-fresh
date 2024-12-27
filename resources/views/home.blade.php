@@ -180,18 +180,85 @@
         </div>
     </section>
     <!-- /Delivery -->
-    <section>
+    <!-- Iconbox -->
+    <section class="flat-spacing pt-0">
+        <div class="container">
+            <div dir="ltr" class="swiper tf-sw-iconbox" data-preview="4" data-tablet="3" data-mobile-sm="2"
+                data-mobile="1" data-space-lg="30" data-space-md="30" data-space="15" data-pagination="1"
+                data-pagination-sm="2" data-pagination-md="3" data-pagination-lg="4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="tf-icon-box">
+                            <div class="icon-box">
+                                <span class="icon icon-return"></span>
+                            </div>
+                            <div class="content text-center">
+                                <h6>14-Day Returns</h6>
+                                <p class="text-secondary">
+                                    Risk-free shopping with easy returns.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="tf-icon-box">
+                            <div class="icon-box">
+                                <span class="icon icon-shipping"></span>
+                            </div>
+                            <div class="content text-center">
+                                <h6>Free Shipping</h6>
+                                <p class="text-secondary">
+                                    No extra costs, just the price you see.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="tf-icon-box">
+                            <div class="icon-box">
+                                <span class="icon icon-headset"></span>
+                            </div>
+                            <div class="content text-center">
+                                <h6>24/7 Support</h6>
+                                <p class="text-secondary">
+                                    24/7 support, always here just for you
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="tf-icon-box">
+                            <div class="icon-box">
+                                <span class="icon icon-sealCheck"></span>
+                            </div>
+                            <div class="content text-center">
+                                <h6>Member Discounts</h6>
+                                <p class="text-secondary">
+                                    Special prices for our loyal customers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sw-pagination-iconbox sw-dots type-circle justify-content-center"></div>
+            </div>
+        </div>
+    </section>
+    <!-- /Iconbox -->
+    <!-- Gallery shop gram -->
+    <section class="mb-5">
         <div class="container-full2">
             <div dir="ltr" class="swiper tf-sw-shop-gallery" data-preview="6" data-tablet="3" data-mobile="2"
                 data-space-lg="10" data-space-md="10" data-space="8" data-pagination="2" data-pagination-md="3"
                 data-pagination-lg="1">
                 <div class="swiper-wrapper" id="instagram-gallery">
-                    <!-- Instagram Images will be dynamically added here -->
+
                 </div>
                 <div class="sw-pagination-gallery sw-dots type-circle justify-content-center"></div>
             </div>
         </div>
     </section>
+    <!-- /Gallery shop gram -->
     <script>
         async function fetchInstagramImages() {
             const accessToken =
