@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- Start Breadcrumb Area  -->
-    <x-breadcrumb home-url="index.html" home-label="Home" current-page="My Account" title="Explore All Products"
+    <x-breadcrumb home-url="{{ route('home') }}" home-label="Home" current-page="My Account" title="Explore All Products"
         image="{{ asset('assets/images/section/page-title.jpg') }}" image-alt="Product Thumbnail" />
 
     <!-- End Breadcrumb Area  -->

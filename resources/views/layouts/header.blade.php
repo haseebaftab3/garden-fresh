@@ -6,7 +6,7 @@
             </a>
         </div>
         <div class="col-xl-3 col-md-4 col-6">
-            <a href="index.html" class="logo-header">
+            <a href="{{ route('home') }}" class="logo-header">
                 <img src="{{ asset('assets/images/logo/logo.png') }}" alt="logo" class="logo" />
             </a>
         </div>
@@ -28,7 +28,7 @@
         </div>
         <div class="col-xl-3 col-md-4 col-3">
             <ul class="nav-icon d-flex justify-content-end align-items-center">
-                <li class="nav-search">
+                {{-- <li class="nav-search">
                     <a href="#search" data-bs-toggle="modal" class="nav-icon-item">
                         <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -39,8 +39,8 @@
                                 stroke-linejoin="round" />
                         </svg>
                     </a>
-                </li>
-                <li class="nav-account">
+                </li> --}}
+                {{-- <li class="nav-account">
                     <a href="#" class="nav-icon-item">
                         <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -64,7 +64,7 @@
                             <span class="body-text-">Support</span>
                         </div>
                     </div>
-                </li>
+                </li> --}}
                 {{-- <li class="nav-wishlist">
                     <a href="wish-list.html" class="nav-icon-item">
                         <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none"

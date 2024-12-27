@@ -2,7 +2,7 @@
 @section('title', 'Garden Fresh | Home')
 @section('content')
     <!-- Start Breadcrumb Area  -->
-    <x-breadcrumb home-url="index.html" home-label="Home" current-page="My Account" title="Explore All Products"
+    <x-breadcrumb home-url="{{ route('home') }}" home-label="Home" current-page="My Account" title="Explore All Products"
         image="assets/images/product/product-45.png" image-alt="Product Image" />
 
     <!-- End Breadcrumb Area  -->

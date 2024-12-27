@@ -29,7 +29,7 @@
                         <div id="dropdown-menu-one" class="collapse">
                             <ul class="sub-nav-menu">
                                 <li>
-                                    <a href="index.html" class="sub-nav-link">Fashion Womenswear</a>
+                                    <a href="{{ route('home') }}" class="sub-nav-link">Fashion Womenswear</a>
                                 </li>
                                 <li>
                                     <a href="home-fashion-eleganceNest.html" class="sub-nav-link">Fashion
