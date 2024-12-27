@@ -201,7 +201,7 @@
                                                     @endphp
                                                     <li class="{{ $isAvailable ? '' : 'disabled' }} weight-option text-title"
                                                         data-bs-toggle="popover" data-bs-trigger="hover"
-                                                        data-bs-content="Stock remaining: {{ $isAvailable ? $stock : 'Out of Stock' }}{{ $extraPrice > 0 ? ' | Extra Price: Rs ' . $extraPrice : '' }}"
+                                                        data-bs-content="Available"
                                                         data-value="{{ $variation->variation_value }}"
                                                         data-variation-id="{{ $variation->id }}"
                                                         data-variation-type="{{ $variation->variation_type }}"
@@ -291,8 +291,8 @@
                                         <div class="icon">
                                             <i class="icon-timer"></i>
                                         </div>
-                                        <p class="text-caption-1">Estimated Delivery:&nbsp;&nbsp;<span>12-26
-                                                days</span> (International), <span>3-6 days</span> (United States)</p>
+                                        <p class="text-caption-1">Estimated Delivery:&nbsp;&nbsp;<span>5-10 days</span>
+                                            (Pakistan only)</p>
                                     </div>
                                     <div class="tf-product-info-return">
                                         <div class="icon">
@@ -301,56 +301,21 @@
                                         <p class="text-caption-1">Return within <span>45 days</span> of purchase.
                                             Duties & taxes are non-refundable.</p>
                                     </div>
-                                    <div class="dropdown dropdown-store-location">
-                                        <div class="dropdown-title dropdown-backdrop" data-bs-toggle="dropdown"
-                                            aria-haspopup="true">
-                                            <div class="tf-product-info-view link">
-                                                <div class="icon">
-                                                    <i class="icon-map-pin"></i>
-                                                </div>
-                                                <span>View Store Information</span>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <div class="dropdown-content">
-
-                                                <div class="line-bt"></div>
-                                                <div>
-                                                    <h6>Fashion Modave</h6>
-                                                    <p>Pickup available. Usually ready in 24 hours</p>
-                                                </div>
-                                                <div>
-                                                    <p>766 Rosalinda Forges Suite 044,</p>
-                                                    <p>Gracielahaven, Oregon</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <ul class="tf-product-info-sku">
                                     <li>
                                         <p class="text-caption-1">SKU:</p>
-                                        <p class="text-caption-1 text-1">53453412</p>
+                                        <p class="text-caption-1 text-1">{{ $product->sku }}</p>
                                     </li>
                                     <li>
-                                        <p class="text-caption-1">Stock:</p>
-                                        @if ($finalStock > 0)
-                                            <p class="text-caption-1 text-1"> {{ $finalStock }} Items Left
-                                            </p>
-                                        @else
-                                            <p class="text-caption-1 text-1">0 Items Left</p>
-                                        @endif
-
-                                    </li>
-                                    <li>
-                                        <p class="text-caption-1">Available:</p>
+                                        <p class="text-caption-1">Availability:</p>
                                         <p class="text-caption-1 text-1">{{ $stockStatus }}</p>
                                     </li>
                                     <li>
                                         <p class="text-caption-1">Categories:</p>
-                                        <p class="text-caption-1"><a href="#" class="text-1 link">Clothes</a>,
-                                            <a href="#" class="text-1 link">women</a>, <a href="#"
-                                                class="text-1 link">T-shirt</a>
+                                        <p class="text-caption-1"><a href="#"
+                                                class="text-1 link">{{ $product->category->name }}</a>
+
                                         </p>
                                     </li>
                                 </ul>
@@ -516,8 +481,8 @@
 @push('css')
     <style>
         /* strong {
-                    font-weight: inherit !important;
-                } */
+                                                                            font-weight: inherit !important;
+                                                                        } */
 
         .loader-overlay {
             position: absolute;
