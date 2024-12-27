@@ -555,8 +555,8 @@
 @push('css')
     <style>
         /* strong {
-                                                                                                                                                                                                                font-weight: inherit !important;
-                                                                                                                                                                                                            } */
+                                                                                                                                                                                                                    font-weight: inherit !important;
+                                                                                                                                                                                                                } */
 
         .loader-overlay {
             position: absolute;
@@ -1163,32 +1163,43 @@
             <div class="overflow-y-auto">
                 <div class="tf-product-popup-delivery">
                     <div class="title">Delivery</div>
-                    <p class="text-paragraph">All orders shipped with UPS Express.</p>
-                    <p class="text-paragraph">Always free shipping for orders over US $250.</p>
-                    <p class="text-paragraph">All orders are shipped with a UPS tracking number.</p>
+                    <p class="text-paragraph">At Garden Fresh, we are committed to ensuring your orders are delivered
+                        promptly and with care.</p>
+                    <p class="text-paragraph">We offer <strong>free shipping</strong> on every order, regardless of the
+                        amount.</p>
+                    <p class="text-paragraph">Every order is shipped with a tracking number for your convenience.</p>
                 </div>
                 <div class="tf-product-popup-delivery">
                     <div class="title">Returns</div>
-                    <p class="text-paragraph">Items returned within 14 days of their original shipment date in same
-                        as new condition will be eligible for a full refund or store credit.</p>
-                    <p class="text-paragraph">Refunds will be charged back to the original form of payment used for
-                        purchase.</p>
-                    <p class="text-paragraph">Customer is responsible for shipping charges when making returns and
-                        shipping/handling fees of original purchase is non-refundable.</p>
-                    <p class="text-paragraph">All sale items are final purchases.</p>
+                    <p class="text-paragraph">At Garden Fresh, we prioritize the quality of our products. Please note
+                        that we do not offer refunds. However, if the product is damaged upon delivery, we will issue a
+                        discount voucher for your next order.</p>
+                    <p class="text-paragraph">To be eligible for a discount voucher:</p>
+                    <ul class="text-paragraph">
+                        <li>You must provide clear proof of damage, including photos of the product and packaging.</li>
+                        <li>The original packaging and labels must be intact.</li>
+                    </ul>
+                    <p class="text-paragraph">For reporting damaged items:</p>
+                    <ul class="text-paragraph">
+                        <li>Contact our customer service within 24 hours of receiving your order.</li>
+                        <li>Provide photographic evidence along with your order details.</li>
+                        <li>Once approved, a discount voucher will be issued for your next purchase.</li>
+                    </ul>
                 </div>
                 <div class="tf-product-popup-delivery">
                     <div class="title">Help</div>
-                    <p class="text-paragraph">Give us a shout if you have any other questions and/or concerns.</p>
-                    <p class="text-paragraph">Email: <a href="mailto:contact@domain.com"><span
-                                class="__cf_email__">contact@domain.com</span></a></p>
-                    <p class="text-paragraph mb-0">Phone: +1 (23) 456 789</p>
+                    <p class="text-paragraph">If you have any questions or concerns, feel free to contact us:</p>
+                    <p class="text-paragraph">📧 Email: <a
+                            href="mailto:gardenfreshpk@gmail.com">gardenfreshpk@gmail.com</a></p>
+                    <p class="text-paragraph">📱 WhatsApp (Replies Only): <a href="https://wa.me/923390002134">+92 339
+                            0002134</a></p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- /modal delivery_return -->
+
 
 <!-- modal share social -->
 <div class="modal modalCentered fade tf-product-modal modal-part-content" id="share_social" tabindex="-1"
