@@ -19,6 +19,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryDetailController;
 use App\Http\Controllers\MainProductController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\ShareController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +46,7 @@ Route::get('/get-cart-items', [CartController::class, 'getCartItems'])->name('ca
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
 Route::get('/cart', [CartController::class, 'cart'])->name('cart.index');
 Route::post('/cart/clear', [CartController::class, 'clearCart'])->name('cart.clear');
+Route::post('/share', [ShareController::class, 'shareLink'])->name('share.link');
 
 Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
 Route::get('/order/success/{orderId}', [CheckoutController::class, 'orderSuccess'])->name('order.success');

@@ -298,8 +298,8 @@
                                         <div class="icon">
                                             <i class="icon-arrowClockwise"></i>
                                         </div>
-                                        <p class="text-caption-1">Return within <span>45 days</span> of purchase.
-                                            Duties & taxes are non-refundable.</p>
+                                        <p class="text-caption-1">Return within <span>2 days</span> with Specific
+                                            Terms.</p>
                                     </div>
                                 </div>
                                 <ul class="tf-product-info-sku">
@@ -481,8 +481,8 @@
 @push('css')
     <style>
         /* strong {
-                                                                                    font-weight: inherit !important;
-                                                                                } */
+                                                                                                                                    font-weight: inherit !important;
+                                                                                                                                } */
 
         .loader-overlay {
             position: absolute;
@@ -1023,5 +1023,153 @@
                 }
             });
         }
+    </script>
+@endpush
+
+
+
+<!-- modal ask_question -->
+<div class="modal modalCentered fade tf-product-modal modal-part-content" id="ask_question">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="header">
+                <div class="demo-title">Ask a question</div>
+                <span class="icon-close icon-close-popup" data-bs-dismiss="modal"></span>
+            </div>
+            <div class="overflow-y-auto">
+                <form class="">
+                    <fieldset class="">
+                        <label>Name *</label>
+                        <input type="text" placeholder="" class="" name="text" tabindex="2"
+                            value="" aria-required="true" required="">
+                    </fieldset>
+                    <fieldset class="">
+                        <label>Email *</label>
+                        <input type="email" placeholder="" class="" name="text" tabindex="2"
+                            value="" aria-required="true" required="">
+                    </fieldset>
+                    <fieldset class="">
+                        <label>Phone number</label>
+                        <input type="number" placeholder="" class="" name="text" tabindex="2"
+                            value="" aria-required="true" required="">
+                    </fieldset>
+                    <fieldset class="">
+                        <label>Message</label>
+                        <textarea name="message" rows="4" placeholder="" class="" tabindex="2" aria-required="true"
+                            required=""></textarea>
+                    </fieldset>
+                    <button type="submit" class="btn-style-2 w-100"><span class="text">Send</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /modal ask_question -->
+
+<!-- modal delivery_return -->
+<div class="modal modalCentered fade tf-product-modal modal-part-content" id="delivery_return">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="header">
+                <div class="demo-title">Shipping & Delivery</div>
+                <span class="icon-close icon-close-popup" data-bs-dismiss="modal"></span>
+            </div>
+            <div class="overflow-y-auto">
+                <div class="tf-product-popup-delivery">
+                    <div class="title">Delivery</div>
+                    <p class="text-paragraph">All orders shipped with UPS Express.</p>
+                    <p class="text-paragraph">Always free shipping for orders over US $250.</p>
+                    <p class="text-paragraph">All orders are shipped with a UPS tracking number.</p>
+                </div>
+                <div class="tf-product-popup-delivery">
+                    <div class="title">Returns</div>
+                    <p class="text-paragraph">Items returned within 14 days of their original shipment date in same
+                        as new condition will be eligible for a full refund or store credit.</p>
+                    <p class="text-paragraph">Refunds will be charged back to the original form of payment used for
+                        purchase.</p>
+                    <p class="text-paragraph">Customer is responsible for shipping charges when making returns and
+                        shipping/handling fees of original purchase is non-refundable.</p>
+                    <p class="text-paragraph">All sale items are final purchases.</p>
+                </div>
+                <div class="tf-product-popup-delivery">
+                    <div class="title">Help</div>
+                    <p class="text-paragraph">Give us a shout if you have any other questions and/or concerns.</p>
+                    <p class="text-paragraph">Email: <a href="mailto:contact@domain.com"><span
+                                class="__cf_email__">contact@domain.com</span></a></p>
+                    <p class="text-paragraph mb-0">Phone: +1 (23) 456 789</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /modal delivery_return -->
+
+<!-- modal share social -->
+<div class="modal modalCentered fade tf-product-modal modal-part-content" id="share_social" tabindex="-1"
+    role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="header">
+                <div class="demo-title">Share</div>
+                <span class="icon-close icon-close-popup" data-bs-dismiss="modal" aria-label="Close"></span>
+            </div>
+            <div class="overflow-y-auto">
+                <div id="alert-placeholder-share"></div>
+                <ul class="tf-social-icon d-flex gap-10">
+                    <li><a href="#" class="box-icon social-facebook bg_line"><i class="icon icon-fb"></i></a>
+                    </li>
+                    <li><a href="#" class="box-icon social-twiter bg_line"><i class="icon icon-x"></i></a></li>
+                    <li><a href="#" class="box-icon social-instagram bg_line"><i
+                                class="icon icon-instagram"></i></a></li>
+                    <li><a href="#" class="box-icon social-tiktok bg_line"><i class="icon icon-tiktok"></i></a>
+                    </li>
+                    <li><a href="#" class="box-icon social-pinterest bg_line"><i
+                                class="icon icon-pinterest"></i></a></li>
+                </ul>
+                {{-- <form class="form-share" method="post" action="{{ route('share.link') }}" accept-charset="utf-8"> --}}
+                <form class="form-share" accept-charset="utf-8">
+                    @csrf
+                    <fieldset>
+                        <input type="text" name="link" value="{{ url()->current() }}" tabindex="0"
+                            aria-required="true" readonly>
+                    </fieldset>
+                    <div class="button-submit">
+                        <button class="tf-btn radius-4 btn-fill" type="submit"><span
+                                class="text">Copy</span></button>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /modal share social -->
+@push('js')
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelector('.button-submit button').addEventListener('click', function() {
+            const input = document.querySelector('input[name="link"]');
+            navigator.clipboard.writeText(input.value).then(() => {
+                // Create the Bootstrap alert
+                const alertHTML = `
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Link copied to clipboard!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        `;
+
+                // Insert the alert into the placeholder
+                const alertPlaceholder = document.getElementById('alert-placeholder-share');
+                alertPlaceholder.innerHTML = alertHTML;
+            }).catch(err => {
+                // Handle errors (optional)
+                const alertHTML = `
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                Failed to copy the link. Please try again!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        `;
+                document.getElementById('alert-placeholder').innerHTML = alertHTML;
+            });
+        });
     </script>
 @endpush
