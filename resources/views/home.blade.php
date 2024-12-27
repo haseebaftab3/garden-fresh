@@ -264,7 +264,7 @@
             const accessToken =
                 'IGAAh58XVDuZClBZAE1LRF9XWFdhUjdVYVRSWmVQX05oYVRURFc5YXlEWWhmVldXT3RjdndFOHVqdDM3VDYwRDdNTzlFclA3bWlVV3RZAWVZAfekM3SC1jczZAtNWxMcnd3Q3hCMDdMQXBRRmtVaG11dTdOcU0wWVRFOWVFSlBNQ2dsQQZDZD'; // Replace with your Instagram Access Token
             const endpoint =
-                `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink&access_token=${accessToken}`;
+                `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink&access_token=${accessToken}&limit=20`;
 
             try {
                 const response = await fetch(endpoint);
@@ -297,5 +297,6 @@
 
         fetchInstagramImages();
     </script>
+
 
 @endsection
