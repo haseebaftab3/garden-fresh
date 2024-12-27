@@ -172,10 +172,10 @@
                                 <form accept="#" method="POST" class="product-variations-wrapper">
                                     <div id="alert-placeholder"></div>
 
-                                    <div class="loader-overlay">
+                                    {{-- <div class="loader-overlay">
                                         <i class="fas fa-spinner fa-spin text-primary"></i>
                                         <p>Loading product variations...</p>
-                                    </div>
+                                    </div> --}}
 
                                     @if ($product->variations->where('variation_type', 'weight')->isNotEmpty())
                                         @php
