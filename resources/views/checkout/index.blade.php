@@ -3,18 +3,9 @@
 @section('content')
 
     <!-- page-title -->
-    <div class="page-title" style="background-image: url(images/section/page-title.jpg);">
-        <div class="container">
-            <h3 class="heading text-center">Check Out</h3>
-            <ul class="breadcrumbs d-flex align-items-center justify-content-center">
-                <li><a class="link" href="{{ route('home') }}">Homepage</a></li>
-                <li><i class="icon-arrRight"></i></li>
-                <li><a class="link" href="shop-default-grid.html">Shop</a></li>
-                <li><i class="icon-arrRight"></i></li>
-                <li>View Cart</li>
-            </ul>
-        </div>
-    </div>
+    <x-breadcrumb home-url="{{ route('home') }}" home-label="Home" current-page="Checkout" title="Secure Your Purchase"
+        image="{{ asset('assets/images/bg/1.jpg') }}" image-alt="Checkout Thumbnail" />
+
     <!-- /page-title -->
 
     <!-- Section checkout -->

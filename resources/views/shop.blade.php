@@ -4,7 +4,7 @@
 
     <!-- Start Breadcrumb Area  -->
     <x-breadcrumb home-url="{{ route('home') }}" home-label="Home" current-page="My Account" title="Explore All Products"
-        image="{{ asset('assets/images/section/page-title.jpg') }}" image-alt="Product Thumbnail" />
+        image="{{ asset('assets/images/bg/1.jpg') }}" image-alt="Product Thumbnail" />
 
     <!-- End Breadcrumb Area  -->
     <section class="flat-spacing">

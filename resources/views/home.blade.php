@@ -89,61 +89,77 @@
     <!-- Collection -->
     <section class="flat-spacing pt-0">
         <div class="container">
+            <div class="heading-section text-center wow fadeInUp">
+                <h3 class="heading">Coming Soon at Garden Fresh</h3>
+                <p class="subheading text-secondary">
+                    Exciting new arrivals! Freshness redefined for you.
+                </p>
+            </div>
+
             <div dir="ltr" class="swiper tf-sw-collection" data-preview="3" data-tablet="2" data-mobile-sm="1.7"
                 data-mobile="1" data-space-lg="30" data-space-md="30" data-space="15" data-pagination="1"
                 data-pagination-md="1" data-pagination-lg="1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="collection-position-2 style-5 style-7 hover-img wow fadeInUp" data-wow-delay="0s">
-                            <a class="img-style">
-                                <img class="lazyload" data-src="{{ asset('assets/images/collections/cls-organic-1.jpg') }}"
-                                    src="{{ asset('assets/images/collections/cls-organic-1.jpg') }}" alt="banner-cls" />
+                        <div class="collection-position-2 style-5 style-7 hover-img wow fadeInUp" data-wow-delay="0s"
+                            style="height: 300px;">
+                            <a class="img-style position-relative">
+                                <img class="lazyload" data-src="{{ asset('assets/images/bg/3.jpg') }}"
+                                    src="{{ asset('assets/images/bg/3.jpg') }}" alt="banner-cls" />
+                                <div class="overlay"
+                                    style="height: 100%;background: rgba(0, 0, 0, 0.3);width: 100%;position: absolute;top: 0;left: 0;">
+                                </div>
                             </a>
                             <div class="content">
-                                <span class="text-title text-white">Pure Organic-Vegan</span>
+                                <span class="text-title text-white">Garden Fresh - Premium Quality</span>
                                 <h4 class="title">
-                                    <a href="shop-collection.html" class="link text-white">Fresh Veggie Combos Start from
-                                        $22</a>
+                                    <span class="link text-white">Juicy Pomegranate - Nature's Superfood</span>
                                 </h4>
                                 <div>
-                                    <a href="shop-collection.html" class="btn-line style-white">Shop Now</a>
+                                    <span class="btn-line style-white">Coming Soon</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="collection-position-2 style-5 style-7 hover-img wow fadeInUp" data-wow-delay="0.1s">
-                            <a class="img-style">
-                                <img class="lazyload" data-src="{{ asset('assets/images/collections/cls-organic-2.jpg') }}"
-                                    src="{{ asset('assets/images/collections/cls-organic-2.jpg') }}" alt="banner-cls" />
+                        <div class="collection-position-2 style-5 style-7 hover-img wow fadeInUp" data-wow-delay="0.1s"
+                            style="height: 300px;">
+                            <a class="img-style position-relative">
+                                <img class="lazyload" data-src="{{ asset('assets/images/bg/4.jpg') }}"
+                                    src="{{ asset('assets/images/collections/bg/4.jpg') }}" alt="banner-cls" />
+                                <div class="overlay"
+                                    style="height: 100%;background: rgba(0, 0, 0, 0.3);width: 100%;position: absolute;top: 0;left: 0;">
+                                </div>
                             </a>
                             <div class="content">
-                                <span class="text-title text-white">Top-quality nuts and grains.</span>
+                                <span class="text-title text-white">Garden Fresh - Handpicked Goodness</span>
                                 <h4 class="title">
-                                    <a href="shop-collection.html" class="link text-white">Nut & Grain Combos Start from
-                                        $22</a>
+                                    <span class="link text-white">Tropical Mango - Sweetness Redefined</span>
                                 </h4>
                                 <div>
-                                    <a href="shop-collection.html" class="btn-line style-white">Shop Now</a>
+                                    <span class="btn-line style-white">Coming Soon</span>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="collection-position-2 style-5 style-7 hover-img wow fadeInUp" data-wow-delay="0.2s">
-                            <a class="img-style">
-                                <img class="lazyload"
-                                    data-src="{{ asset('assets/images/collections/cls-organic-3.jpg') }}"
-                                    src="{{ asset('assets/images/collections/cls-organic-3.jpg') }}" alt="banner-cls" />
+                        <div class="collection-position-2 style-5 style-7 hover-img wow fadeInUp" data-wow-delay="0.2s"
+                            style="height: 300px;">
+                            <a class="img-style position-relative">
+                                <img class="lazyload" data-src="{{ asset('assets/images/bg/2.jpg') }}"
+                                    src="{{ asset('assets/images/bg/2.jpg') }}" alt="banner-cls" />
+                                <div class="overlay"
+                                    style="height: 100%;background: rgba(0, 0, 0, 0.3);width: 100%;position: absolute;top: 0;left: 0;">
+                                </div>
                             </a>
                             <div class="content">
-                                <span class="text-title text-white">Delicious and nutritious blends.</span>
+                                <span class="text-title text-white">Garden Fresh - Naturally Nutritious</span>
                                 <h4 class="title">
-                                    <a href="shop-collection.html" class="link text-white">Smoothie Essentials Bundle
-                                        Start from $22</a>
+                                    <span class="link text-white">Exotic Kiwi - Packed with Vitality</span>
                                 </h4>
                                 <div>
-                                    <a href="shop-collection.html" class="btn-line style-white">Shop Now</a>
+                                    <span class="btn-line style-white">Coming Soon</span>
                                 </div>
                             </div>
                         </div>
@@ -160,25 +176,40 @@
             <div class="wg-free-delivery align-items-center tf-grid-layout md-col-2 gap-0">
                 <div class="free-delivery-info text-center">
                     <h3 class="free-delivery-heading text-white">
-                        Get Free Delivery 60 Days
+                        Fresh Citrus Delivered Free for 60 Days!
                     </h3>
                     <p class="text text-white">
-                        Shop now and take advantage of this special offer to get your
-                        favorite items delivered to your doorstep at no extra cost.
+                        Celebrate the New Year with Garden Fresh! Shop now to enjoy a 12% discount on your favorite citrus
+                        fruits and get them delivered to your doorstep at no extra cost.
                     </p>
+                    @php
+                        use Carbon\Carbon;
+
+                        // Current time in Pakistan
+                        $now = Carbon::now('Asia/Karachi');
+                        // End of the year in Pakistan time
+                        $endOfYear = Carbon::create($now->year, 12, 31, 23, 59, 59, 'Asia/Karachi');
+                        // Calculate remaining seconds
+                        $remainingSeconds = $endOfYear->diffInSeconds($now);
+                    @endphp
+
                     <div class="tf-countdown style-2">
-                        <div class="js-countdown" data-timer="1007500" data-labels="Days,Hours,Mins,Secs"></div>
+                        <div class="js-countdown" data-timer="{{ $remainingSeconds }}"
+                            data-labels="Days,Hours,Mins,Secs"></div>
                     </div>
-                    <a href="shop-default-grid.html" class="tf-btn btn-fill btn-white"><span class="text">Buy at a
-                            discount</span><i class="icon icon-arrowUpRight"></i></a>
+
+                    <a href="{{ route('shop') }}" class="tf-btn btn-fill btn-white">
+                        <span class="text">Shop Now & Save 12%</span><i class="icon icon-arrowUpRight"></i>
+                    </a>
                 </div>
                 <div class="free-delivery-img">
                     <img class="lazyload" data-src="{{ asset('assets/images/home/3.jpeg') }}"
-                        src="{{ asset('assets/images/home/3.jpeg') }}" alt="delivery-img" />
+                        src="{{ asset('assets/images/home/3.jpeg') }}" alt="Fresh Citrus Delivery" />
                 </div>
             </div>
         </div>
     </section>
+
     <!-- /Delivery -->
     <!-- Iconbox -->
     <section class="flat-spacing">
