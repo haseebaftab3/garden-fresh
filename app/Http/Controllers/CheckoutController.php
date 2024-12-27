@@ -68,7 +68,7 @@ class CheckoutController extends Controller
             $this->saveOrderItems($data, $cartItemsWithPrices, $order->id);
 
             // Step 6: Save billing address
-            $this->saveAddress($data, $order->id, 'billing');
+            $this->saveAddress($data,  $order, 'billing');
 
             // Step 7: Save payment details
             $this->savePaymentDetails($data, $order->id, $subtotal);
@@ -234,11 +234,11 @@ class CheckoutController extends Controller
         }
     }
 
-    private function saveAddress($data, $orderId, $type)
+    private function saveAddress($data,   $order, $type)
     {
         try {
             Address::create([
-                'order_id' => $orderId,
+                'order_id' => $order->id,
                 'type' => $type,
                 'address_line1' => $data['address_line1'],
                 'address_line2' => $data['address_line2'] ?? null,
@@ -248,6 +248,7 @@ class CheckoutController extends Controller
                 'email' => $data['email'] ?? null,
                 'postal_code' => $data['postal_code'],
             ]);
+            Mail::to($data['email'])->queue(new OrderSuccessMail($order));
         } catch (Exception $e) {
             // Log::error('Saving Address Failed: ' . $e->getMessage());
             throw $e;
@@ -287,7 +288,6 @@ class CheckoutController extends Controller
         if (!$order) {
             return redirect()->route('checkout.index')->with('error', 'Order not found.');
         }
-        Mail::to($order->shippingAddress->email)->queue(new OrderSuccessMail($order));
         return view('checkout.success', compact('order'));
     }
 }
