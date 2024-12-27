@@ -150,7 +150,7 @@
 
                                         @if (!empty($product->discount) && $product->discount > 0)
                                             <div class="badges-on-sale text-btn-uppercase">
-                                                {{ round($product->discount, 1) }}%
+                                                {{ ceil($product->discount) }}%
                                             </div>
                                         @endif
                                     </div>
@@ -555,8 +555,8 @@
 @push('css')
     <style>
         /* strong {
-                                                                                                                                                                                                                        font-weight: inherit !important;
-                                                                                                                                                                                                                    } */
+                                                                                                                                                                                                                                font-weight: inherit !important;
+                                                                                                                                                                                                                            } */
 
         .loader-overlay {
             position: absolute;
