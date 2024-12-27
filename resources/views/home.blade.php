@@ -173,12 +173,62 @@
                             discount</span><i class="icon icon-arrowUpRight"></i></a>
                 </div>
                 <div class="free-delivery-img">
-                    <img class="lazyload" data-src="{{ asset('assets/images/section/delivery-1.jpg') }}"
-                        src="{{ asset('assets/images/section/delivery-1.jpg') }}" alt="delivery-img" />
+                    <img class="lazyload" data-src="{{ asset('assets/images/home/3.jpeg') }}"
+                        src="{{ asset('assets/images/home/3.jpeg') }}" alt="delivery-img" />
                 </div>
             </div>
         </div>
     </section>
     <!-- /Delivery -->
+    <section>
+        <div class="container-full2">
+            <div dir="ltr" class="swiper tf-sw-shop-gallery" data-preview="6" data-tablet="3" data-mobile="2"
+                data-space-lg="10" data-space-md="10" data-space="8" data-pagination="2" data-pagination-md="3"
+                data-pagination-lg="1">
+                <div class="swiper-wrapper" id="instagram-gallery">
+                    <!-- Instagram Images will be dynamically added here -->
+                </div>
+                <div class="sw-pagination-gallery sw-dots type-circle justify-content-center"></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        async function fetchInstagramImages() {
+            const accessToken =
+                'IGAAh58XVDuZClBZAE1LRF9XWFdhUjdVYVRSWmVQX05oYVRURFc5YXlEWWhmVldXT3RjdndFOHVqdDM3VDYwRDdNTzlFclA3bWlVV3RZAWVZAfekM3SC1jczZAtNWxMcnd3Q3hCMDdMQXBRRmtVaG11dTdOcU0wWVRFOWVFSlBNQ2dsQQZDZD'; // Replace with your Instagram Access Token
+            const endpoint =
+                `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink&access_token=${accessToken}`;
+
+            try {
+                const response = await fetch(endpoint);
+                const data = await response.json();
+
+                if (data.data) {
+                    const gallery = document.getElementById('instagram-gallery');
+                    data.data.forEach((item, index) => {
+                        const delay = (index + 1) * 0.1; // Incremental delay for animation
+                        const slide = document.createElement('div');
+                        slide.className = 'swiper-slide';
+                        slide.innerHTML = `
+                            <div class="gallery-item hover-overlay hover-img wow fadeInUp" data-wow-delay="${delay}s">
+                                <div class="img-style">
+                                    <img class="lazyload img-hover" data-src="${item.media_url}" src="${item.media_url}" alt="Instagram Image" />
+                                </div>
+                                <a href="${item.permalink}" target="_blank" class="box-icon hover-tooltip">
+                                    <span class="icon icon-eye"></span>
+                                    <span class="tooltip">View Post</span>
+                                </a>
+                            </div>
+                        `;
+                        gallery.appendChild(slide);
+                    });
+                }
+            } catch (error) {
+                console.error('Error fetching Instagram images:', error);
+            }
+        }
+
+        fetchInstagramImages();
+    </script>
 
 @endsection
