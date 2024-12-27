@@ -4,17 +4,18 @@
         <div class="mb-body">
             <div class="mb-content-top">
                 <ul class="nav-ul-mb">
-                    <li class="nav-mb-item">
+                    <li class="nav-mb-item {{ Route::currentRouteName() == 'home' ? 'active' : '' }}">
                         <a href="{{ route('home') }}" class="mb-menu-link">
                             <span>Home</span>
                         </a>
                     </li>
-                    <li class="nav-mb-item">
+                    <li class="nav-mb-item {{ Route::currentRouteName() == 'shop' ? 'active' : '' }}">
                         <a href="{{ route('shop') }}" class="mb-menu-link">
                             <span>Shop</span>
                         </a>
                     </li>
                 </ul>
+
             </div>
             <div class="mb-other-content">
                 <ul class="mb-info">

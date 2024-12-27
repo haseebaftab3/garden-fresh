@@ -13,17 +13,15 @@
         <div class="col-xl-6 d-none d-xl-block">
             <nav class="box-navigation text-center">
                 <ul class="box-nav-ul d-flex align-items-center justify-content-center">
-                    <li class="menu-item active">
-                        <a href="{{ route('home') }}" class="item-link">Home </a>
-
+                    <li class="menu-item {{ Route::currentRouteName() == 'home' ? 'active' : '' }}">
+                        <a href="{{ route('home') }}" class="item-link">Home</a>
                     </li>
-                    <li class="menu-item">
-                        <a href="{{ route('shop') }}" class="item-link">Shop </a>
-
+                    <li
+                        class="menu-item {{ Route::currentRouteName() == 'shop' || Route::currentRouteName() == 'product.details' ? 'active' : '' }}">
+                        <a href="{{ route('shop') }}" class="item-link">Shop</a>
                     </li>
-
-
                 </ul>
+
             </nav>
         </div>
         <div class="col-xl-3 col-md-4 col-3">
